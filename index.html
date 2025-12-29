@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kantor Wymiana Walut Kraków | Floriańska</title>
+    
+    <title>Kantor Kraków Exchange | Best Rates & 0% Commission | Floriańska 37</title>
+    <meta name="description" content="Best Currency Exchange in Kraków Old Town (Floriańska 37). 0% Commission / Brak Prowizji. Trusted & Recommended. We buy/sell EUR, USD, GBP. Kantor czynny 7 dni.">
+    <meta name="keywords" content="kantor kraków, exchange krakow, currency exchange, best rate, wymiana walut floriańska, kantor centrum, currency exchange poland, kantor 0% commission, zaufany, polecany, trusted, recommended, old town exchange">
+    <meta name="author" content="Kraków Exchange">
+    
+    <link rel="icon" href="https://i.imgur.com/QtrXT7C.jpeg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QtrXT7C.jpeg">
+
+    <meta property="og:title" content="Kantor Kraków Floriańska | Best Rates & 0% Commission">
+    <meta property="og:description" content="Trusted Exchange in City Center. No hidden fees. Sprawdź nasze kursy!">
+    <meta property="og:image" content="https://i.imgur.com/sx8ZUeZ.jpeg"> 
+    <meta property="og:url" content="https://krakowexchange.pl"> <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Kantor Kraków Exchange",
+      "image": "https://i.imgur.com/sx8ZUeZ.jpeg",
+      "description": "Professional currency exchange in Kraków Old Town. Best rates, 0% commission. Kantor wymiany walut.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Floriańska 37",
+        "addressLocality": "Kraków",
+        "postalCode": "31-019",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.0638, 
+        "longitude": 19.9413
+      },
+      "url": "https://krakowexchange.pl",
+      "telephone": "+48889505057",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "$",
+      "currenciesAccepted": "EUR, USD, GBP, CHF, PLN",
+      "paymentAccepted": "Cash"
+    }
+    </script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
         body { font-family: 'Montserrat', sans-serif; }
@@ -40,7 +95,7 @@
         }
         .animate-marquee {
             display: inline-block;
-            /* ZMIANA: Przyspieszono z 30s na 15s */
+            /* Prędkość paska - 15s */
             animation: marquee 15s linear infinite;
         }
         .animate-marquee:hover {
@@ -207,7 +262,7 @@
                                 <option value="USD">🇺🇸 US Dollar (USD)</option>
                                 <option value="GBP">🇬🇧 Funt Brytyjski (GBP)</option>
                                 <option value="CHF">🇨🇭 Frank Szw. (CHF)</option>
-                                </select>
+                            </select>
                         </div>
                     </div>
 
@@ -328,7 +383,6 @@
             USD: { buy: 3.50, sell: 3.66, flag: '🇺🇸' },
             GBP: { buy: 4.60, sell: 4.85, flag: '🇬🇧' },
             CHF: { buy: 4.05, sell: 4.59, flag: '🇨🇭' }
-            // UAH (Ukraina) usunięta
         };
 
         const translations = {
@@ -365,7 +419,6 @@
                 th_buy: "We Buy",
                 th_sell: "We Sell",
                 footer_update: "Last update",
-                // disclaimer removed
                 loc_address: "Address",
                 btn_copy: "Copy for GPS",
                 loc_hours: "Opening Hours",
@@ -404,7 +457,6 @@
                 th_buy: "Skup (Ty sprzedajesz)",
                 th_sell: "Sprzedaż (Ty kupujesz)",
                 footer_update: "Ostatnia aktualizacja",
-                // disclaimer removed
                 loc_address: "Adres",
                 btn_copy: "Kopiuj adres",
                 loc_hours: "Godziny Otwarcia",
@@ -450,7 +502,6 @@
             const eurEls = document.querySelectorAll('.ticker-eur');
             const usdEls = document.querySelectorAll('.ticker-usd');
             
-            // ZMIANA: Teraz pokazuje obie ceny (Skup / Sprzedaż)
             eurEls.forEach(el => el.innerText = `${rates.EUR.buy.toFixed(2)} / ${rates.EUR.sell.toFixed(2)}`);
             usdEls.forEach(el => el.innerText = `${rates.USD.buy.toFixed(2)} / ${rates.USD.sell.toFixed(2)}`);
         }
