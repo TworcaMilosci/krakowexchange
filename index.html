@@ -26,7 +26,7 @@
             color: #0f172a;
         }
 
-        /* Hero Background - Default dark if image fails */
+        /* Hero Background */
         .hero-overlay {
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
@@ -40,7 +40,8 @@
         }
         .animate-marquee {
             display: inline-block;
-            animation: marquee 30s linear infinite;
+            /* ZMIANA: Przyspieszono z 30s na 15s */
+            animation: marquee 15s linear infinite;
         }
         .animate-marquee:hover {
             animation-play-state: paused;
@@ -124,15 +125,15 @@
 
     <div class="bg-slate-900 text-white py-3 overflow-hidden whitespace-nowrap border-b border-slate-700 relative">
         <div class="inline-block animate-marquee pl-4">
-            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">EUR/PLN</span> <span class="ticker-eur">4.35</span></span>
+            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">EUR</span> <span class="ticker-eur">-- / --</span></span>
             <span class="mx-4 text-sm text-slate-500">|</span>
-            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">USD/PLN</span> <span class="ticker-usd">4.02</span></span>
+            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">USD</span> <span class="ticker-usd">-- / --</span></span>
             <span class="mx-4 text-sm text-slate-500">|</span>
             <span class="mx-4 text-sm text-gray-400" data-i18n="ticker_promo">BRAK PROWIZJI - NO COMMISSION</span>
             <span class="mx-4 text-sm text-slate-500">|</span>
-            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">EUR/PLN</span> <span class="ticker-eur">4.35</span></span>
+            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">EUR</span> <span class="ticker-eur">-- / --</span></span>
             <span class="mx-4 text-sm text-slate-500">|</span>
-            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">USD/PLN</span> <span class="ticker-usd">4.02</span></span>
+            <span class="mx-4 text-sm"><span class="text-yellow-400 font-bold">USD</span> <span class="ticker-usd">-- / --</span></span>
             <span class="mx-4 text-sm text-slate-500">|</span>
             <span class="mx-4 text-sm text-gray-400">BEST RATES GUARANTEED</span>
         </div>
@@ -206,8 +207,7 @@
                                 <option value="USD">🇺🇸 US Dollar (USD)</option>
                                 <option value="GBP">🇬🇧 Funt Brytyjski (GBP)</option>
                                 <option value="CHF">🇨🇭 Frank Szw. (CHF)</option>
-                                <option value="UAH">🇺🇦 Hrywna (UAH)</option>
-                            </select>
+                                </select>
                         </div>
                     </div>
 
@@ -247,8 +247,7 @@
                     </div>
                     <div class="p-4 bg-gray-50 text-center border-t border-gray-100">
                         <p class="text-xs text-gray-400">
-                            <span data-i18n="footer_update">Ostatnia aktualizacja</span>: <span id="last-update">--:--</span><br>
-                            <span data-i18n="footer_disclaimer">Ceny mogą się różnić dla małych kwot.</span>
+                            <span data-i18n="footer_update">Ostatnia aktualizacja</span>: <span id="last-update">--:--</span>
                         </p>
                     </div>
                 </div>
@@ -296,8 +295,8 @@
                     </div>
                 </div>
 
-                <div class="h-[400px] md:h-auto min-h-[400px] relative rounded-xl overflow-hidden group border border-slate-600 shadow-lg">
-                    <img src="IMG_0756.jpg" alt="Kantor Exchange Floriańska Kraków" class="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition duration-500 transform group-hover:scale-105">
+                <div class="h-[500px] md:h-auto min-h-[500px] relative rounded-xl overflow-hidden group border border-slate-600 shadow-lg">
+                    <img src="https://i.imgur.com/sx8ZUeZ.jpeg" alt="Kantor Exchange Floriańska Kraków" class="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition duration-500 transform group-hover:scale-105">
                     
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
 
@@ -328,8 +327,8 @@
             EUR: { buy: 4.10, sell: 4.25, flag: '🇪🇺' }, 
             USD: { buy: 3.50, sell: 3.66, flag: '🇺🇸' },
             GBP: { buy: 4.60, sell: 4.85, flag: '🇬🇧' },
-            CHF: { buy: 4.05, sell: 4.59, flag: '🇨🇭' },
-            UAH: { buy: 0.07, sell: 0.11, flag: '🇺🇦' }
+            CHF: { buy: 4.05, sell: 4.59, flag: '🇨🇭' }
+            // UAH (Ukraina) usunięta
         };
 
         const translations = {
@@ -366,7 +365,7 @@
                 th_buy: "We Buy",
                 th_sell: "We Sell",
                 footer_update: "Last update",
-                footer_disclaimer: "Prices may vary for small amounts.",
+                // disclaimer removed
                 loc_address: "Address",
                 btn_copy: "Copy for GPS",
                 loc_hours: "Opening Hours",
@@ -405,7 +404,7 @@
                 th_buy: "Skup (Ty sprzedajesz)",
                 th_sell: "Sprzedaż (Ty kupujesz)",
                 footer_update: "Ostatnia aktualizacja",
-                footer_disclaimer: "Ceny hurtowe. Mogą się różnić dla małych kwot.",
+                // disclaimer removed
                 loc_address: "Adres",
                 btn_copy: "Kopiuj adres",
                 loc_hours: "Godziny Otwarcia",
@@ -451,8 +450,9 @@
             const eurEls = document.querySelectorAll('.ticker-eur');
             const usdEls = document.querySelectorAll('.ticker-usd');
             
-            eurEls.forEach(el => el.innerText = rates.EUR.sell.toFixed(2));
-            usdEls.forEach(el => el.innerText = rates.USD.sell.toFixed(2));
+            // ZMIANA: Teraz pokazuje obie ceny (Skup / Sprzedaż)
+            eurEls.forEach(el => el.innerText = `${rates.EUR.buy.toFixed(2)} / ${rates.EUR.sell.toFixed(2)}`);
+            usdEls.forEach(el => el.innerText = `${rates.USD.buy.toFixed(2)} / ${rates.USD.sell.toFixed(2)}`);
         }
 
         function calculate() {
@@ -488,7 +488,7 @@
                 html += `
                     <tr class="hover:bg-blue-50 transition cursor-default group border-b border-gray-50 last:border-0">
                         <td class="px-6 py-4 whitespace-nowrap font-medium text-navy flex items-center gap-3">
-                            <span class="text-2xl filter drop-shadow-sm grayscale group-hover:grayscale-0 transition">${data.flag}</span> 
+                            <span class="text-2xl filter drop-shadow-sm">${data.flag}</span> 
                             <span class="text-lg">${code}</span>
                         </td>
                         <td class="px-3 py-4 text-right font-bold text-slate-500 group-hover:text-navy transition text-lg">
