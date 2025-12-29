@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,25 @@
     <meta name="description" content="Best Currency Exchange in Kraków Old Town (Floriańska 37). 0% Commission / Brak Prowizji. Trusted & Recommended. We buy/sell EUR, USD, GBP. Kantor czynny 7 dni.">
     <meta name="keywords" content="kantor kraków, exchange krakow, currency exchange, best rate, wymiana walut floriańska, kantor centrum, currency exchange poland, kantor 0% commission, zaufany, polecany, trusted, recommended, old town exchange">
     <meta name="author" content="Kraków Exchange">
-    
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://krakowexchange.pl">
+
     <link rel="icon" href="https://i.imgur.com/QtrXT7C.jpeg" type="image/jpeg">
     <link rel="apple-touch-icon" href="https://i.imgur.com/QtrXT7C.jpeg">
 
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Kantor Kraków Floriańska | Best Rates & 0% Commission">
     <meta property="og:description" content="Trusted Exchange in City Center. No hidden fees. Sprawdź nasze kursy!">
     <meta property="og:image" content="https://i.imgur.com/sx8ZUeZ.jpeg"> 
-    <meta property="og:url" content="https://krakowexchange.pl"> <meta property="og:type" content="website">
+    <meta property="og:url" content="https://krakowexchange.pl">
+    <meta property="og:site_name" content="Kraków Exchange Floriańska">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kantor Kraków Exchange | Best Rates">
+    <meta name="twitter:description" content="0% Commission Exchange in Kraków Old Town. Floriańska 37.">
+    <meta name="twitter:image" content="https://i.imgur.com/sx8ZUeZ.jpeg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -65,37 +76,24 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
         body { font-family: 'Montserrat', sans-serif; }
         
-        /* Premium Gold Gradient */
-        .gold-gradient {
-            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-        }
-        .text-gold {
-            color: #fbbf24;
-        }
-        
-        /* Deep Navy Background */
-        .bg-navy {
-            background-color: #0f172a; /* Slate 900 */
-        }
-        .text-navy {
-            color: #0f172a;
-        }
+        .gold-gradient { background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%); }
+        .text-gold { color: #fbbf24; }
+        .bg-navy { background-color: #0f172a; }
+        .text-navy { color: #0f172a; }
 
-        /* Hero Background */
         .hero-overlay {
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
 
-        /* Animation for the Ticker Tape */
+        /* Animation: Prędkość paska - 15s */
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
         .animate-marquee {
             display: inline-block;
-            /* Prędkość paska - 15s */
             animation: marquee 15s linear infinite;
         }
         .animate-marquee:hover {
@@ -464,12 +462,12 @@
             }
         };
 
-        let currentLang = 'en'; // Default to PL
+        let currentLang = 'en';
         let activeDirection = 'sell';
 
         document.addEventListener('DOMContentLoaded', () => {
             renderRatesTable();
-            setLanguage('en'); // Force initial load in PL
+            setLanguage('en'); 
             calculate();
             updateTicker();
             
