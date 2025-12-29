@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Kantor Kraków Exchange | Best Rates & 0% Commission | Floriańska 37</title>
-    <meta name="description" content="Official Currency Exchange in Kraków Old Town (Floriańska 37). 0% Commission. No hidden fees. The rate you see is the rate you get. Safe & Licensed.">
-    <meta name="keywords" content="kantor kraków, exchange krakow, currency exchange, best rate, wymiana walut floriańska 37, kantor centrum, currency exchange poland, kantor 0% commission, zaufany, polecany, trusted, recommended, old town exchange">
+    <meta name="description" content="Official Currency Exchange in Kraków Old Town (Floriańska 37). 0% Commission. Best rates. Kantor wymiany walut Kraków, możliwość negocjacji.">
+    <meta name="keywords" content="kantor kraków, exchange krakow, currency exchange, best rate, wymiana walut floriańska 37, kantor centrum, currency exchange poland, kantor negocjacje, zaufany, polecany">
     <meta name="author" content="Kraków Exchange">
     <meta name="robots" content="index, follow">
 
@@ -18,17 +18,14 @@
     <meta property="og:locale" content="pl_PL">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Kantor Kraków Floriańska | Official & Safe Exchange">
-    <meta property="og:description" content="Visit the official exchange on Floriańska 37. Best rates, no hidden fees.">
-    <meta property="og:image" content="https://i.imgur.com/sx8ZUeZ.jpeg"> 
-    <meta property="og:url" content="https://krakowexchange.pl">
+    <meta property="og:description" content="Visit the official exchange on Floriańska 37. Best rates, negotiable.">
+    <meta property="og:image" content="https://i.imgur.com/UJab0qU.jpeg"> <meta property="og:url" content="https://krakowexchange.pl">
     <meta property="og:site_name" content="Kraków Exchange Floriańska">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kantor Kraków Exchange | Safe & Fair Rates">
-    <meta name="twitter:description" content="0% Commission. Official Licensed Entity. Floriańska 37.">
-    <meta name="twitter:image" content="https://i.imgur.com/sx8ZUeZ.jpeg">
+    <meta name="twitter:image" content="https://i.imgur.com/UJab0qU.jpeg">
 
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75&fm=webp">
+    <link rel="preload" as="image" href="https://i.imgur.com/UJab0qU.jpeg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -39,8 +36,7 @@
       "@context": "https://schema.org",
       "@type": "FinancialService",
       "name": "Kantor Kraków Exchange",
-      "image": "https://i.imgur.com/sx8ZUeZ.jpeg",
-      "description": "Professional and safe currency exchange in Kraków Old Town. Best rates, 0% commission. Licensed entity.",
+      "image": "https://i.imgur.com/UJab0qU.jpeg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Floriańska 37",
@@ -84,10 +80,12 @@
         .bg-navy { background-color: #0f172a; }
         .text-navy { color: #0f172a; }
 
+        /* HERO - TWOJE ZDJĘCIE RYNKU */
+        /* Gradient jest lżejszy (0.6 - 0.75), żeby było widać Rynek */
         .hero-overlay {
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75&fm=webp');
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/UJab0qU.jpeg');
             background-size: cover;
-            background-position: center;
+            background-position: center center; /* Centrujemy najważniejszą część */
             background-color: #0f172a; 
         }
 
@@ -168,7 +166,8 @@
             </h1>
 
             <h2 class="text-xl md:text-3xl font-bold text-white mb-6 drop-shadow-md">
-                <span class="text-yellow-400">0% Commission.</span> No Hidden Fees.
+                <span class="text-yellow-400" data-i18n="hero_subtitle_highlight">0% Commission.</span> 
+                <span data-i18n="hero_subtitle_text">No Hidden Fees.</span>
             </h2>
             
             <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto font-medium text-shadow border-t border-slate-500/50 pt-4" data-i18n="hero_desc">
@@ -231,56 +230,58 @@
 
         <div class="grid lg:grid-cols-12 gap-8 items-start" id="calculator">
             
-            <div class="lg:col-span-7 bg-white rounded shadow-xl border border-gray-200 overflow-hidden">
-                <div class="bg-navy p-6 border-b border-slate-700">
-                    <h2 class="text-white text-xl font-bold flex items-center">
-                        <i class="fa-solid fa-calculator text-yellow-400 mr-3"></i> <span data-i18n="calc_title">Kalkulator Walut</span>
-                    </h2>
-                </div>
-                <div class="p-8">
-                    <div class="flex gap-4 mb-8">
-                        <label class="flex-1 cursor-pointer group">
-                            <input type="radio" name="direction" value="sell" class="peer hidden" checked onchange="setDirection('sell')">
-                            <div class="text-center py-4 px-4 border-2 border-slate-200 rounded-lg peer-checked:border-navy peer-checked:bg-slate-50 peer-checked:text-navy text-gray-400 transition group-hover:bg-gray-50 h-full flex flex-col items-center justify-center">
-                                <i class="fa-solid fa-wallet text-2xl mb-2"></i>
-                                <span class="font-bold text-sm" data-i18n="calc_have">Mam Walutę</span>
-                                <span class="text-xs block mt-1 opacity-75" data-i18n="calc_sell_sub">(Sprzedaję kantorowi)</span>
-                            </div>
-                        </label>
-                        <label class="flex-1 cursor-pointer group">
-                            <input type="radio" name="direction" value="buy" class="peer hidden" onchange="setDirection('buy')">
-                            <div class="text-center py-4 px-4 border-2 border-slate-200 rounded-lg peer-checked:border-navy peer-checked:bg-slate-50 peer-checked:text-navy text-gray-400 transition group-hover:bg-gray-50 h-full flex flex-col items-center justify-center">
-                                <i class="fa-solid fa-briefcase text-2xl mb-2"></i>
-                                <span class="font-bold text-sm" data-i18n="calc_want">Chcę Walutę</span>
-                                <span class="text-xs block mt-1 opacity-75" data-i18n="calc_buy_sub">(Kupuję od kantoru)</span>
-                            </div>
-                        </label>
+            <div class="lg:col-span-7 space-y-8">
+                <div class="bg-white rounded shadow-xl border border-gray-200 overflow-hidden">
+                    <div class="bg-navy p-6 border-b border-slate-700">
+                        <h2 class="text-white text-xl font-bold flex items-center">
+                            <i class="fa-solid fa-calculator text-yellow-400 mr-3"></i> <span data-i18n="calc_title">Kalkulator Walut</span>
+                        </h2>
                     </div>
-
-                    <div class="space-y-6">
-                        <div class="relative">
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-2" data-i18n="label_amount">Kwota</label>
-                            <input type="number" id="amount" value="100" oninput="calculate()" class="w-full bg-gray-50 border-b-2 border-gray-300 text-3xl font-bold text-navy py-2 focus:outline-none focus:border-yellow-500 transition appearance-none" placeholder="0.00">
+                    <div class="p-8">
+                        <div class="flex gap-4 mb-8">
+                            <label class="flex-1 cursor-pointer group">
+                                <input type="radio" name="direction" value="sell" class="peer hidden" checked onchange="setDirection('sell')">
+                                <div class="text-center py-4 px-4 border-2 border-slate-200 rounded-lg peer-checked:border-navy peer-checked:bg-slate-50 peer-checked:text-navy text-gray-400 transition group-hover:bg-gray-50 h-full flex flex-col items-center justify-center">
+                                    <i class="fa-solid fa-wallet text-2xl mb-2"></i>
+                                    <span class="font-bold text-sm" data-i18n="calc_have">Mam Walutę</span>
+                                    <span class="text-xs block mt-1 opacity-75" data-i18n="calc_sell_sub">(Sprzedaję kantorowi)</span>
+                                </div>
+                            </label>
+                            <label class="flex-1 cursor-pointer group">
+                                <input type="radio" name="direction" value="buy" class="peer hidden" onchange="setDirection('buy')">
+                                <div class="text-center py-4 px-4 border-2 border-slate-200 rounded-lg peer-checked:border-navy peer-checked:bg-slate-50 peer-checked:text-navy text-gray-400 transition group-hover:bg-gray-50 h-full flex flex-col items-center justify-center">
+                                    <i class="fa-solid fa-briefcase text-2xl mb-2"></i>
+                                    <span class="font-bold text-sm" data-i18n="calc_want">Chcę Walutę</span>
+                                    <span class="text-xs block mt-1 opacity-75" data-i18n="calc_buy_sub">(Kupuję od kantoru)</span>
+                                </div>
+                            </label>
                         </div>
 
-                        <div class="relative">
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-2" data-i18n="label_currency">Waluta</label>
-                            <select id="currency" onchange="calculate()" class="w-full bg-white border border-gray-300 text-lg font-semibold text-navy py-3 px-4 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400 cursor-pointer">
-                                <option value="EUR">🇪🇺 Euro (EUR)</option>
-                                <option value="USD">🇺🇸 US Dollar (USD)</option>
-                                <option value="GBP">🇬🇧 Funt Brytyjski (GBP)</option>
-                                <option value="CHF">🇨🇭 Frank Szw. (CHF)</option>
-                            </select>
-                        </div>
-                    </div>
+                        <div class="space-y-6">
+                            <div class="relative">
+                                <label class="block text-xs font-bold text-gray-500 uppercase mb-2" data-i18n="label_amount">Kwota</label>
+                                <input type="number" id="amount" value="100" oninput="calculate()" class="w-full bg-gray-50 border-b-2 border-gray-300 text-3xl font-bold text-navy py-2 focus:outline-none focus:border-yellow-500 transition appearance-none" placeholder="0.00">
+                            </div>
 
-                    <div class="mt-8 bg-slate-900 rounded-lg p-6 text-center relative overflow-hidden transition-all duration-300">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-yellow-300"></div>
-                        <p class="text-gray-400 text-sm mb-2 font-medium" id="result-label">Otrzymasz:</p>
-                        <div class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-2">
-                            <span id="result">0.00</span> <span class="text-yellow-400 text-2xl">PLN</span>
+                            <div class="relative">
+                                <label class="block text-xs font-bold text-gray-500 uppercase mb-2" data-i18n="label_currency">Waluta</label>
+                                <select id="currency" onchange="calculate()" class="w-full bg-white border border-gray-300 text-lg font-semibold text-navy py-3 px-4 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400 cursor-pointer">
+                                    <option value="EUR">🇪🇺 Euro (EUR)</option>
+                                    <option value="USD">🇺🇸 US Dollar (USD)</option>
+                                    <option value="GBP">🇬🇧 Funt Brytyjski (GBP)</option>
+                                    <option value="CHF">🇨🇭 Frank Szw. (CHF)</option>
+                                </select>
+                            </div>
                         </div>
-                        <p class="text-slate-500 text-xs"><span data-i18n="label_rate">Zastosowany kurs</span>: <span id="applied-rate" class="text-slate-300 font-mono">4.2800</span></p>
+
+                        <div class="mt-8 bg-slate-900 rounded-lg p-6 text-center relative overflow-hidden transition-all duration-300">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-yellow-300"></div>
+                            <p class="text-gray-400 text-sm mb-2 font-medium" id="result-label">Otrzymasz:</p>
+                            <div class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-2">
+                                <span id="result">0.00</span> <span class="text-yellow-400 text-2xl">PLN</span>
+                            </div>
+                            <p class="text-slate-500 text-xs"><span data-i18n="label_rate">Zastosowany kurs</span>: <span id="applied-rate" class="text-slate-300 font-mono">4.2800</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,7 +385,7 @@
             </div>
             
             <div class="text-center">
-                 <div class="flex gap-4 justify-center text-2xl text-slate-600 mb-2">
+                <div class="flex gap-4 justify-center text-2xl text-slate-600 mb-2">
                     <i class="fa-solid fa-building-columns" title="Regulated"></i>
                     <i class="fa-solid fa-lock" title="Secure"></i>
                     <i class="fa-solid fa-check-circle" title="Verified"></i>
@@ -423,15 +424,17 @@
                 nav_calc: "Calculator",
                 nav_map: "Location",
                 nav_contact: "Contact",
-                // HERO
+                // HERO - ENG
                 hero_badge: "Official & Verified",
                 hero_title_1: "Best Currency Exchange",
                 hero_title_2: "in Kraków Old Town",
+                hero_subtitle_highlight: "0% Commission.",
+                hero_subtitle_text: "No Hidden Fees.",
                 hero_desc: "The rate you see on the board is the cash you get. Safe, licensed & transparent service on Floriańska 37 St.",
                 btn_check: "Check Rates",
                 btn_find: "Find Office",
                 ticker_promo: "NO COMMISSION - 0% PROWIZJI",
-                // FEATURES (ORYGINAŁ)
+                // FEATURES
                 feat_1_title: "Transparent Rates",
                 feat_1_desc: "The price you see on the board is the price you get. Absolutely no hidden commissions.",
                 badge_rec: "RECOMMENDED",
@@ -453,7 +456,6 @@
                 th_buy: "We Buy",
                 th_sell: "We Sell",
                 footer_update: "Last update",
-                // LOCATION & FOOTER
                 loc_address: "Address",
                 loc_landmark: "(next to Twist Cafe)",
                 btn_copy: "Copy for GPS",
@@ -466,15 +468,17 @@
                 nav_calc: "Kalkulator",
                 nav_map: "Lokalizacja",
                 nav_contact: "Kontakt",
-                // HERO
+                // HERO - PL (TUTAJ ZMIANA)
                 hero_badge: "Oficjalny Kantor",
                 hero_title_1: "Najlepszy Kantor",
                 hero_title_2: "Kraków - Stare Miasto",
-                hero_desc: "Kurs widoczny na tablicy to kwota, którą otrzymasz. Bezpiecznie, legalnie i bez ukrytych opłat przy Floriańskiej 37.",
+                hero_subtitle_highlight: "Możliwość Negocjacji.", 
+                hero_subtitle_text: "Najlepsze Kursy.",
+                hero_desc: "Bezpiecznie, legalnie i bez ukrytych opłat przy Floriańskiej 37. Zapraszamy do negocjacji przy większych kwotach.",
                 btn_check: "Sprawdź Kurs",
                 btn_find: "Znajdź Nas",
                 ticker_promo: "BRAK PROWIZJI - NO COMMISSION",
-                // FEATURES (PL)
+                // FEATURES
                 feat_1_title: "Przejrzyste Zasady",
                 feat_1_desc: "Cena, którą widzisz na tablicy, to cena końcowa. Żadnych ukrytych prowizji czy opłat.",
                 badge_rec: "POLECANE",
@@ -496,7 +500,6 @@
                 th_buy: "Skup (Ty sprzedajesz)",
                 th_sell: "Sprzedaż (Ty kupujesz)",
                 footer_update: "Ostatnia aktualizacja",
-                // LOCATION & FOOTER
                 loc_address: "Adres",
                 loc_landmark: "(obok Twist Cafe)",
                 btn_copy: "Kopiuj adres",
@@ -525,7 +528,6 @@
             
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                // Obsługa HTML dla ikon w stopce
                 if(t[key]) el.innerHTML = t[key];
             });
             calculate();
