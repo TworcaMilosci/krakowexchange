@@ -28,8 +28,12 @@
     <meta name="twitter:description" content="0% Commission Exchange in Kraków Old Town. Floriańska 37.">
     <meta name="twitter:image" content="https://i.imgur.com/sx8ZUeZ.jpeg">
 
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75&fm=webp">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     
     <script type="application/ld+json">
     {
@@ -81,13 +85,14 @@
         .bg-navy { background-color: #0f172a; }
         .text-navy { color: #0f172a; }
 
+        /* ZMIANA: Zoptymalizowane tło w CSS (WebP + mniejszy rozmiar) */
         .hero-overlay {
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75&fm=webp');
             background-size: cover;
             background-position: center;
+            background-color: #0f172a; /* Fallback color */
         }
 
-        /* Animation: Prędkość paska - 15s */
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -349,7 +354,7 @@
                 </div>
 
                 <div class="h-[500px] md:h-auto min-h-[500px] relative rounded-xl overflow-hidden group border border-slate-600 shadow-lg">
-                    <img src="https://i.imgur.com/sx8ZUeZ.jpeg" alt="Kantor Exchange Floriańska Kraków" class="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition duration-500 transform group-hover:scale-105">
+                    <img src="https://i.imgur.com/sx8ZUeZ.jpeg" loading="lazy" width="800" height="1200" alt="Kantor Exchange Floriańska Kraków" class="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition duration-500 transform group-hover:scale-105">
                     
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
 
@@ -462,7 +467,7 @@
             }
         };
 
-        let currentLang = 'en';
+        let currentLang = 'en'; 
         let activeDirection = 'sell';
 
         document.addEventListener('DOMContentLoaded', () => {
