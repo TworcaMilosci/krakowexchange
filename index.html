@@ -19,7 +19,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Kantor Kraków Floriańska | Official & Safe Exchange">
     <meta property="og:description" content="Visit the official exchange on Floriańska 37. Best rates, negotiable.">
-    <meta property="og:image" content="https://i.imgur.com/UJab0qU.jpeg"> <meta property="og:url" content="https://krakowexchange.pl">
+    <meta property="og:image" content="https://i.imgur.com/UJab0qU.jpeg"> 
+    <meta property="og:url" content="https://krakowexchange.pl">
     <meta property="og:site_name" content="Kraków Exchange Floriańska">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -80,12 +81,11 @@
         .bg-navy { background-color: #0f172a; }
         .text-navy { color: #0f172a; }
 
-        /* HERO - TWOJE ZDJĘCIE RYNKU */
-        /* Gradient jest lżejszy (0.6 - 0.75), żeby było widać Rynek */
+        /* HERO - Zoptymalizowany gradient dla lepszej czytelności na tle Rynku */
         .hero-overlay {
-            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.75)), url('https://i.imgur.com/UJab0qU.jpeg');
+            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('https://i.imgur.com/UJab0qU.jpeg');
             background-size: cover;
-            background-position: center center; /* Centrujemy najważniejszą część */
+            background-position: center center;
             background-color: #0f172a; 
         }
 
@@ -99,6 +99,15 @@
         }
         .animate-marquee:hover {
             animation-play-state: paused;
+        }
+        
+        /* Animacja wejścia */
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
         }
     </style>
 </head>
@@ -153,32 +162,45 @@
         </div>
     </nav>
 
-    <section class="hero-overlay h-[650px] flex items-center justify-center text-white pt-20">
-        <div class="text-center px-4 max-w-4xl mx-auto">
+    <section class="hero-overlay min-h-screen flex flex-col items-center justify-center text-white pt-32 pb-16 px-4">
+        <div class="text-center max-w-4xl mx-auto w-full">
             
-            <div class="inline-flex items-center gap-2 border border-green-500/50 bg-green-900/40 px-5 py-2 rounded-full text-sm font-bold mb-6 backdrop-blur-md text-green-400 uppercase tracking-widest shadow-lg">
+            <div class="inline-flex items-center gap-2 border border-green-500/50 bg-green-900/40 px-5 py-2 rounded-full text-sm font-bold mb-4 backdrop-blur-md text-green-400 uppercase tracking-widest shadow-lg animate-fade-in-up">
                 <i class="fa-solid fa-check-circle"></i> <span data-i18n="hero_badge">Official & Verified Exchange</span>
             </div>
 
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
+            <div class="flex items-center justify-center gap-2 mb-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-3">
+                    <div class="flex text-yellow-400 text-xs">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-white text-xs font-semibold">4.9/5 on Google Maps</span>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.2s;">
                 <span data-i18n="hero_title_1">Best Currency Exchange</span> <br>
                 <span class="text-yellow-400" data-i18n="hero_title_2">in Kraków Old Town</span>
             </h1>
 
-            <h2 class="text-xl md:text-3xl font-bold text-white mb-6 drop-shadow-md">
+            <h2 class="text-xl md:text-3xl font-bold text-white mb-6 drop-shadow-md animate-fade-in-up" style="animation-delay: 0.3s;">
                 <span class="text-yellow-400" data-i18n="hero_subtitle_highlight">0% Commission.</span> 
                 <span data-i18n="hero_subtitle_text">No Hidden Fees.</span>
             </h2>
             
-            <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto font-medium text-shadow border-t border-slate-500/50 pt-4" data-i18n="hero_desc">
+            <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto font-medium text-shadow border-t border-slate-500/50 pt-4 animate-fade-in-up" style="animation-delay: 0.4s;" data-i18n="hero_desc">
                 The rate you see on the board is the cash you get. Safe, licensed & transparent service on Floriańska 37 St.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#calculator" class="gold-gradient text-navy hover:bg-yellow-400 px-8 py-4 rounded font-bold text-lg transition shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+            <div class="flex flex-col sm:flex-row gap-5 justify-center w-full animate-fade-in-up" style="animation-delay: 0.5s;">
+                <a href="#calculator" class="gold-gradient text-navy hover:bg-yellow-400 px-8 py-4 rounded font-bold text-lg transition shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1 flex items-center justify-center gap-2 w-full sm:w-auto">
                     <i class="fa-solid fa-calculator"></i> <span data-i18n="btn_check">Check Rates</span>
                 </a>
-                <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-navy px-8 py-4 rounded font-bold text-lg transition flex items-center justify-center gap-2">
+                <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-navy px-8 py-4 rounded font-bold text-lg transition flex items-center justify-center gap-2 w-full sm:w-auto">
                     <i class="fa-solid fa-map-pin"></i> <span data-i18n="btn_find">Find Office</span>
                 </a>
             </div>
@@ -227,6 +249,43 @@
                 <p class="text-gray-600 text-center text-sm" data-i18n="feat_3_desc">Changing a larger amount? Ask our teller for a better rate.</p>
             </div>
         </div>
+
+        <section class="mb-16 border-t border-b border-gray-100 py-12">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy mb-2" data-i18n="reviews_title">Trusted by Thousands</h2>
+                <p class="text-gray-500 text-sm" data-i18n="reviews_subtitle">See what our customers say about our rates and service.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-yellow-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"Finally an honest exchange in the city center! No commission, exactly as advertised."</p>
+                    <p class="text-xs font-bold text-navy">John D. <span class="text-gray-400 font-normal">- Tourist</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-yellow-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"Wymieniałem większą kwotę. Udało się wynegocjować świetny kurs. Polecam!"</p>
+                    <p class="text-xs font-bold text-navy">Marek K. <span class="text-gray-400 font-normal">- Lokalny Klient</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-yellow-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"Very professional. The office is clean and right next to the cafe. Good rates."</p>
+                    <p class="text-xs font-bold text-navy">Anna S. <span class="text-gray-400 font-normal">- Germany</span></p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="https://www.google.com/maps/search/?api=1&query=Floriańska+37+Kraków" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm transition">
+                    <i class="fa-brands fa-google"></i> See all reviews on Google Maps
+                </a>
+            </div>
+        </section>
 
         <div class="grid lg:grid-cols-12 gap-8 items-start" id="calculator">
             
@@ -424,7 +483,7 @@
                 nav_calc: "Calculator",
                 nav_map: "Location",
                 nav_contact: "Contact",
-                // HERO - ENG
+                // HERO
                 hero_badge: "Official & Verified",
                 hero_title_1: "Best Currency Exchange",
                 hero_title_2: "in Kraków Old Town",
@@ -434,6 +493,9 @@
                 btn_check: "Check Rates",
                 btn_find: "Find Office",
                 ticker_promo: "NO COMMISSION - 0% PROWIZJI",
+                // REVIEWS
+                reviews_title: "Trusted by Thousands",
+                reviews_subtitle: "See what our customers say about our rates and service.",
                 // FEATURES
                 feat_1_title: "Transparent Rates",
                 feat_1_desc: "The price you see on the board is the price you get. Absolutely no hidden commissions.",
@@ -468,7 +530,7 @@
                 nav_calc: "Kalkulator",
                 nav_map: "Lokalizacja",
                 nav_contact: "Kontakt",
-                // HERO - PL (TUTAJ ZMIANA)
+                // HERO
                 hero_badge: "Oficjalny Kantor",
                 hero_title_1: "Najlepszy Kantor",
                 hero_title_2: "Kraków - Stare Miasto",
@@ -478,6 +540,9 @@
                 btn_check: "Sprawdź Kurs",
                 btn_find: "Znajdź Nas",
                 ticker_promo: "BRAK PROWIZJI - NO COMMISSION",
+                // REVIEWS
+                reviews_title: "Zaufali nam Klienci",
+                reviews_subtitle: "Zobacz opinie naszych klientów.",
                 // FEATURES
                 feat_1_title: "Przejrzyste Zasady",
                 feat_1_desc: "Cena, którą widzisz na tablicy, to cena końcowa. Żadnych ukrytych prowizji czy opłat.",
