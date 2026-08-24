@@ -9,7 +9,9 @@ Edytujesz **wyłącznie plik `rates.json`**. Nie dotykasz `index.html`.
    - `buy` = skup detal (kupujemy od klienta)
    - `sell` = sprzedaż detal (sprzedajemy klientowi)
    - `buyHurt` / `sellHurt` = kursy hurtowe (opcjonalne)
-   - `wholesaleFrom` = od jakiej kwoty obowiązuje hurt (tekst, np. "1 000 EUR")
+   - `wholesaleFrom` = od jakiej kwoty obowiązuje hurt (tekst wyświetlany, np. "1 000 EUR")
+   - `wholesaleMinAmount` = próg liczbowy dla kalkulatora (np. 1000) — od tej kwoty
+     kalkulator sam przelicza po kursie hurtowym
    - `alsoBuy` = lista walut skupowanych po wcześniejszym kontakcie
 3. Zmień datę w polu `"updated"` — wyświetla się na tablicy jako "Aktualizacja".
 4. Kliknij **Commit changes**. Netlify sam opublikuje stronę w ~1 minutę.
@@ -26,6 +28,7 @@ Edytujesz **wyłącznie plik `rates.json`**. Nie dotykasz `index.html`.
 {
   "updated": "2026-08-24",
   "wholesaleFrom": "1 000 EUR",
+  "wholesaleMinAmount": 1000,
   "rates": {
     "EUR": { "buy": 4.49, "sell": 4.52, "buyHurt": 4.50, "sellHurt": 4.51 },
     "USD": { "buy": 3.78, "sell": 3.92, "buyHurt": 3.82, "sellHurt": 3.88 },
