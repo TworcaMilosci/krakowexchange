@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://krakowexchange.pl/sitemap.xml
+
+Sitemap: https://kantorblacksheep.pl/sitemap.xml

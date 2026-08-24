@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://krakowexchange.pl/</loc>
-      <lastmod>2025-12-29</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-   </url>
+  <url>
+    <loc>https://kantorblacksheep.pl/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- TODO: po zdjęciu noindex z podstron dodaj:
+  <url><loc>https://kantorblacksheep.pl/avoid-scams.html</loc></url>
+  <url><loc>https://kantorblacksheep.pl/scam-help.html</loc></url>
+  -->
 </urlset>
