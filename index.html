@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://kantorblacksheep.pl/images/front-og-1200x630.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
+    <link rel="preload" as="image" href="images/hero-flock.webp" fetchpriority="high">
     <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/sygnet-512.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -53,7 +54,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <style>
 
         :root {
@@ -202,7 +204,7 @@
                 <h1 class="display text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-2 lg:mb-3" data-i18n="hero_title">
                     Don't get fleeced.
                 </h1>
-                <img src="images/hero-flock.png" width="1408" height="768" fetchpriority="high"
+                <img src="images/hero-flock.webp" width="1408" height="768" fetchpriority="high"
                      alt="Sheared white sheep and one untouched black sheep — don't get fleeced"
                      class="w-full -mt-12 mb-6 lg:-mt-14 lg:mb-3 lg:max-w-lg pointer-events-none select-none">
                 <p class="text-neutral-400 text-base sm:text-lg mb-4 max-w-md" data-i18n="hero_slogan">
@@ -328,8 +330,8 @@
             <h2 class="display text-2xl sm:text-3xl text-center mb-12" data-i18n="visit_title">Find us</h2>
 
             <div class="max-w-4xl mx-auto mb-4">
-                <img src="images/street-800.jpg"
-                     srcset="images/street-800.jpg 800w, images/street-1400.jpg 1400w"
+                <img src="images/street-800.webp"
+                     srcset="images/street-800.webp 800w, images/street-1400.webp 1400w"
                      sizes="(max-width: 1024px) 100vw, 896px"
                      loading="lazy" width="1400" height="875"
                      alt="Kantor Black Sheep, Floriańska 37 — tablica kursów po prawej, w tle Brama Floriańska / rate board on the right, St. Florian's Gate ahead"
