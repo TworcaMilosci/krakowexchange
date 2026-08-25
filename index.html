@@ -51,8 +51,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
         :root {
             --ink: #0a0a0a;
@@ -159,7 +161,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
                 <a href="#top" class="flex items-center gap-3">
-                    <img src="images/sygnet-512.png" alt="Black Sheep" class="w-10 h-10 rounded-xl" width="40" height="40">
+                    <img src="images/sygnet-96.png" alt="Black Sheep" class="w-10 h-10 rounded-xl" width="40" height="40">
                     <span class="lockup" style="font-size: 0.62rem;">
                         <span class="top">Kantor</span>
                         <span class="sub">Black Sheep</span>
@@ -200,7 +202,7 @@
                 <h1 class="display text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-2 lg:mb-3" data-i18n="hero_title">
                     Don't get fleeced.
                 </h1>
-                <img src="images/hero-flock.png" width="1408" height="768"
+                <img src="images/hero-flock.png" width="1408" height="768" fetchpriority="high"
                      alt="Sheared white sheep and one untouched black sheep — don't get fleeced"
                      class="w-full -mt-12 mb-6 lg:-mt-14 lg:mb-3 lg:max-w-lg pointer-events-none select-none">
                 <p class="text-neutral-400 text-base sm:text-lg mb-4 max-w-md" data-i18n="hero_slogan">
@@ -326,7 +328,10 @@
             <h2 class="display text-2xl sm:text-3xl text-center mb-12" data-i18n="visit_title">Find us</h2>
 
             <div class="max-w-4xl mx-auto mb-4">
-                <img src="images/street-1600x1000.jpg" loading="lazy" width="1600" height="1000"
+                <img src="images/street-800.jpg"
+                     srcset="images/street-800.jpg 800w, images/street-1400.jpg 1400w"
+                     sizes="(max-width: 1024px) 100vw, 896px"
+                     loading="lazy" width="1400" height="875"
                      alt="Kantor Black Sheep, Floriańska 37 — tablica kursów po prawej, w tle Brama Floriańska / rate board on the right, St. Florian's Gate ahead"
                      class="w-full rounded-2xl border border-neutral-800 object-cover">
                 <p class="text-xs text-neutral-500 mt-2 text-center" data-i18n="visit_photo_caption">Look for the board with the black sheep and EUR, USD, GBP rates — don't get fleeced.</p>
