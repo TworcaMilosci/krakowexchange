@@ -28,7 +28,7 @@
       "@context": "https://schema.org",
       "@type": "FinancialService",
       "name": "Exchange Kantor Black Sheep",
-      "alternateName": "Kantor Black Sheep",
+      "alternateName": ["Kantor Black Sheep", "Kantor Wymiany Walut U Górali"],
       "url": "https://kantorblacksheep.pl",
       "telephone": "+48889505057",
       "image": "https://kantorblacksheep.pl/images/front-og-1200x630.jpg",
@@ -50,12 +50,23 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Czy to dawny Kantor U Górali?","acceptedAnswer":{"@type":"Answer","text":"Tak — ten sam kantor przy Floriańskiej 37 i ten sam właściciel. W 2026 roku zmieniliśmy nazwę na Exchange Kantor Black Sheep."}},
+        {"@type":"Question","name":"Jakie waluty wymieniacie?","acceptedAnswer":{"@type":"Answer","text":"Stale: euro (EUR), dolary amerykańskie (USD), funty brytyjskie (GBP). Skupujemy również franki szwajcarskie (CHF), dolary kanadyjskie (CAD), dolary australijskie (AUD), korony duńskie (DKK), szwedzkie (SEK), norweskie (NOK), czeskie (CZK), forinty węgierskie (HUF), jeny japońskie (JPY), dirhamy ZEA (AED), bilon euro oraz wycofane i zniszczone banknoty."}},
+        {"@type":"Question","name":"Czy kursy podlegają negocjacji?","acceptedAnswer":{"@type":"Answer","text":"Przy większych kwotach tak — od równowartości 1 000 EUR automatycznie obowiązują kursy hurtowe."}},
+        {"@type":"Question","name":"Czy mogę zapłacić kartą?","acceptedAnswer":{"@type":"Answer","text":"Wymieniamy wyłącznie gotówkę."}},
+        {"@type":"Question","name":"Czy skupujecie stare, wycofane lub zniszczone banknoty?","acceptedAnswer":{"@type":"Answer","text":"Tak — wycofane serie, zniszczone banknoty oraz bilon euro, po wcześniejszym kontakcie telefonicznym."}},
+        {"@type":"Question","name":"Czy potrzebuję dokumentu, żeby wymienić pieniądze?","acceptedAnswer":{"@type":"Answer","text":"Przy codziennych kwotach nie — identyfikacja jest wymagana od równowartości 15 000 EUR."}},
+        {"@type":"Question","name":"Czy kantor jest otwarty w weekendy?","acceptedAnswer":{"@type":"Answer","text":"Sobota 10:00–20:00, niedziela zamknięte, pon–pt 09:00–20:00."}}
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <style>
 
         :root {
@@ -73,7 +84,7 @@
             *, *::before, *::after { animation: none !important; transition: none !important; }
         }
 
-        body { font-family: 'Montserrat', sans-serif; background: var(--ink); color: #fff; }
+        body { font-family: 'Montserrat', 'Montserrat Fallback', sans-serif; background: var(--ink); color: #fff; }
 
         /* Brand lockup: KANTOR extrabold/white, BLACK SHEEP bold/gray */
         .brand-top { font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; }
@@ -154,6 +165,24 @@
         #calculator input:focus, #calculator select:focus, #calculator button:focus-visible { outline-color: #0a0a0a; }
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
         input[type=number] { -moz-appearance: textfield; }
+
+        /* very narrow phones: keep the nav on one line */
+        @media (max-width: 400px) {
+            .lockup { font-size: 0.55rem !important; }
+            .lang-btn { padding: 0.3rem 0.5rem; }
+        }
+
+        /* FAQ accordion */
+        .faq { border: 1px solid #e5e5e5; border-radius: 1rem; background: #fff; }
+        .faq + .faq { margin-top: 0.75rem; }
+        .faq summary {
+            list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+            gap: 1rem; padding: 1.1rem 1.25rem; font-weight: 700; font-size: 0.95rem;
+        }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after { content: "+"; font-weight: 700; font-size: 1.2rem; color: #737373; transition: transform 0.15s ease; }
+        .faq[open] summary::after { transform: rotate(45deg); }
+        .faq p { padding: 0 1.25rem 1.1rem; font-size: 0.92rem; color: #404040; line-height: 1.55; }
     </style>
 </head>
 <body>
@@ -181,10 +210,10 @@
                         <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
                         <button class="lang-btn" id="btn-pl" onclick="setLanguage('pl')">PL</button>
                     </div>
-                    <a href="tel:+48889505057" class="hidden sm:inline-flex btn-ghost !py-2 !px-4 !text-xs num !gap-2">
+                    <span class="hidden sm:inline-flex"><a href="tel:+48889505057" class="btn-ghost !py-2 !px-4 !text-xs num !gap-2">
                         <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>+48 889 505 057</a>
+                        </svg>+48 889 505 057</a></span>
                     <a href="tel:+48889505057" aria-label="Call +48 889 505 057" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white text-white">
                         <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -270,7 +299,7 @@
                 </div>
 
                 <!-- Also buy -->
-                <div class="mt-5 bg-[--panel]/60 border border-neutral-800 rounded-3xl px-6 py-5">
+                <div class="mt-5 bg-[#141414]/60 border border-neutral-800 rounded-3xl px-6 py-5">
                     <p class="eyebrow mb-3" data-i18n="also_title">We also buy</p>
                     <div id="also-chips" class="flex flex-wrap gap-2 mb-3"></div>
                     <p class="text-sm text-neutral-400">
@@ -369,6 +398,44 @@
         </div>
     </section>
 
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="bg-[--paper] text-neutral-900 py-16 sm:py-20 px-4 sm:px-6 scroll-mt-16">
+        <div class="max-w-3xl mx-auto">
+            <p class="eyebrow !text-neutral-500 text-center mb-2" data-i18n="faq_eyebrow">Good to know</p>
+            <h2 class="display text-2xl sm:text-3xl text-center mb-10" data-i18n="faq_title">Frequently asked questions</h2>
+
+            <details class="faq">
+                <summary><span data-i18n="faq_q1">Is this the former "Kantor U Górali"?</span></summary>
+                <p data-i18n="faq_a1">Yes — same exchange office, same spot at Floriańska 37, same owner. In 2026 we rebranded to Exchange Kantor Black Sheep. Only the name changed; the rates policy stayed.</p>
+            </details>
+            <details class="faq">
+                <summary><span data-i18n="faq_q7">Which currencies do you exchange?</span></summary>
+                <p data-i18n="faq_a7">Always on the board: euro (EUR), US dollars (USD) and British pounds (GBP). We also buy: Swiss francs (CHF), Canadian dollars (CAD), Australian dollars (AUD), Danish krone (DKK), Swedish krona (SEK), Norwegian krone (NOK), Czech koruna (CZK), Hungarian forints (HUF), Japanese yen (JPY) and UAE dirhams (AED) — plus euro coins and withdrawn or damaged banknotes, after a phone call in advance.</p>
+            </details>
+            <details class="faq">
+                <summary><span data-i18n="faq_q2">Are the rates negotiable?</span></summary>
+                <p data-i18n="faq_a2">For larger amounts — yes, just ask at the counter. From the equivalent of 1,000 EUR wholesale rates apply automatically.</p>
+            </details>
+            <details class="faq">
+                <summary><span data-i18n="faq_q3">Can I pay by card?</span></summary>
+                <p data-i18n="faq_a3">We exchange cash only — like every traditional kantor in Poland.</p>
+            </details>
+            <details class="faq">
+                <summary><span data-i18n="faq_q4">Do you buy old, withdrawn or damaged banknotes?</span></summary>
+                <p data-i18n="faq_a4">Yes — withdrawn series, damaged banknotes and euro coins. Contact us in advance at +48 889 505 057 to confirm what you have.</p>
+            </details>
+            <details class="faq">
+                <summary><span data-i18n="faq_q5">Do I need an ID to exchange money?</span></summary>
+                <p data-i18n="faq_a5">For everyday amounts — no. Polish anti-money-laundering law requires identification only for transactions from the equivalent of 15,000 EUR.</p>
+            </details>
+            <details class="faq">
+                <summary><span data-i18n="faq_q6">Are you open on weekends?</span></summary>
+                <p data-i18n="faq_a6">Saturday 10:00–20:00. Sunday we are closed. Monday to Friday 09:00–20:00.</p>
+            </details>
+        </div>
+    </section>
+
     <!-- ================= FOOTER ================= -->
     <footer class="border-t border-neutral-800 py-10 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
@@ -377,6 +444,9 @@
                 <p class="text-xs text-neutral-500 mt-1">Floriańska 37, 31-019 Kraków</p>
             </div>
             <div class="text-xs text-neutral-500 sm:text-center flex flex-col gap-1.5">
+                <a href="before-you-visit.html" class="underline underline-offset-4 hover:text-white transition-colors" data-i18n="footer_guide">
+                    Before you visit Kraków — money guide →
+                </a>
                 <a href="avoid-scams.html" class="underline underline-offset-4 hover:text-white transition-colors" data-i18n="footer_avoid">
                     How not to get scammed at an exchange →
                 </a>
@@ -446,6 +516,22 @@
                 visit_hours: "Opening hours", hours_week: "Mon–Fri", hours_sat: "Saturday", hours_sun: "Sunday", hours_closed: "Closed",
                 visit_contact: "Contact", visit_languages: "We speak English & Polish.",
                 visit_photo_caption: "Look for the board with the black sheep and EUR, USD, GBP rates — don't get fleeced.",
+                footer_guide: "Before you visit Kraków — money guide →",
+                faq_eyebrow: "Good to know", faq_title: "Frequently asked questions",
+                faq_q1: "Is this the former \"Kantor U Górali\"?",
+                faq_a1: "Yes — same exchange office, same spot at Floriańska 37, same owner. In 2026 we rebranded to Exchange Kantor Black Sheep. Only the name changed; the rates policy stayed.",
+                faq_q7: "Which currencies do you exchange?",
+                faq_a7: "Always on the board: euro (EUR), US dollars (USD) and British pounds (GBP). We also buy: Swiss francs (CHF), Canadian dollars (CAD), Australian dollars (AUD), Danish krone (DKK), Swedish krona (SEK), Norwegian krone (NOK), Czech koruna (CZK), Hungarian forints (HUF), Japanese yen (JPY) and UAE dirhams (AED) — plus euro coins and withdrawn or damaged banknotes, after a phone call in advance.",
+                faq_q2: "Are the rates negotiable?",
+                faq_a2: "For larger amounts — yes, just ask at the counter. From the equivalent of 1,000 EUR wholesale rates apply automatically.",
+                faq_q3: "Can I pay by card?",
+                faq_a3: "We exchange cash only — like every traditional kantor in Poland.",
+                faq_q4: "Do you buy old, withdrawn or damaged banknotes?",
+                faq_a4: "Yes — withdrawn series, damaged banknotes and euro coins. Contact us in advance at +48 889 505 057 to confirm what you have.",
+                faq_q5: "Do I need an ID to exchange money?",
+                faq_a5: "For everyday amounts — no. Polish anti-money-laundering law requires identification only for transactions from the equivalent of 15,000 EUR.",
+                faq_q6: "Are you open on weekends?",
+                faq_a6: "Saturday 10:00–20:00. Sunday we are closed. Monday to Friday 09:00–20:00.",
                 footer_avoid: "How not to get scammed at an exchange →",
                 footer_scam: "Scammed by an exchange office? What to do →",
                 footer_nbp: "Registered currency exchange — NBP register",
@@ -480,6 +566,22 @@
                 visit_hours: "Godziny otwarcia", hours_week: "Pon–Pt", hours_sat: "Sobota", hours_sun: "Niedziela", hours_closed: "Zamknięte",
                 visit_contact: "Kontakt", visit_languages: "Mówimy po polsku i angielsku.",
                 visit_photo_caption: "Szukaj tablicy z czarną owcą i kursami EUR, USD, GBP — nie daj się oskubać.",
+                footer_guide: "Zanim przyjedziesz do Krakowa — przewodnik po pieniądzach →",
+                faq_eyebrow: "Warto wiedzieć", faq_title: "Częste pytania",
+                faq_q1: "Czy to dawny \"Kantor U Górali\"?",
+                faq_a1: "Tak — ten sam kantor, to samo miejsce przy Floriańskiej 37 i ten sam właściciel. W 2026 roku zmieniliśmy nazwę na Exchange Kantor Black Sheep. Zmieniła się tylko nazwa — polityka kursów została.",
+                faq_q7: "Jakie waluty wymieniacie?",
+                faq_a7: "Stale na tablicy: euro (EUR), dolary amerykańskie (USD) i funty brytyjskie (GBP). Skupujemy również: franki szwajcarskie (CHF), dolary kanadyjskie (CAD), dolary australijskie (AUD), korony duńskie (DKK), korony szwedzkie (SEK), korony norweskie (NOK), korony czeskie (CZK), forinty węgierskie (HUF), jeny japońskie (JPY) i dirhamy ZEA (AED) — a także bilon euro oraz wycofane i zniszczone banknoty, po wcześniejszym kontakcie telefonicznym.",
+                faq_q2: "Czy kursy podlegają negocjacji?",
+                faq_a2: "Przy większych kwotach — tak, wystarczy zapytać w okienku. Od równowartości 1 000 EUR automatycznie obowiązują kursy hurtowe.",
+                faq_q3: "Czy mogę zapłacić kartą?",
+                faq_a3: "Wymieniamy wyłącznie gotówkę — jak każdy tradycyjny kantor w Polsce.",
+                faq_q4: "Czy skupujecie stare, wycofane lub zniszczone banknoty?",
+                faq_a4: "Tak — wycofane serie, zniszczone banknoty oraz bilon euro. Zadzwoń wcześniej pod +48 889 505 057 i potwierdź, co masz.",
+                faq_q5: "Czy potrzebuję dokumentu, żeby wymienić pieniądze?",
+                faq_a5: "Przy codziennych kwotach — nie. Przepisy AML wymagają identyfikacji dopiero od transakcji o równowartości 15 000 EUR.",
+                faq_q6: "Czy jesteście otwarci w weekendy?",
+                faq_a6: "Sobota 10:00–20:00. W niedziele zamknięte. Od poniedziałku do piątku 09:00–20:00.",
                 footer_avoid: "Jak nie dać się oszukać w kantorze →",
                 footer_scam: "Oszukał Cię kantor? Zobacz, co zrobić →",
                 footer_nbp: "Działalność kantorowa wpisana do rejestru NBP",
@@ -627,13 +729,19 @@
         }
 
         async function loadRates() {
-            try {
-                const res = await fetch("rates.json?t=" + Date.now(), { cache: "no-store" });
-                if (res.ok) {
-                    const json = await res.json();
-                    if (json && json.rates) DATA = json;
-                }
-            } catch (e) {}
+            const sources = [
+                "https://raw.githubusercontent.com/TworcaMilosci/krakowexchange/main/rates.json?t=" + Date.now(),
+                "rates.json?t=" + Date.now()
+            ];
+            for (const url of sources) {
+                try {
+                    const res = await fetch(url, { cache: "no-store" });
+                    if (res.ok) {
+                        const json = await res.json();
+                        if (json && json.rates) { DATA = json; break; }
+                    }
+                } catch (e) {}
+            }
             renderBoard();
             renderAlsoBuy();
             renderCurrencyOptions();
