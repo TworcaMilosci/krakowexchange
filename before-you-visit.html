@@ -41,6 +41,16 @@
   .back{font:700 12px 'Montserrat';letter-spacing:.18em;text-decoration:none;color:var(--text);white-space:nowrap}
   .back:hover{color:#fff}
 
+  /* mobile: keep the header on one clean line */
+  @media(max-width:640px){
+    .hd{gap:10px}
+    .logo-txt{font-size:14px}
+    .logo-txt small{font-size:8px;letter-spacing:.14em}
+    .lang button{padding:7px 12px;font-size:11px}
+    .back{font-size:11px;letter-spacing:.08em}
+  }
+
+
   .hero{padding:88px 0 40px}
   .eyebrow{font:700 12px 'Montserrat';letter-spacing:.3em;color:var(--muted);text-transform:uppercase;margin-bottom:20px}
   h1{font-weight:800;font-size:clamp(36px,5.6vw,60px);letter-spacing:.01em;line-height:1.06;text-transform:uppercase}
@@ -82,6 +92,8 @@
   .btn{display:inline-block;background:#fff;color:#000;border:0;border-radius:999px;
        font:800 13px 'Montserrat';letter-spacing:.14em;text-transform:uppercase;padding:18px 38px;cursor:pointer;text-decoration:none}
   .btn:hover{background:#ddd}
+  .btn{white-space:nowrap;max-width:100%}
+  @media(max-width:560px){.btn{font-size:12px;padding:14px 22px;letter-spacing:.1em}}
   .btn.ghost{background:none;color:#fff;border:1px solid #555}
   .btn.ghost:hover{border-color:#fff}
   .cta{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;padding:40px 0 10px}
@@ -328,7 +340,7 @@ const T = {
   disc:"Written by the team of Kantor Black Sheep, Floriańska 37, Kraków. Yes, we run an exchange office — that's exactly why we know every trick on this page. The advice above is general information, holds true for any honest kantor, and costs you nothing to verify."
  },
  pl:{
-  back:"← STRONA GŁÓWNA",
+  back:"← START",
   eyebrow:"Przewodnik finansowy dla turystów · Kraków",
   h1:"Zanim odwiedzisz Kraków",
   lead:"Wszystko o pieniądzach w Polsce, co pomijają przewodniki: gdzie karta zawodzi, jak bankomaty naciągają i dlaczego jedno słowo — \u201Ezłoty\u201D — realnie oszczędza pieniądze. Szczere porady od kantoru, który nie znosi patrzeć, jak turyści dają się oskubać.",

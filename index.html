@@ -58,6 +58,7 @@
         {"@type":"Question","name":"Czy to dawny Kantor U Górali?","acceptedAnswer":{"@type":"Answer","text":"Tak — ten sam kantor przy Floriańskiej 37 i ten sam właściciel. W 2026 roku zmieniliśmy nazwę na Exchange Kantor Black Sheep."}},
         {"@type":"Question","name":"Jakie waluty wymieniacie?","acceptedAnswer":{"@type":"Answer","text":"Stale: euro (EUR), dolary amerykańskie (USD), funty brytyjskie (GBP). Skupujemy również franki szwajcarskie (CHF), dolary kanadyjskie (CAD), dolary australijskie (AUD), korony duńskie (DKK), szwedzkie (SEK), norweskie (NOK), czeskie (CZK), forinty węgierskie (HUF), jeny japońskie (JPY), dirhamy ZEA (AED), bilon euro oraz wycofane i zniszczone banknoty."}},
         {"@type":"Question","name":"Czy kursy podlegają negocjacji?","acceptedAnswer":{"@type":"Answer","text":"Przy większych kwotach tak — od równowartości 1 000 EUR automatycznie obowiązują kursy hurtowe."}},
+        {"@type":"Question","name":"Który kurs mnie dotyczy — kupno czy sprzedaż?","acceptedAnswer":{"@type":"Answer","text":"Kursy podajemy od strony kantoru. Kupno: przynosisz nam walutę — przy kursie kupna EUR 4,40 za 100 euro otrzymasz 440 zł. Sprzedaż: kupujesz walutę od nas — przy kursie sprzedaży GBP 5,10 za 100 funtów zapłacisz 510 zł."}},
         {"@type":"Question","name":"Czy mogę zapłacić kartą?","acceptedAnswer":{"@type":"Answer","text":"Wymieniamy wyłącznie gotówkę."}},
         {"@type":"Question","name":"Czy skupujecie stare, wycofane lub zniszczone banknoty?","acceptedAnswer":{"@type":"Answer","text":"Tak — wycofane serie, zniszczone banknoty oraz bilon euro, po wcześniejszym kontakcie telefonicznym."}},
         {"@type":"Question","name":"Czy potrzebuję dokumentu, żeby wymienić pieniądze?","acceptedAnswer":{"@type":"Answer","text":"Przy codziennych kwotach nie — identyfikacja jest wymagana od równowartości 15 000 EUR."}},
@@ -183,6 +184,8 @@
         .faq summary::after { content: "+"; font-weight: 700; font-size: 1.2rem; color: #737373; transition: transform 0.15s ease; }
         .faq[open] summary::after { transform: rotate(45deg); }
         .faq p { padding: 0 1.25rem 1.1rem; font-size: 0.92rem; color: #404040; line-height: 1.55; }
+        .faq .curr { display: block; padding: 0.18rem 0; font-weight: 600; color: #262626; }
+        .faq a { text-decoration: underline; text-underline-offset: 3px; font-weight: 700; color: #0a0a0a; }
     </style>
 </head>
 <body>
@@ -306,6 +309,7 @@
                         <span data-i18n="also_extra">+ euro coins, withdrawn and damaged banknotes</span> ·
                         <span data-i18n="also_note">contact us in advance</span>:
                         <a href="tel:+48889505057" class="block sm:inline-block mt-1 sm:mt-0 whitespace-nowrap num text-white underline underline-offset-4 hover:text-neutral-300">+48 889 505 057</a>
+                        <span class="hidden sm:inline"> · </span><a href="https://wa.me/48889505057" target="_blank" rel="noopener" class="block sm:inline-block mt-1 sm:mt-0 whitespace-nowrap text-white underline underline-offset-4 hover:text-neutral-300">WhatsApp</a>
                     </p>
                 </div>
             </div>
@@ -392,6 +396,7 @@
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-3" data-i18n="visit_contact">Contact</p>
                     <a href="tel:+48889505057" class="text-lg font-semibold num hover:underline underline-offset-4">+48 889 505 057</a>
+                    <p class="mt-2"><a href="https://wa.me/48889505057" target="_blank" rel="noopener" class="text-sm text-neutral-300 underline underline-offset-4 hover:text-white transition-colors">WhatsApp: +48 889 505 057</a></p>
                     <p class="text-sm text-neutral-500 mt-4" data-i18n="visit_languages">We speak English &amp; Polish.</p>
                 </div>
             </div>
@@ -411,11 +416,15 @@
             </details>
             <details class="faq">
                 <summary><span data-i18n="faq_q7">Which currencies do you exchange?</span></summary>
-                <p data-i18n="faq_a7">Always on the board: euro (EUR), US dollars (USD) and British pounds (GBP). We also buy: Swiss francs (CHF), Canadian dollars (CAD), Australian dollars (AUD), Danish krone (DKK), Swedish krona (SEK), Norwegian krone (NOK), Czech koruna (CZK), Hungarian forints (HUF), Japanese yen (JPY) and UAE dirhams (AED) — plus euro coins and withdrawn or damaged banknotes, after a phone call in advance.</p>
+                <p data-i18n="faq_a7" data-i18n-html>Loading…</p>
             </details>
             <details class="faq">
                 <summary><span data-i18n="faq_q2">Are the rates negotiable?</span></summary>
                 <p data-i18n="faq_a2">For larger amounts — yes, just ask at the counter. From the equivalent of 1,000 EUR wholesale rates apply automatically.</p>
+            </details>
+            <details class="faq">
+                <summary><span data-i18n="faq_q8">Which rate applies to me — buy or sell?</span></summary>
+                <p data-i18n="faq_a8" data-i18n-html>Loading…</p>
             </details>
             <details class="faq">
                 <summary><span data-i18n="faq_q3">Can I pay by card?</span></summary>
@@ -521,9 +530,11 @@
                 faq_q1: "Is this the former \"Kantor U Górali\"?",
                 faq_a1: "Yes — same exchange office, same spot at Floriańska 37, same owner. In 2026 we rebranded to Exchange Kantor Black Sheep. Only the name changed; the rates policy stayed.",
                 faq_q7: "Which currencies do you exchange?",
-                faq_a7: "Always on the board: euro (EUR), US dollars (USD) and British pounds (GBP). We also buy: Swiss francs (CHF), Canadian dollars (CAD), Australian dollars (AUD), Danish krone (DKK), Swedish krona (SEK), Norwegian krone (NOK), Czech koruna (CZK), Hungarian forints (HUF), Japanese yen (JPY) and UAE dirhams (AED) — plus euro coins and withdrawn or damaged banknotes, after a phone call in advance.",
+                faq_a7: "<span class=\"curr\">🇪🇺 EUR (euro)</span><span class=\"curr\">🇺🇸 USD (US dollars)</span><span class=\"curr\">🇬🇧 GBP (British pounds)</span><span class=\"curr\">🇨🇭 CHF (Swiss francs)</span><span class=\"curr\">🇨🇦 CAD (Canadian dollars)</span><span class=\"curr\">🇦🇺 AUD (Australian dollars)</span><span class=\"curr\">🇩🇰 DKK (Danish krone)</span><span class=\"curr\">🇸🇪 SEK (Swedish krona)</span><span class=\"curr\">🇳🇴 NOK (Norwegian krone)</span><span class=\"curr\">🇨🇿 CZK (Czech koruna)</span><span class=\"curr\">🇭🇺 HUF (Hungarian forints)</span><span class=\"curr\">🇯🇵 JPY (Japanese yen)</span><span class=\"curr\">🇦🇪 AED (UAE dirhams)</span>— plus euro coins and withdrawn or damaged banknotes, after contacting us first. You can send photos on WhatsApp: <a href=\"https://wa.me/48889505057\" target=\"_blank\" rel=\"noopener\">wa.me/48889505057</a>",
                 faq_q2: "Are the rates negotiable?",
                 faq_a2: "For larger amounts — yes, just ask at the counter. From the equivalent of 1,000 EUR wholesale rates apply automatically.",
+                faq_q8: "Which rate applies to me — buy or sell?",
+                faq_a8: "Rates are always quoted from the kantor's side — WE BUY or WE SELL the currency.<br><br><strong>We buy</strong> = you bring us currency. At a buy rate of EUR 4.40, for 100 euro you receive <strong>440 zł</strong>.<br><br><strong>We sell</strong> = you buy currency from us. At a sell rate of GBP 5.10, for 100 British pounds you pay <strong>510 zł</strong>.",
                 faq_q3: "Can I pay by card?",
                 faq_a3: "We exchange cash only — like every traditional kantor in Poland.",
                 faq_q4: "Do you buy old, withdrawn or damaged banknotes?",
@@ -571,9 +582,11 @@
                 faq_q1: "Czy to dawny \"Kantor U Górali\"?",
                 faq_a1: "Tak — ten sam kantor, to samo miejsce przy Floriańskiej 37 i ten sam właściciel. W 2026 roku zmieniliśmy nazwę na Exchange Kantor Black Sheep. Zmieniła się tylko nazwa — polityka kursów została.",
                 faq_q7: "Jakie waluty wymieniacie?",
-                faq_a7: "Stale na tablicy: euro (EUR), dolary amerykańskie (USD) i funty brytyjskie (GBP). Skupujemy również: franki szwajcarskie (CHF), dolary kanadyjskie (CAD), dolary australijskie (AUD), korony duńskie (DKK), korony szwedzkie (SEK), korony norweskie (NOK), korony czeskie (CZK), forinty węgierskie (HUF), jeny japońskie (JPY) i dirhamy ZEA (AED) — a także bilon euro oraz wycofane i zniszczone banknoty, po wcześniejszym kontakcie telefonicznym.",
+                faq_a7: "<span class=\"curr\">🇪🇺 EUR (euro)</span><span class=\"curr\">🇺🇸 USD (dolary amerykańskie)</span><span class=\"curr\">🇬🇧 GBP (funty brytyjskie)</span><span class=\"curr\">🇨🇭 CHF (franki szwajcarskie)</span><span class=\"curr\">🇨🇦 CAD (dolary kanadyjskie)</span><span class=\"curr\">🇦🇺 AUD (dolary australijskie)</span><span class=\"curr\">🇩🇰 DKK (korony duńskie)</span><span class=\"curr\">🇸🇪 SEK (korony szwedzkie)</span><span class=\"curr\">🇳🇴 NOK (korony norweskie)</span><span class=\"curr\">🇨🇿 CZK (korony czeskie)</span><span class=\"curr\">🇭🇺 HUF (forinty węgierskie)</span><span class=\"curr\">🇯🇵 JPY (jeny japońskie)</span><span class=\"curr\">🇦🇪 AED (dirhamy ZEA)</span>— a także bilon euro oraz wycofane i zniszczone banknoty, po wcześniejszym kontakcie. Zdjęcia możesz podesłać na WhatsApp: <a href=\"https://wa.me/48889505057\" target=\"_blank\" rel=\"noopener\">wa.me/48889505057</a>",
                 faq_q2: "Czy kursy podlegają negocjacji?",
                 faq_a2: "Przy większych kwotach — tak, wystarczy zapytać w okienku. Od równowartości 1 000 EUR automatycznie obowiązują kursy hurtowe.",
+                faq_q8: "Który kurs mnie dotyczy — kupno czy sprzedaż?",
+                faq_a8: "Kursy zawsze podajemy od strony kantoru — to MY KUPUJEMY lub MY SPRZEDAJEMY walutę.<br><br><strong>Kupno</strong> = przynosisz nam walutę. Przy kursie kupna EUR 4,40 za 100 euro otrzymasz <strong>440 zł</strong>.<br><br><strong>Sprzedaż</strong> = kupujesz walutę od nas. Przy kursie sprzedaży GBP 5,10 za 100 funtów brytyjskich zapłacisz <strong>510 zł</strong>.",
                 faq_q3: "Czy mogę zapłacić kartą?",
                 faq_a3: "Wymieniamy wyłącznie gotówkę — jak każdy tradycyjny kantor w Polsce.",
                 faq_q4: "Czy skupujecie stare, wycofane lub zniszczone banknoty?",
@@ -613,7 +626,9 @@
             const t = translations[lang];
             document.querySelectorAll("[data-i18n]").forEach(el => {
                 const key = el.getAttribute("data-i18n");
-                if (t[key]) el.textContent = t[key];
+                if (!t[key]) return;
+                if (el.hasAttribute("data-i18n-html")) el.innerHTML = t[key];
+                else el.textContent = t[key];
             });
             document.getElementById("btn-en").classList.toggle("active", lang === "en");
             document.getElementById("btn-pl").classList.toggle("active", lang === "pl");

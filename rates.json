@@ -5,21 +5,21 @@
   "rates": {
     "EUR": {
       "buy": 4.22,
-      "sell": 4.33,
-      "buyHurt": 4.30,
-      "sellHurt": 4.33
+      "sell": 4.34,
+      "buyHurt": 4.32,
+      "sellHurt": 4.34
     },
     "USD": {
-      "buy": 3.60,
-      "sell": 3.73,
-      "buyHurt": 3.70,
-      "sellHurt": 3.72
+      "buy": 3.62,
+      "sell": 3.74,
+      "buyHurt": 3.71,
+      "sellHurt": 3.74
     },
     "GBP": {
-      "buy": 4.90,
-      "sell": 5.06,
-      "buyHurt": 5.01,
-      "sellHurt": 5.05
+      "buy": 4.92,
+      "sell": 5.09,
+      "buyHurt": 5.03,
+      "sellHurt": 5.07
     }
   },
   "alsoBuy": [
