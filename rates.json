@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-28",
+  "updated": "2026-08-29",
   "wholesaleFrom": "1 000 EUR",
   "wholesaleMinAmount": 1000,
   "rates": {
     "EUR": {
-      "buy": 4.420,
+      "buy": 4.22,
       "sell": 4.33,
       "buyHurt": 4.30,
       "sellHurt": 4.33
