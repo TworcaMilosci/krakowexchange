@@ -172,6 +172,9 @@
             .lockup { font-size: 0.55rem !important; }
             .lang-btn { padding: 0.3rem 0.5rem; }
         }
+        @media (max-width: 430px) {
+            thead th { letter-spacing: 0.14em; }
+        }
 
         /* FAQ accordion */
         .faq { border: 1px solid #e5e5e5; border-radius: 1rem; background: #fff; }
@@ -278,12 +281,12 @@
                             <tr class="text-left">
                                 <th class="px-6 pt-5 pb-2 eyebrow"><span data-i18n="th_currency">Currency</span></th>
                                 <th class="px-3 pt-5 pb-2 eyebrow text-right">
-                                    <span data-i18n="th_buy_main">We buy</span><br>
-                                    <span class="text-neutral-600" data-i18n="th_buy_sub">kupno</span>
+                                    <span class="whitespace-nowrap" data-i18n="th_buy_main">We buy</span><br>
+                                    <span class="text-neutral-600 whitespace-nowrap" data-i18n="th_buy_sub">kupno</span>
                                 </th>
                                 <th class="px-6 pt-5 pb-2 eyebrow text-right">
-                                    <span data-i18n="th_sell_main">We sell</span><br>
-                                    <span class="text-neutral-600" data-i18n="th_sell_sub">sprzedaż</span>
+                                    <span class="whitespace-nowrap" data-i18n="th_sell_main">We sell</span><br>
+                                    <span class="text-neutral-600 whitespace-nowrap" data-i18n="th_sell_sub">sprzedaż</span>
                                 </th>
                             </tr>
                         </thead>
@@ -369,13 +372,13 @@
                      loading="lazy" width="1400" height="875"
                      alt="Kantor Black Sheep, Floriańska 37 — tablica kursów po prawej, w tle Brama Floriańska / rate board on the right, St. Florian's Gate ahead"
                      class="w-full rounded-2xl border border-neutral-800 object-cover">
-                <p class="text-xs text-neutral-500 mt-2 text-center" data-i18n="visit_photo_caption">Look for the board with the black sheep and EUR, USD, GBP rates — don't get fleeced.</p>
+                <p class="text-xs text-neutral-500 mt-2 text-center" data-i18n="visit_photo_caption">We are 100 m from St. Florian's Gate. Look for the board with the black sheep and EUR, USD, GBP rates — don't get fleeced.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-3" data-i18n="visit_address">Address</p>
-                    <p class="text-lg font-semibold">Floriańska 37</p>
+                    <p class="text-lg font-semibold" data-i18n="visit_street">Floriańska Street 37</p>
                     <p class="text-neutral-400 mb-5">31-019 Kraków</p>
                     <a href="https://maps.google.com/?cid=3299726714959505459" target="_blank" rel="noopener" class="btn-solid !w-full !px-4 text-center">
                         <span data-i18n="btn_maps">Open Google Maps</span>
@@ -520,11 +523,11 @@
                 calc_wholesale_applied: "wholesale rate",
                 result_receive: "You receive", result_pay: "You pay",
                 visit_eyebrow: "Kraków Old Town", visit_title: "Find us",
-                visit_address: "Address",
+                visit_address: "Address", visit_street: "Floriańska Street 37",
                 btn_maps: "Open Google Maps", btn_copy: "Copy address",
                 visit_hours: "Opening hours", hours_week: "Mon–Fri", hours_sat: "Saturday", hours_sun: "Sunday", hours_closed: "Closed",
                 visit_contact: "Contact", visit_languages: "We speak English & Polish.",
-                visit_photo_caption: "Look for the board with the black sheep and EUR, USD, GBP rates — don't get fleeced.",
+                visit_photo_caption: "We are 100 m from St. Florian\'s Gate. Look for the board with the black sheep and EUR, USD, GBP rates — don\'t get fleeced.",
                 footer_guide: "Before you visit Kraków — money guide →",
                 faq_eyebrow: "Good to know", faq_title: "Frequently asked questions",
                 faq_q1: "Is this the former \"Kantor U Górali\"?",
@@ -572,11 +575,11 @@
                 calc_wholesale_applied: "kurs hurtowy",
                 result_receive: "Otrzymasz", result_pay: "Zapłacisz",
                 visit_eyebrow: "Stare Miasto", visit_title: "Lokalizacja",
-                visit_address: "Adres",
+                visit_address: "Adres", visit_street: "ul. Floriańska 37",
                 btn_maps: "Otwórz Mapy Google", btn_copy: "Kopiuj adres",
                 visit_hours: "Godziny otwarcia", hours_week: "Pon–Pt", hours_sat: "Sobota", hours_sun: "Niedziela", hours_closed: "Zamknięte",
                 visit_contact: "Kontakt", visit_languages: "Mówimy po polsku i angielsku.",
-                visit_photo_caption: "Szukaj tablicy z czarną owcą i kursami EUR, USD, GBP — nie daj się oskubać.",
+                visit_photo_caption: "Jesteśmy 100 m od Bramy Floriańskiej. Szukaj tablicy z czarną owcą i kursami EUR, USD, GBP — nie daj się oskubać.",
                 footer_guide: "Zanim przyjedziesz do Krakowa — przewodnik po pieniądzach →",
                 faq_eyebrow: "Warto wiedzieć", faq_title: "Częste pytania",
                 faq_q1: "Czy to dawny \"Kantor U Górali\"?",
