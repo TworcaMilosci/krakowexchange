@@ -102,9 +102,10 @@
   .disclaimer{color:var(--faint);font-size:12.5px;max-width:760px;margin:26px auto 0;text-align:center}
 
   /* ===== unified header (matches the homepage nav 1:1) ===== */
-  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(0,0,0,.9);backdrop-filter:blur(8px);border-bottom:1px solid #262626}
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(0,0,0,.9);backdrop-filter:blur(8px);border-bottom:1px solid #262626;padding:0 16px}
+  @media(min-width:640px){header{padding:0 24px}}
   body{padding-top:64px}
-  .hd{height:64px;padding:0;gap:12px}
+  .hd{height:64px;padding:0;gap:12px;max-width:1152px;margin:0 auto}
   .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
   .logo img{width:40px!important;height:40px!important;border-radius:12px!important}
   .logo-txt{display:inline-block;line-height:1;text-transform:uppercase;font-weight:800;font-size:calc(0.62rem * 1.9);letter-spacing:.045em;color:#fff}
@@ -282,7 +283,7 @@
 
 </main>
 
-<footer>© 2026 Kantor Black Sheep · Floriańska 37, Kraków</footer>
+<footer>© 2026 Kantor Black Sheep · Floriańska 37, Kraków · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacy / Prywatność</a></footer>
 
 <script>
 const T = {
@@ -449,5 +450,6 @@ function setLang(l){
 }
 setLang(LANG);
 </script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fce89aac099a4854bc0afdcbf74b9904"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
