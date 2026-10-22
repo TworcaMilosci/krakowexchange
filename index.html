@@ -234,12 +234,12 @@
                 </p>
 
                 <a href="https://maps.google.com/?cid=3299726714959505459" target="_blank" rel="noopener"
-                   class="group inline-flex items-center mb-6" aria-label="4.7 out of 5 stars on Google Maps">
-                    <span class="stars text-lg" style="--rating: 94%;" aria-hidden="true">
+                   class="group inline-flex items-center mb-6" aria-label="4.8 out of 5 stars on Google Maps">
+                    <span class="stars text-lg" style="--rating: 96%;" aria-hidden="true">
                         <span class="base">★★★★★</span>
                         <span class="fill">★★★★★</span>
                     </span>
-                    <span class="text-white font-bold text-sm ml-2">4.7</span>
+                    <span class="text-white font-bold text-sm ml-2">4.8</span>
                     <span class="text-sm text-neutral-400 underline underline-offset-4 group-hover:text-white transition-colors ml-3" data-i18n="hero_reviews">on Google Maps</span>
                 </a>
 
@@ -649,6 +649,11 @@
             renderBoardNote();
         }
 
+        function fmtRate(n) {
+            const dec = (String(n).split(".")[1] || "").length;
+            return n.toFixed(Math.min(Math.max(dec, 2), 4));
+        }
+
         function renderBoard() {
             const tbody = document.getElementById("board-body");
             const wholesale = currentView === "wholesale";
@@ -661,8 +666,8 @@
                         <span class="text-xl mr-2" aria-hidden="true">${FLAGS[code] || ""}</span>
                         <span class="display text-lg sm:text-xl">${code}</span>
                     </td>
-                    <td class="px-3 py-4 text-right board-digit num text-xl sm:text-2xl">${buy.toFixed(2)}</td>
-                    <td class="px-6 py-4 text-right board-digit num text-xl sm:text-2xl">${sell.toFixed(2)}</td>
+                    <td class="px-3 py-4 text-right board-digit num text-xl sm:text-2xl">${fmtRate(buy)}</td>
+                    <td class="px-6 py-4 text-right board-digit num text-xl sm:text-2xl">${fmtRate(sell)}</td>
                 </tr>`;
             }).join("");
             document.getElementById("board-date").textContent = DATA.updated || "—";
@@ -724,7 +729,7 @@
                 : (useW ? r.sellHurt : r.sell);
             document.getElementById("result-label").textContent = activeDirection === "sell" ? t.result_receive : t.result_pay;
             document.getElementById("result").textContent = (amount * rate).toLocaleString(currentLang === "pl" ? "pl-PL" : "en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            document.getElementById("applied-rate").textContent = rate.toFixed(4);
+            document.getElementById("applied-rate").textContent = fmtRate(rate);
             document.getElementById("rate-tier").textContent = useW ? " · " + t.calc_wholesale_applied : "";
         }
 
