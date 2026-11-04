@@ -1,25 +1,25 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "wholesaleFrom": "5 000 EUR",
   "wholesaleMinAmount": 5000,
   "rates": {
     "EUR": {
-      "buy": 4.34,
-      "sell": 4.43,
-      "buyHurt": 4.40,
-      "sellHurt": 4.42
+      "buy": 4.31,
+      "sell": 4.42,
+      "buyHurt": 4.38,
+      "sellHurt": 4.405
     },
     "USD": {
-      "buy": 3.86,
-      "sell": 3.97,
-      "buyHurt": 3.93,
-      "sellHurt": 3.95
+      "buy": 3.82,
+      "sell": 3.94,
+      "buyHurt": 3.90,
+      "sellHurt": 3.925
     },
     "GBP": {
-      "buy": 5.16,
-      "sell": 5.32,
-      "buyHurt": 5.27,
-      "sellHurt": 5.30
+      "buy": 5.15,
+      "sell": 5.30,
+      "buyHurt": 5.25,
+      "sellHurt": 5.285
     }
   },
   "alsoBuy": [
