@@ -1,13 +1,15 @@
+---
+import Logo from '../components/Logo.astro';
+import GeoMeta from '../components/GeoMeta.astro';
+import Analytics from '../components/Analytics.astro';
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polityka prywatności / Privacy policy | Exchange Kantor Black Sheep</title>
-    <meta name="geo.region" content="PL-12">
-    <meta name="geo.placename" content="Kraków">
-    <meta name="geo.position" content="50.06373;19.9408">
-    <meta name="ICBM" content="50.06373, 19.9408">
+    <GeoMeta />
     <meta property="og:image" content="https://kantorblacksheep.pl/images/front-og-2.jpg">
     <meta name="description" content="Polityka prywatności Exchange Kantor Black Sheep — kto jest administratorem danych i co przetwarzamy. Privacy policy.">
     <meta name="robots" content="index, follow">
@@ -17,7 +19,7 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <link rel="stylesheet" href="styles.css">
-    <style>
+    <style is:inline>
         :root { --ink:#0a0a0a; --panel:#141414; --mist:#a3a3a3; --dim:#6b6b6b; }
         body { font-family:'Montserrat','Montserrat Fallback',sans-serif; background:var(--ink); color:#fff; }
         .brand-top { font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#fff; }
@@ -40,11 +42,7 @@
     <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-neutral-800 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto flex items-center justify-between h-16">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="images/sygnet-96.png" alt="Exchange Kantor Black Sheep" class="w-10 h-10 rounded-xl" width="40" height="40">
-                <span class="lockup" style="font-size: 0.62rem;">
-                    <span class="top">Exchange</span>
-                    <span class="sub"><b>Kantor</b> Black Sheep</span>
-                </span>
+                <Logo variant="lockup" base="" />
             </a>
             <div class="flex items-center gap-3">
                 <div class="flex items-center gap-1 border border-neutral-700 rounded-full p-0.5">
@@ -97,7 +95,7 @@
         <p class="text-xs text-neutral-500">© <span class="num">2026</span> Exchange Kantor Black Sheep · Floriańska 37, Kraków</p>
     </footer>
 
-    <script>
+    <script is:inline>
         const translations = {
             en: {
                 nav_back: "← HOME",
@@ -156,6 +154,6 @@
         }
         setLanguage(detectLang());
     </script>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fce89aac099a4854bc0afdcbf74b9904"}'></script><!-- End Cloudflare Web Analytics -->
+<Analytics />
 </body>
 </html>

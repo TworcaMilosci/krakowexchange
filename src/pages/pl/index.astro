@@ -1,12 +1,14 @@
+---
+import Logo from '../../components/Logo.astro';
+import GeoMeta from '../../components/GeoMeta.astro';
+import Analytics from '../../components/Analytics.astro';
+---
 <!DOCTYPE html><html lang="pl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Exchange Kantor Black Sheep | Kantor Wymiany Walut Kraków | Floriańska 37 | 0% Prowizji</title>
-    <meta name="geo.region" content="PL-12">
-    <meta name="geo.placename" content="Kraków">
-    <meta name="geo.position" content="50.06373;19.9408">
-    <meta name="ICBM" content="50.06373, 19.9408">
+    <GeoMeta />
     <meta name="description" content="Exchange Kantor Black Sheep: kantor wymiany walut na Starym Mieście w Krakowie, Floriańska 37. Najlepsze kursy walut w centrum Krakowa, spread kilka groszy w detalu, kursy hurtowe do negocjacji, 0% prowizji. Dawny Kantor U Górali.">
     <link rel="canonical" href="https://kantorblacksheep.pl/pl/">
     <link rel="alternate" hreflang="en" href="https://kantorblacksheep.pl/">
@@ -28,7 +30,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="../images/sygnet-512.png">
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
 
-    <script type="application/ld+json">
+    <script is:inline type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FinancialService",
@@ -139,10 +141,10 @@
 }
     </script>
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Który kurs mnie dotyczy — kupno czy sprzedaż?", "acceptedAnswer": {"@type": "Answer", "text": "Kursy zawsze podajemy od strony kantoru — to MY KUPUJEMY lub MY SPRZEDAJEMY walutę. Kupno = przynosisz nam walutę. Przy kursie kupna EUR 4,40 za 100 euro otrzymasz 440 zł. Sprzedaż = kupujesz walutę od nas. Przy kursie sprzedaży GBP 5,10 za 100 funtów brytyjskich zapłacisz 510 zł."}}, {"@type": "Question", "name": "Jaki macie spread?", "acceptedAnswer": {"@type": "Answer", "text": "Kilka groszy. W detalu różnica między naszym kursem kupna a sprzedaży to maksymalnie 9 gr. W hurcie 2–3 gr: taki kurs pokazujemy dla kwoty 5 000 EUR, a negocjować można nawet od równowartości 500 EUR. Obie tabele, detaliczna i hurtowa, są zawsze na tablicy i na tej stronie."}}, {"@type": "Question", "name": "Jaka jest różnica między złotym (zł) a PLN?", "acceptedAnswer": {"@type": "Answer", "text": "Żadna — to ta sama waluta. PLN to międzynarodowy kod polskiego złotego (tak jak EUR dla euro), a zł to codzienny skrót, który zobaczysz na cenach. 10 zł = 10 PLN."}}, {"@type": "Question", "name": "Jakie waluty wymieniacie?", "acceptedAnswer": {"@type": "Answer", "text": "🇪🇺 EUR (euro), 🇺🇸 USD (dolary amerykańskie), 🇬🇧 GBP (funty brytyjskie), 🇨🇭 CHF (franki szwajcarskie), 🇨🇦 CAD (dolary kanadyjskie), 🇦🇺 AUD (dolary australijskie), 🇩🇰 DKK (korony duńskie), 🇸🇪 SEK (korony szwedzkie), 🇳🇴 NOK (korony norweskie), 🇨🇿 CZK (korony czeskie), 🇭🇺 HUF (forinty węgierskie), 🇯🇵 JPY (jeny japońskie), 🇦🇪 AED (dirhamy ZEA)— a także bilon euro oraz wycofane i zniszczone banknoty, po wcześniejszym kontakcie. Zdjęcia możesz podesłać na WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Czy kursy podlegają negocjacji?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Przy większych kwotach kurs ustalamy indywidualnie w okienku. Kurs hurtowy można negocjować nawet od równowartości 500 EUR; to zależy od kwoty, więc po prostu zapytaj. Tabela hurtowa na stronie pokazuje kursy dla kwoty 5 000 EUR (spread 2–3 gr)."}}, {"@type": "Question", "name": "Czy mogę zapłacić kartą?", "acceptedAnswer": {"@type": "Answer", "text": "Wymieniamy wyłącznie gotówkę — jak każdy tradycyjny kantor w Polsce."}}, {"@type": "Question", "name": "Czy skupujecie stare, wycofane lub zniszczone banknoty?", "acceptedAnswer": {"@type": "Answer", "text": "Tak — wycofane serie, zniszczone banknoty oraz bilon euro. Zadzwoń wcześniej pod +48 889 505 057 albo podeślij zdjęcia na WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Czy potrzebuję dokumentu, żeby wymienić pieniądze?", "acceptedAnswer": {"@type": "Answer", "text": "Przy codziennych kwotach — nie. Przepisy AML wymagają identyfikacji dopiero od transakcji o równowartości 15 000 EUR."}}, {"@type": "Question", "name": "Czy jesteście otwarci w weekendy?", "acceptedAnswer": {"@type": "Answer", "text": "Sobota: 09:30–20:30; Niedziela: zamknięte; Poniedziałek–piątek: 09:30–20:30"}}, {"@type": "Question", "name": "Czy Floriańska to bezpieczne miejsce na wymianę walut?", "acceptedAnswer": {"@type": "Answer", "text": "Szczerze? Reputacja ulicy jest mieszana — część punktów w okolicy eksponuje tylko jeden, atrakcyjny kurs, który dotyczy odwrotnego kierunku wymiany niż ten, którego potrzebujesz. Inne nie wyświetlają kursów wcale, a jeszcze inne pokazują kursy innych walut, np. ALL, RSD czy JOD, opisane symbolami € $ £, żeby zmylić. Właśnie dlatego gramy w otwarte karty: pełna tabela kupna i sprzedaży, 0% prowizji, a każdy kantor — także nasz — zweryfikujesz w 30 sekund po świeżych opiniach w Google Maps. Uczciwa wymiana na Floriańskiej istnieje; po prostu sprawdź tablicę i opinie oraz zapytaj o kurs w okienku, zanim podasz gotówkę."}}, {"@type": "Question", "name": "Czy to dawny \"Kantor U Górali\"?", "acceptedAnswer": {"@type": "Answer", "text": "Tak — ten sam kantor przy Floriańskiej 37 i ten sam właściciel. Zmieniliśmy nazwę, żeby mówiła wprost, kim jesteśmy: czarną owcą wśród krakowskich kantorów — tą, która gra w otwarte karty. Pełna tabela kupna i sprzedaży, 0% prowizji, żadnych gwiazdek. Zmieniła się nazwa — zasady zostały."}}]}</script>
+    <script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Który kurs mnie dotyczy — kupno czy sprzedaż?", "acceptedAnswer": {"@type": "Answer", "text": "Kursy zawsze podajemy od strony kantoru — to MY KUPUJEMY lub MY SPRZEDAJEMY walutę. Kupno = przynosisz nam walutę. Przy kursie kupna EUR 4,40 za 100 euro otrzymasz 440 zł. Sprzedaż = kupujesz walutę od nas. Przy kursie sprzedaży GBP 5,10 za 100 funtów brytyjskich zapłacisz 510 zł."}}, {"@type": "Question", "name": "Jaki macie spread?", "acceptedAnswer": {"@type": "Answer", "text": "Kilka groszy. W detalu różnica między naszym kursem kupna a sprzedaży to maksymalnie 9 gr. W hurcie 2–3 gr: taki kurs pokazujemy dla kwoty 5 000 EUR, a negocjować można nawet od równowartości 500 EUR. Obie tabele, detaliczna i hurtowa, są zawsze na tablicy i na tej stronie."}}, {"@type": "Question", "name": "Jaka jest różnica między złotym (zł) a PLN?", "acceptedAnswer": {"@type": "Answer", "text": "Żadna — to ta sama waluta. PLN to międzynarodowy kod polskiego złotego (tak jak EUR dla euro), a zł to codzienny skrót, który zobaczysz na cenach. 10 zł = 10 PLN."}}, {"@type": "Question", "name": "Jakie waluty wymieniacie?", "acceptedAnswer": {"@type": "Answer", "text": "🇪🇺 EUR (euro), 🇺🇸 USD (dolary amerykańskie), 🇬🇧 GBP (funty brytyjskie), 🇨🇭 CHF (franki szwajcarskie), 🇨🇦 CAD (dolary kanadyjskie), 🇦🇺 AUD (dolary australijskie), 🇩🇰 DKK (korony duńskie), 🇸🇪 SEK (korony szwedzkie), 🇳🇴 NOK (korony norweskie), 🇨🇿 CZK (korony czeskie), 🇭🇺 HUF (forinty węgierskie), 🇯🇵 JPY (jeny japońskie), 🇦🇪 AED (dirhamy ZEA)— a także bilon euro oraz wycofane i zniszczone banknoty, po wcześniejszym kontakcie. Zdjęcia możesz podesłać na WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Czy kursy podlegają negocjacji?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Przy większych kwotach kurs ustalamy indywidualnie w okienku. Kurs hurtowy można negocjować nawet od równowartości 500 EUR; to zależy od kwoty, więc po prostu zapytaj. Tabela hurtowa na stronie pokazuje kursy dla kwoty 5 000 EUR (spread 2–3 gr)."}}, {"@type": "Question", "name": "Czy mogę zapłacić kartą?", "acceptedAnswer": {"@type": "Answer", "text": "Wymieniamy wyłącznie gotówkę — jak każdy tradycyjny kantor w Polsce."}}, {"@type": "Question", "name": "Czy skupujecie stare, wycofane lub zniszczone banknoty?", "acceptedAnswer": {"@type": "Answer", "text": "Tak — wycofane serie, zniszczone banknoty oraz bilon euro. Zadzwoń wcześniej pod +48 889 505 057 albo podeślij zdjęcia na WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Czy potrzebuję dokumentu, żeby wymienić pieniądze?", "acceptedAnswer": {"@type": "Answer", "text": "Przy codziennych kwotach — nie. Przepisy AML wymagają identyfikacji dopiero od transakcji o równowartości 15 000 EUR."}}, {"@type": "Question", "name": "Czy jesteście otwarci w weekendy?", "acceptedAnswer": {"@type": "Answer", "text": "Sobota: 09:30–20:30; Niedziela: zamknięte; Poniedziałek–piątek: 09:30–20:30"}}, {"@type": "Question", "name": "Czy Floriańska to bezpieczne miejsce na wymianę walut?", "acceptedAnswer": {"@type": "Answer", "text": "Szczerze? Reputacja ulicy jest mieszana — część punktów w okolicy eksponuje tylko jeden, atrakcyjny kurs, który dotyczy odwrotnego kierunku wymiany niż ten, którego potrzebujesz. Inne nie wyświetlają kursów wcale, a jeszcze inne pokazują kursy innych walut, np. ALL, RSD czy JOD, opisane symbolami € $ £, żeby zmylić. Właśnie dlatego gramy w otwarte karty: pełna tabela kupna i sprzedaży, 0% prowizji, a każdy kantor — także nasz — zweryfikujesz w 30 sekund po świeżych opiniach w Google Maps. Uczciwa wymiana na Floriańskiej istnieje; po prostu sprawdź tablicę i opinie oraz zapytaj o kurs w okienku, zanim podasz gotówkę."}}, {"@type": "Question", "name": "Czy to dawny \"Kantor U Górali\"?", "acceptedAnswer": {"@type": "Answer", "text": "Tak — ten sam kantor przy Floriańskiej 37 i ten sam właściciel. Zmieniliśmy nazwę, żeby mówiła wprost, kim jesteśmy: czarną owcą wśród krakowskich kantorów — tą, która gra w otwarte karty. Pełna tabela kupna i sprzedaży, 0% prowizji, żadnych gwiazdek. Zmieniła się nazwa — zasady zostały."}}]}</script>
     <link rel="stylesheet" href="../styles.css">
 
-    <style>
+    <style is:inline>
 
         :root {
             --ink: #0a0a0a;
@@ -284,11 +286,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="flex items-center justify-between h-16">
                 <a href="#top" class="flex items-center gap-3">
-                    <img src="../images/sygnet-96.png" alt="Exchange Kantor Black Sheep" class="w-10 h-10 rounded-xl" width="40" height="40">
-                    <span class="lockup" style="font-size: 0.62rem;">
-                        <span class="top">Exchange</span>
-                        <span class="sub"><b>Kantor</b> Black Sheep</span>
-                    </span>
+                    <Logo variant="lockup" base="../" />
                 </a>
 
                 <div class="hidden md:flex items-center gap-8">
@@ -638,7 +636,7 @@
         <span data-i18n="toast_copied">Skopiowano adres</span>
     </div>
 
-    <script>
+    <script is:inline>
         /* =====================================================
            RATES are loaded from rates.json (same folder).
            To change rates: edit ONLY rates.json — never this file.
@@ -979,7 +977,7 @@
         setLanguage("pl");
         loadRates();
     </script>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;fce89aac099a4854bc0afdcbf74b9904&quot;}"></script><!-- End Cloudflare Web Analytics -->
+<Analytics />
 
 
 </body></html>

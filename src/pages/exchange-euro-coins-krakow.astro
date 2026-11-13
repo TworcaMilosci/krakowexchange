@@ -1,13 +1,15 @@
+---
+import Logo from '../components/Logo.astro';
+import GeoMeta from '../components/GeoMeta.astro';
+import Analytics from '../components/Analytics.astro';
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exchange euro coins in Kraków | Exchange Kantor Black Sheep</title>
-    <meta name="geo.region" content="PL-12">
-    <meta name="geo.placename" content="Kraków">
-    <meta name="geo.position" content="50.06373;19.9408">
-    <meta name="ICBM" content="50.06373, 19.9408">
+    <GeoMeta />
     <meta property="og:image" content="https://kantorblacksheep.pl/images/front-og-2.jpg">
     <meta name="description" content="Left with euro coins after a trip? We buy euro coins at Floriańska 37 in Kraków&#x27;s Old Town. Message us the amount on WhatsApp and get the rate before you come.">
     <meta name="robots" content="index, follow">
@@ -19,9 +21,9 @@
     <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do I need to contact you first?", "acceptedAnswer": {"@type": "Answer", "text": "So you know the rate and we know the amount before you come. Coins are counted by hand, and the rate for coins is set separately from the banknote rates on our board."}}, {"@type": "Question", "name": "Which coins do you buy?", "acceptedAnswer": {"@type": "Answer", "text": "Euro coins. Tell us which denominations you have and we will confirm."}}, {"@type": "Question", "name": "Do you also buy euro banknotes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, at the rates on our board, with no need to contact us first. Both retail and wholesale rates are published on our home page."}}]}</script>
+    <script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do I need to contact you first?", "acceptedAnswer": {"@type": "Answer", "text": "So you know the rate and we know the amount before you come. Coins are counted by hand, and the rate for coins is set separately from the banknote rates on our board."}}, {"@type": "Question", "name": "Which coins do you buy?", "acceptedAnswer": {"@type": "Answer", "text": "Euro coins. Tell us which denominations you have and we will confirm."}}, {"@type": "Question", "name": "Do you also buy euro banknotes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, at the rates on our board, with no need to contact us first. Both retail and wholesale rates are published on our home page."}}]}</script>
     <link rel="stylesheet" href="styles.css">
-    <style>
+    <style is:inline>
         :root { --ink:#0a0a0a; --panel:#141414; --mist:#a3a3a3; --dim:#6b6b6b; }
         body { font-family:'Montserrat','Montserrat Fallback',sans-serif; background:var(--ink); color:#fff; }
         .lockup { display:inline-block; line-height:1; text-transform:uppercase; }
@@ -39,18 +41,14 @@
         .cta-row { display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center; }
         a:focus-visible, button:focus-visible { outline:2px solid #fff; outline-offset:2px; }
     </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Exchange euro coins in Kraków", "description": "Left with euro coins after a trip? We buy euro coins at Floriańska 37 in Kraków's Old Town. Message us the amount on WhatsApp and get the rate before you come.", "url": "https://kantorblacksheep.pl/exchange-euro-coins-krakow.html", "inLanguage": "en", "areaServed": {"@type": "City", "name": "Kraków"}, "provider": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl", "telephone": "+48889505057", "address": {"@type": "PostalAddress", "streetAddress": "Floriańska 37", "addressLocality": "Kraków", "postalCode": "31-019", "addressCountry": "PL"}}}</script>
+<script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Exchange euro coins in Kraków", "description": "Left with euro coins after a trip? We buy euro coins at Floriańska 37 in Kraków's Old Town. Message us the amount on WhatsApp and get the rate before you come.", "url": "https://kantorblacksheep.pl/exchange-euro-coins-krakow.html", "inLanguage": "en", "areaServed": {"@type": "City", "name": "Kraków"}, "provider": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl", "telephone": "+48889505057", "address": {"@type": "PostalAddress", "streetAddress": "Floriańska 37", "addressLocality": "Kraków", "postalCode": "31-019", "addressCountry": "PL"}}}</script>
 </head>
 <body>
 
     <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-neutral-800 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto flex items-center justify-between h-16">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="images/sygnet-96.png" alt="Exchange Kantor Black Sheep" class="w-10 h-10 rounded-xl" width="40" height="40">
-                <span class="lockup" style="font-size: 0.62rem;">
-                    <span class="top">Exchange</span>
-                    <span class="sub"><b>Kantor</b> Black Sheep</span>
-                </span>
+                <Logo variant="lockup" base="" />
             </a>
             <div class="flex items-center gap-3">
                 <div class="flex items-center gap-1 border border-neutral-700 rounded-full p-0.5">
@@ -118,6 +116,6 @@
     <footer class="border-t border-neutral-800 py-10 px-4 sm:px-6 text-center">
         <p class="text-xs text-neutral-500">© <span class="num">2026</span> Exchange Kantor Black Sheep · Floriańska 37, Kraków · <a href="privacy.html" class="underline underline-offset-4">Privacy / Prywatność</a></p>
     </footer>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fce89aac099a4854bc0afdcbf74b9904"}'></script><!-- End Cloudflare Web Analytics -->
+<Analytics />
 </body>
 </html>

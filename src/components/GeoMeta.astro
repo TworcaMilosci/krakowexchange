@@ -1,0 +1,8 @@
+---
+import { SITE } from '../data/site.js';
+const lon = SITE.lon.toFixed(5);
+---
+<meta name="geo.region" content="PL-12">
+    <meta name="geo.placename" content={SITE.city}>
+    <meta name="geo.position" content={`${SITE.lat};${lon}`}>
+    <meta name="ICBM" content={`${SITE.lat}, ${lon}`}>

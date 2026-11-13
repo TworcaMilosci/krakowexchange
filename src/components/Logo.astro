@@ -1,0 +1,20 @@
+---
+// Logo w nagłówku: sygnet + EXCHANGE / KANTOR BLACK SHEEP.
+// variant "lockup" = strony na Tailwind, "txt" = poradniki z własnym CSS.
+import { SITE } from '../data/site.js';
+const { variant = 'lockup', base = '' } = Astro.props;
+---
+{variant === 'lockup' ? (
+  <Fragment>
+    <img src={`${base}images/sygnet-96.png`} alt={SITE.name} class="w-10 h-10 rounded-xl" width="40" height="40">
+    <span class="lockup" style="font-size: 0.62rem;">
+      <span class="top">Exchange</span>
+      <span class="sub"><b>Kantor</b> Black Sheep</span>
+    </span>
+  </Fragment>
+) : (
+  <Fragment>
+    <img src={`${base}images/sygnet-96.png`} alt={SITE.name} width="40" height="40">
+    <span class="logo-txt">EXCHANGE<small><b>KANTOR</b> BLACK SHEEP</small></span>
+  </Fragment>
+)}

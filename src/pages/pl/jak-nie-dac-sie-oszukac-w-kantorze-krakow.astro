@@ -1,24 +1,26 @@
-<!DOCTYPE html><html lang="en"><head>
+---
+import Logo from '../../components/Logo.astro';
+import GeoMeta from '../../components/GeoMeta.astro';
+import Analytics from '../../components/Analytics.astro';
+---
+<!DOCTYPE html><html lang="pl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How not to get scammed at a currency exchange | Exchange Kantor Black Sheep</title>
-    <meta name="geo.region" content="PL-12">
-    <meta name="geo.placename" content="Kraków">
-    <meta name="geo.position" content="50.06373;19.9408">
-    <meta name="ICBM" content="50.06373, 19.9408">
+    <title>Jak nie dać się oszukać w kantorze | Exchange Kantor Black Sheep</title>
+    <GeoMeta />
     <meta property="og:image" content="https://kantorblacksheep.pl/images/front-og-2.jpg">
-    <meta name="description" content="Five simple rules to avoid currency exchange scams in Kraków — check both rates, read currency codes, ask before you pay.">
-    <link rel="canonical" href="https://kantorblacksheep.pl/avoid-currency-exchange-scams-krakow.html">
+    <meta name="description" content="Pięć prostych zasad, dzięki którym nie dasz się oszukać w kantorze w Krakowie: sprawdź oba kursy, czytaj kody walut, zapytaj o kwotę przed wymianą.">
+    <link rel="canonical" href="https://kantorblacksheep.pl/pl/jak-nie-dac-sie-oszukac-w-kantorze-krakow.html">
     <link rel="alternate" hreflang="en" href="https://kantorblacksheep.pl/avoid-currency-exchange-scams-krakow.html">
     <link rel="alternate" hreflang="pl" href="https://kantorblacksheep.pl/pl/jak-nie-dac-sie-oszukac-w-kantorze-krakow.html">
     <link rel="alternate" hreflang="x-default" href="https://kantorblacksheep.pl/avoid-currency-exchange-scams-krakow.html">
     <meta name="robots" content="index, follow">
 
-    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../images/favicon-64.png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="styles.css">
-    <style>
+    <link rel="stylesheet" href="../styles.css">
+    <style is:inline>
         :root { --ink:#0a0a0a; --panel:#141414; --mist:#a3a3a3; --dim:#6b6b6b; }
         body { font-family:'Montserrat','Montserrat Fallback',sans-serif; background:var(--ink); color:#fff; }
         .brand-top { font-weight:800; text-transform:uppercase; letter-spacing:0.06em; color:#fff; }
@@ -35,25 +37,21 @@
         .btn-solid { background:#fff; color:var(--ink); border-radius:9999px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.85rem; padding:1rem 2rem; display:inline-flex; align-items:center; justify-content:center; }
         a:focus-visible, button:focus-visible { outline:2px solid #fff; outline-offset:2px; }
     </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How not to get scammed at a currency exchange", "description": "Five simple rules to avoid currency exchange scams in Kraków — check both rates, read currency codes, ask before you pay.", "inLanguage": "en", "mainEntityOfPage": "https://kantorblacksheep.pl/avoid-currency-exchange-scams-krakow.html", "image": "https://kantorblacksheep.pl/images/front-og-2.jpg", "dateModified": "2026-11-13", "author": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}, "publisher": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}}</script>
+<script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Jak nie dać się oszukać w kantorze", "description": "Pięć prostych zasad, dzięki którym nie dasz się oszukać w kantorze w Krakowie: sprawdź oba kursy, czytaj kody walut, zapytaj o kwotę przed wymianą.", "inLanguage": "pl", "mainEntityOfPage": "https://kantorblacksheep.pl/pl/jak-nie-dac-sie-oszukac-w-kantorze-krakow.html", "image": "https://kantorblacksheep.pl/images/front-og-2.jpg", "dateModified": "2026-11-13", "author": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}, "publisher": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}}</script>
 </head>
 <body>
 
     <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-neutral-800 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto flex items-center justify-between h-16">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="images/sygnet-96.png" alt="Exchange Kantor Black Sheep" class="w-10 h-10 rounded-xl" width="40" height="40">
-                <span class="lockup" style="font-size: 0.62rem;">
-                    <span class="top">Exchange</span>
-                    <span class="sub"><b>Kantor</b> Black Sheep</span>
-                </span>
+                <Logo variant="lockup" base="../" />
             </a>
             <div class="flex items-center gap-3">
                 <div class="flex items-center gap-1 border border-neutral-700 rounded-full p-0.5">
-                    <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
-                    <button class="lang-btn" id="btn-pl" onclick="setLanguage('pl')">PL</button>
+                    <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn active" id="btn-pl" onclick="setLanguage('pl')">PL</button>
                 </div>
-                <span class="hidden sm:inline-flex"><a href="index.html" class="eyebrow hover:text-white transition-colors" data-i18n="nav_back">← HOME</a></span>
+                <span class="hidden sm:inline-flex"><a href="index.html" class="eyebrow hover:text-white transition-colors" data-i18n="nav_back">← STRONA GŁÓWNA</a></span>
                 <a href="index.html" aria-label="Home" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white text-white text-lg">←</a>
             </div>
         </div>
@@ -61,50 +59,50 @@
 
     <main class="pt-32 pb-20 px-4 sm:px-6">
         <div class="max-w-3xl mx-auto">
-            <p class="eyebrow mb-4" data-i18n="eyebrow">Consumer guide · Kraków</p>
-            <h1 class="display text-3xl sm:text-5xl leading-tight mb-6" data-i18n="title">How not to get scammed at a currency exchange</h1>
-            <p class="text-neutral-400 text-lg mb-12 max-w-2xl" data-i18n="intro">Five simple rules. They take thirty seconds and work at any exchange office — including ours.</p>
+            <p class="eyebrow mb-4" data-i18n="eyebrow">Poradnik konsumenta · Kraków</p>
+            <h1 class="display text-3xl sm:text-5xl leading-tight mb-6" data-i18n="title">Jak nie dać się oszukać w kantorze</h1>
+            <p class="text-neutral-400 text-lg mb-12 max-w-2xl" data-i18n="intro">Pięć prostych zasad. Zajmują trzydzieści sekund i działają w każdym kantorze — także w naszym.</p>
 
             <div class="space-y-4">
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-2">01</p>
-                    <h2 class="font-bold text-xl mb-2" data-i18n="r1_title">Look for both columns: buy AND sell</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r1_body">An honest exchange displays two rates for each currency — the rate they buy at and the rate they sell at. If the board shows only one spectacular number, it usually applies to the opposite direction of the one you need.</p>
+                    <h2 class="font-bold text-xl mb-2" data-i18n="r1_title">Szukaj obu kolumn: kupna I sprzedaży</h2>
+                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r1_body">Uczciwy kantor pokazuje dwa kursy dla każdej waluty — po jakim skupuje i po jakim sprzedaje. Jeśli na tablicy widnieje tylko jedna, wyjątkowo atrakcyjna liczba, zwykle dotyczy odwrotnego kierunku niż ten, którego potrzebujesz.</p>
                 </div>
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-2">02</p>
-                    <h2 class="font-bold text-xl mb-2" data-i18n="r2_title">Read currency codes, not symbols</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r2_body">A classic trick: a great-looking rate displayed next to a € or $ symbol — but the rate is actually for a different, rarely traded currency. Look for the three-letter codes: EUR, USD, GBP. If the board doesn't show codes, be careful.</p>
+                    <h2 class="font-bold text-xl mb-2" data-i18n="r2_title">Czytaj kody walut, nie symbole</h2>
+                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r2_body">Klasyczny trik: świetny kurs wyświetlony obok symbolu € lub $ — ale w rzeczywistości dotyczy innej, egzotycznej waluty. Szukaj trzyliterowych kodów: EUR, USD, GBP. Jeśli tablica nie pokazuje kodów — uważaj.</p>
                 </div>
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-2">03</p>
-                    <h2 class="font-bold text-xl mb-2" data-i18n="r3_title">Ask for the exact amount before you hand over cash</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r3_body">Say: "How many złoty will I receive for 100 euro?" and wait for a specific number. As long as the money is in your hand, you can simply walk away — no rate is binding until you exchange.</p>
+                    <h2 class="font-bold text-xl mb-2" data-i18n="r3_title">Zapytaj o dokładną kwotę, zanim podasz gotówkę</h2>
+                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r3_body">Powiedz: „Ile złotych dostanę za 100 euro?" i poczekaj na konkretną liczbę. Dopóki pieniądze są w Twojej ręce, możesz po prostu odejść — żaden kurs nie wiąże Cię przed wymianą.</p>
                 </div>
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-2">04</p>
-                    <h2 class="font-bold text-xl mb-2" data-i18n="r4_title">Count your money at the counter and take the receipt</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r4_body">Every registered exchange office in Poland must issue a proof of transaction. Count what you receive before you step away — and keep the receipt. It's your evidence if anything is wrong.</p>
+                    <h2 class="font-bold text-xl mb-2" data-i18n="r4_title">Przelicz pieniądze przy okienku i weź dowód transakcji</h2>
+                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r4_body">Każdy zarejestrowany kantor w Polsce musi wystawić dowód kupna lub sprzedaży. Przelicz otrzymaną kwotę, zanim odejdziesz — i zachowaj dowód. To Twój materiał dowodowy, gdyby coś się nie zgadzało.</p>
                 </div>
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-2">05</p>
-                    <h2 class="font-bold text-xl mb-2" data-i18n="r5_title">Check reviews before you queue</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r5_body">Thirty seconds on Google Maps tells you more than any board. Recent reviews from other travellers are the fastest scam detector there is.</p>
+                    <h2 class="font-bold text-xl mb-2" data-i18n="r5_title">Sprawdź opinie, zanim staniesz w kolejce</h2>
+                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="r5_body">Trzydzieści sekund w Mapach Google powie Ci więcej niż każda tablica. Świeże opinie innych klientów to najszybszy wykrywacz oszustw, jaki istnieje.</p>
                 </div>
             </div>
 
             <div class="mt-10 bg-[--panel] border border-neutral-800 rounded-2xl p-8 text-center">
-                <p class="text-neutral-300 mb-4" data-i18n="cta_scammed">Already been scammed?</p>
-                <a href="scam-help.html" class="btn-solid" data-i18n="cta_scammed_btn">See what to do, step by step</a>
+                <p class="text-neutral-300 mb-4" data-i18n="cta_scammed">Już zostałeś oszukany?</p>
+                <a href="oszukal-cie-kantor.html" class="btn-solid" data-i18n="cta_scammed_btn">Zobacz, co zrobić krok po kroku</a>
             </div>
         </div>
     </main>
 
     <footer class="border-t border-neutral-800 py-10 px-4 sm:px-6 text-center">
-        <p class="text-xs text-neutral-500">© <span class="num">2026</span> Exchange Kantor Black Sheep · Floriańska 37, Kraków · <a href="privacy.html" class="underline underline-offset-4">Privacy / Prywatność</a></p>
+        <p class="text-xs text-neutral-500">© <span class="num">2026</span> Exchange Kantor Black Sheep · Floriańska 37, Kraków · <a href="../privacy.html" class="underline underline-offset-4">Privacy / Prywatność</a></p>
     </footer>
 
-    <script>
+    <script is:inline>
         const translations = {
             en: {
                 nav_back: "← HOME",
@@ -143,9 +141,9 @@
                 cta_scammed_btn: "Zobacz, co zrobić krok po kroku"
             }
         };
-        let currentLang = "en";
-        const PAGE_LANG = "en";
-        const ALT_URL = "pl/jak-nie-dac-sie-oszukac-w-kantorze-krakow.html";
+        let currentLang = "pl";
+        const PAGE_LANG = "pl";
+        const ALT_URL = "../avoid-currency-exchange-scams-krakow.html";
         function detectLang() {
             try {
                 const saved = localStorage.getItem("bs-lang");
@@ -169,9 +167,9 @@
             document.getElementById("btn-en").classList.toggle("active", lang === "en");
             document.getElementById("btn-pl").classList.toggle("active", lang === "pl");
         }
-        if (detectLang() === "pl") { window.location.replace(ALT_URL); } else { setLanguage("en"); }
+        setLanguage("pl");
     </script>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;fce89aac099a4854bc0afdcbf74b9904&quot;}"></script><!-- End Cloudflare Web Analytics -->
+<Analytics />
 
 
 </body></html>

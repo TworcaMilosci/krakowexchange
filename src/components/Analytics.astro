@@ -1,0 +1,5 @@
+---
+import { SITE } from '../data/site.js';
+const beacon = JSON.stringify({ token: SITE.analyticsToken });
+---
+<!-- Cloudflare Web Analytics --><script is:inline type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={beacon}></script><!-- End Cloudflare Web Analytics -->

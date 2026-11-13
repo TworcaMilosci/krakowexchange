@@ -1,27 +1,29 @@
-<!DOCTYPE html><html lang="en"><head>
+---
+import Logo from '../../components/Logo.astro';
+import GeoMeta from '../../components/GeoMeta.astro';
+import Analytics from '../../components/Analytics.astro';
+---
+<!DOCTYPE html><html lang="pl"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-<title>Scammed by an exchange office? · Exchange Kantor Black Sheep</title>
-    <meta name="geo.region" content="PL-12">
-    <meta name="geo.placename" content="Kraków">
-    <meta name="geo.position" content="50.06373;19.9408">
-    <meta name="ICBM" content="50.06373, 19.9408">
+<title>Oszukał Cię kantor? · Exchange Kantor Black Sheep</title>
+    <GeoMeta />
     <meta property="og:image" content="https://kantorblacksheep.pl/images/front-og-2.jpg">
-    <meta name="description" content="Scammed at a currency exchange in Kraków? Step-by-step instructions and a free generator of a ready complaint letter to NBP, UOKiK and the consumer ombudsman.">
-    <link rel="canonical" href="https://kantorblacksheep.pl/scam-help.html">
+    <meta name="description" content="Oszukał Cię kantor w Krakowie? Instrukcja krok po kroku i darmowy generator gotowego pisma do NBP, UOKiK i rzecznika konsumentów.">
+    <link rel="canonical" href="https://kantorblacksheep.pl/pl/oszukal-cie-kantor.html">
     <link rel="alternate" hreflang="en" href="https://kantorblacksheep.pl/scam-help.html">
     <link rel="alternate" hreflang="pl" href="https://kantorblacksheep.pl/pl/oszukal-cie-kantor.html">
     <link rel="alternate" hreflang="x-default" href="https://kantorblacksheep.pl/scam-help.html">
-<style>
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/montserrat-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:600;src:url(fonts/montserrat-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:600;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:700;src:url(fonts/montserrat-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:700;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:800;src:url(fonts/montserrat-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:800;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+<style is:inline>
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:400;src:url(../fonts/montserrat-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:400;src:url(../fonts/montserrat-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:600;src:url(../fonts/montserrat-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:600;src:url(../fonts/montserrat-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:700;src:url(../fonts/montserrat-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:700;src:url(../fonts/montserrat-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:800;src:url(../fonts/montserrat-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:800;src:url(../fonts/montserrat-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Montserrat Fallback';src:local('Arial');size-adjust:112.78%;ascent-override:85.79%;descent-override:22.25%;line-gap-override:0%}
 *,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }
 
@@ -190,22 +192,21 @@
   main form *{min-width:0}
   input,select,textarea{max-width:100%;box-sizing:border-box}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Scammed by an exchange office?", "description": "Scammed at a currency exchange in Kraków? Step-by-step instructions and a free generator of a ready complaint letter to NBP, UOKiK and the consumer ombudsman.", "inLanguage": "en", "mainEntityOfPage": "https://kantorblacksheep.pl/scam-help.html", "image": "https://kantorblacksheep.pl/images/front-og-2.jpg", "dateModified": "2026-11-13", "author": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}, "publisher": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}}</script>
+<script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Oszukał Cię kantor?", "description": "Oszukał Cię kantor w Krakowie? Instrukcja krok po kroku i darmowy generator gotowego pisma do NBP, UOKiK i rzecznika konsumentów.", "inLanguage": "pl", "mainEntityOfPage": "https://kantorblacksheep.pl/pl/oszukal-cie-kantor.html", "image": "https://kantorblacksheep.pl/images/front-og-2.jpg", "dateModified": "2026-11-13", "author": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}, "publisher": {"@type": "FinancialService", "@id": "https://kantorblacksheep.pl/#business", "name": "Exchange Kantor Black Sheep", "url": "https://kantorblacksheep.pl"}}</script>
 </head>
 <body>
 
 <header>
   <div class="wrap hd">
     <a class="logo" href="index.html">
-      <img src="images/sygnet-96.png" alt="Exchange Kantor Black Sheep" width="40" height="40">
-      <span class="logo-txt">EXCHANGE<small><b>KANTOR</b> BLACK SHEEP</small></span>
+      <Logo variant="txt" base="../" />
     </a>
     <div class="hd-right">
       <div class="lang" role="group" aria-label="Language">
-        <button id="btn-en" onclick="setLang('en')" class="on">EN</button>
-        <button id="btn-pl" onclick="setLang('pl')">PL</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+        <button id="btn-pl" onclick="setLang('pl')" class="on">PL</button>
       </div>
-      <a class="backlink" href="index.html" data-i18n="back">← HOME</a>
+      <a class="backlink" href="index.html" data-i18n="back">← STRONA GŁÓWNA</a>
       <a class="backcircle" href="index.html" aria-label="Home">←</a>
     </div>
   </div>
@@ -214,13 +215,13 @@
 <main class="wrap">
 
   <div class="hero">
-    <div class="eyebrow" data-i18n="eyebrow">Consumer guide · Kraków</div>
-    <h1 data-i18n="h1">Scammed by an exchange office?</h1>
-    <p class="lead" data-i18n="lead">A step-by-step guide on what to do when a kantor misled you about the exchange rate — plus a generator that prepares a ready-to-send official complaint.</p>
+    <div class="eyebrow" data-i18n="eyebrow">Poradnik konsumenta · Kraków</div>
+    <h1 data-i18n="h1">Oszukał Cię kantor?</h1>
+    <p class="lead" data-i18n="lead">Instrukcja krok po kroku, co zrobić, gdy kantor wprowadził Cię w błąd co do kursu — oraz generator gotowego pisma do urzędów.</p>
 
     <div class="strip">
-      <strong data-i18n="strip1">Still at the counter?</strong>
-      <span data-i18n="strip2">Don't walk away. Read step 01. EU-wide emergency number:</span>
+      <strong data-i18n="strip1">Jesteś jeszcze przy okienku?</strong>
+      <span data-i18n="strip2">Nie odchodź. Czytaj krok 01. Numer alarmowy w całej UE:</span>
       <a href="tel:112">112</a>
     </div>
   </div>
@@ -229,49 +230,49 @@
   <section>
     <div class="card">
       <div class="num">01</div>
-      <h2 data-i18n="s1h">At the counter</h2>
-      <p class="sub" data-i18n="s1sub">The first minutes decide everything.</p>
+      <h2 data-i18n="s1h">Przy okienku</h2>
+      <p class="sub" data-i18n="s1sub">Pierwsze minuty decydują o wszystkim.</p>
 
-      <h3 data-i18n="s1a-h">Do not leave the counter</h3>
-      <p data-i18n="s1a-p">Do not step away from the window under any circumstances. Many exchange offices state in their terms that complaints are not accepted once you leave the counter. As long as you are standing there with the money and the receipt in hand, you are in the strongest position you will ever have in this case.</p>
+      <h3 data-i18n="s1a-h">Nie odchodź od okienka</h3>
+      <p data-i18n="s1a-p">Pod żadnym pozorem nie oddalaj się od kasy. Wiele kantorów zastrzega w regulaminie, że po odejściu od okienka reklamacje nie są uwzględniane. Dopóki stoisz przy kasie z pieniędzmi i dowodem wymiany w ręku — masz najsilniejszą pozycję, jaką kiedykolwiek będziesz mieć w tej sprawie.</p>
 
-      <h3 data-i18n="s1b-h">Say clearly what you want</h3>
-      <p data-i18n="s1b-p">Calmly and firmly tell the cashier that you do not accept the transaction because you were misled about the rate, and that you want your money back. Add that if you are not refunded, you will call the police (112) and file a complaint with the National Bank of Poland (NBP) — the institution that directly supervises exchange offices and can inspect them.</p>
+      <h3 data-i18n="s1b-h">Powiedz jasno, czego chcesz</h3>
+      <p data-i18n="s1b-p">Spokojnie i stanowczo poinformuj kasjera, że nie akceptujesz transakcji, ponieważ zostałeś wprowadzony w błąd co do kursu, i żądasz zwrotu pieniędzy. Dodaj, że jeśli zwrot nie nastąpi, dzwonisz na policję (112) i składasz skargę do Narodowego Banku Polskiego — instytucji, która bezpośrednio nadzoruje kantory i może przeprowadzić w nich kontrolę.</p>
 
       <div class="phrase">
-        <div class="tag" data-i18n="phr-tag">Show this Polish sentence to the cashier</div>
+        <div class="tag" data-i18n="phr-tag">Zdanie do wypowiedzenia przy okienku</div>
         <p>„Nie akceptuję tej transakcji, zostałem wprowadzony w błąd co do kursu. Proszę o zwrot moich pieniędzy. W przeciwnym razie dzwonię na policję pod numer 112 i składam skargę do Narodowego Banku Polskiego."</p>
       </div>
-      <p class="note" data-i18n="phr-note">The sentence above is in Polish on purpose — just show it to the cashier on your phone screen. It says: “I do not accept this transaction, I was misled about the rate. Please return my money. Otherwise I am calling the police at 112 and filing a complaint with the National Bank of Poland.”</p>
+      <p class="note" data-i18n="phr-note">Wersja angielska tej strony zawiera to samo zdanie po polsku — turysta może po prostu pokazać je kasjerowi na ekranie telefonu.</p>
 
-      <h3 data-i18n="s1c-h">Document everything</h3>
+      <h3 data-i18n="s1c-h">Dokumentuj wszystko</h3>
       <ul class="list">
-        <li data-i18n="s1d1">Keep the exchange receipt (proof of purchase/sale). It is the single most important document in the whole case.</li>
-        <li data-i18n="s1d2">Take photos and record video: the rate board from the street and inside, the counter, the conversation. Capture what misled you — e.g. a hidden or unreadable sell rate, or exotic-currency rates displayed next to $, €, £ symbols.</li>
-        <li data-i18n="s1d3">Write down: the full name of the office, its tax ID (NIP, usually on the receipt), the exact address, date and time, and — if possible — the cashier's name.</li>
-        <li data-i18n="s1d4">If there are witnesses (other customers, travel companions) — ask for their contact details.</li>
+        <li data-i18n="s1d1">Zachowaj dowód wymiany waluty (paragon / dowód kupna-sprzedaży). To najważniejszy dokument w całej sprawie.</li>
+        <li data-i18n="s1d2">Zrób zdjęcia i nagraj video: tablicę kursów z ulicy i z wnętrza, okienko, moment rozmowy. Utrwal to, co Cię zmyliło — np. schowany lub nieczytelny kurs sprzedaży albo kursy walut egzotycznych wyeksponowane przy symbolach $, €, £.</li>
+        <li data-i18n="s1d3">Zanotuj: pełną nazwę kantoru, NIP (zwykle na paragonie), dokładny adres, datę i godzinę oraz — jeśli to możliwe — imię i nazwisko kasjera.</li>
+        <li data-i18n="s1d4">Jeśli są świadkowie (inni klienci, towarzysze podróży) — poproś o kontakt.</li>
       </ul>
 
-      <h3 data-i18n="s1e-h">Can the office actually give the money back?</h3>
-      <p data-i18n="s1e-p1">Formally, a currency exchange is complete the moment it is carried out, and the office may refuse to reverse it. In practice, dishonest offices know exactly what they are doing — and it is often cheaper for them to refund you than to have their counter blocked, the police called, and complaints filed with the NBP, the consumer protection office (UOKiK) and the city hall. Exchange offices are particularly afraid of the NBP, because it directly supervises and inspects them.</p>
-      <p data-i18n="s1e-p2">If you have not left the counter (or very little time has passed and you have not gone far), and you consistently start reporting the case, there is a real chance you will get your money back “for the sake of peace and quiet”. No refund on the spot does not end the case — go to step 02.</p>
+      <h3 data-i18n="s1e-h">Czy kantor może zwrócić pieniądze?</h3>
+      <p data-i18n="s1e-p1">Formalnie wymiana walut jest transakcją zawartą z chwilą jej wykonania i kantor może odmówić jej cofnięcia. W praktyce jednak nieuczciwe kantory doskonale wiedzą, co robią — i często taniej jest im oddać pieniądze, niż mieć zablokowane okienko, wezwaną policję oraz skargi w NBP, UOKiK i urzędzie miasta. Kantory szczególnie obawiają się NBP, bo to instytucja, która bezpośrednio je nadzoruje i kontroluje.</p>
+      <p data-i18n="s1e-p2">Jeśli nie odszedłeś od okienka (albo minęło niewiele czasu i nie oddaliłeś się znacząco) i zaczniesz konsekwentnie zgłaszać sprawę, istnieje realna szansa, że odzyskasz pieniądze „dla świętego spokoju”. Brak zwrotu na miejscu nie zamyka sprawy — przejdź do kroku 02.</p>
     </div>
 
     <!-- ============ 02 ============ -->
     <div class="card">
       <div class="num">02</div>
-      <h2 data-i18n="s2h">Where to report it</h2>
-      <p class="sub" data-i18n="s2sub">Authorities say they receive few complaints — because nobody knows where and how to file them. Here is the full list.</p>
+      <h2 data-i18n="s2h">Gdzie to zgłosić</h2>
+      <p class="sub" data-i18n="s2sub">Urzędy tłumaczą się, że mają mało zgłoszeń — bo nikt nie wie, gdzie i jak zgłaszać. Oto pełna lista.</p>
 
       <div class="inst-grid">
         <div class="inst">
           <h4>Policja · <a href="tel:112" style="border:0">112</a></h4>
-          <div class="role" data-i18n="i0-role">On the spot, when the office refuses a refund. Misleading someone for financial gain may constitute fraud under Polish law (Art. 286 of the Criminal Code).</div>
+          <div class="role" data-i18n="i0-role">Na miejscu, gdy kantor odmawia zwrotu. Wprowadzenie w błąd dla korzyści majątkowej może stanowić oszustwo (art. 286 k.k.).</div>
         </div>
 
         <div class="inst">
           <h4>Narodowy Bank Polski — O/O Kraków</h4>
-          <div class="role" data-i18n="i1-role">The institution that supervises exchange offices. The most important recipient of your complaint.</div>
+          <div class="role" data-i18n="i1-role">Instytucja nadzorująca kantory. Najważniejszy adresat skargi.</div>
           <address>ul. Basztowa 20, 31-156 Kraków<br>
           <a href="tel:+48221812168">+48 22 181 21 68</a><br>
           <a href="mailto:sekretariat.krakow@nbp.pl">sekretariat.krakow@nbp.pl</a></address>
@@ -279,7 +280,7 @@
 
         <div class="inst">
           <h4>Narodowy Bank Polski — Centrala</h4>
-          <div class="role" data-i18n="i2-role">NBP headquarters in Warsaw.</div>
+          <div class="role" data-i18n="i2-role">Warszawska centrala NBP.</div>
           <address>ul. Świętokrzyska 11/21, 00-919 Warszawa<br>
           <a href="tel:+48221851000">22 185 10 00</a><br>
           <a href="mailto:listy@nbp.pl">listy@nbp.pl</a></address>
@@ -287,125 +288,125 @@
 
         <div class="inst">
           <h4>UOKiK</h4>
-          <div class="role" data-i18n="i3-role">Office of Competition and Consumer Protection — notification of practices infringing collective consumer interests.</div>
+          <div class="role" data-i18n="i3-role">Urząd Ochrony Konkurencji i Konsumentów — zawiadomienie o praktykach naruszających zbiorowe interesy konsumentów.</div>
           <address>Pl. Powstańców Warszawy 1, 00-950 Warszawa<br>
           <a href="tel:+48225560800">22 55 60 800</a><br>
           <a href="mailto:uokik@uokik.gov.pl">uokik@uokik.gov.pl</a></address>
         </div>
 
         <div class="inst">
-          <h4 data-i18n="i4-h">Kraków City Hall — Tourism Department</h4>
-          <div class="role" data-i18n="i4-role">Local oversight of tourist-facing services.</div>
+          <h4 data-i18n="i4-h">Wydział ds. Turystyki UMK</h4>
+          <div class="role" data-i18n="i4-role">Urząd Miasta Krakowa — lokalny nadzór nad usługami dla turystów.</div>
           <address>ul. Bracka 10, 31-005 Kraków<br>
-          <span data-i18n="i4-kor">Postal address: Pl. Wszystkich Świętych 3-4, 31-004 Kraków</span><br>
+          <span data-i18n="i4-kor">Korespondencja: Pl. Wszystkich Świętych 3-4, 31-004 Kraków</span><br>
           <a href="tel:+48126165555">12 616 55 55</a> · <a href="tel:+48126166052">12 616 60 52</a><br>
           <a href="mailto:umk@um.krakow.pl">umk@um.krakow.pl</a></address>
         </div>
 
         <div class="inst">
-          <h4 data-i18n="i5-h">Municipal Consumer Ombudsman in Kraków</h4>
-          <div class="role" data-i18n="i5-role">Free legal help and interventions with the trader.</div>
+          <h4 data-i18n="i5-h">Miejski Rzecznik Konsumentów w Krakowie</h4>
+          <div class="role" data-i18n="i5-role">Bezpłatna pomoc prawna i interwencje u przedsiębiorcy.</div>
           <address>al. Powstania Warszawskiego 10, 31-549 Kraków<br>
           <a href="tel:+48126169360">12 616 93 60</a> · <a href="tel:+48126169370">12 616 93 70</a><br>
           <a href="mailto:rzecznik.konsumentow@um.krakow.pl">rzecznik.konsumentow@um.krakow.pl</a></address>
-          <span class="flag" data-i18n="i5-flag">Kraków-area residents only</span>
+          <span class="flag" data-i18n="i5-flag">Tylko mieszkańcy powiatu krakowskiego</span>
         </div>
 
         <div class="inst">
-          <h4 data-i18n="i6-h">ECC-Net — for visitors from the EU, Iceland and Norway</h4>
-          <div class="role" data-i18n="i6-role">The European Consumer Centre in your home country helps you free of charge in cross-border disputes with a Polish trader.</div>
+          <h4 data-i18n="i6-h">ECC-Net — dla turystów z UE, Islandii i Norwegii</h4>
+          <div class="role" data-i18n="i6-role">Europejskie Centrum Konsumenckie w kraju zamieszkania turysty bezpłatnie pomaga w sporach transgranicznych z polskim przedsiębiorcą.</div>
           <address><a href="https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/resolve-your-consumer-complaint/european-consumer-centres-network-ecc-net_en" target="_blank" rel="noopener">commission.europa.eu → ECC-Net</a></address>
         </div>
       </div>
 
-      <p class="note" data-i18n="s2note">The more institutions receive the report, the harder it is to ignore. The generator below prepares a separate letter for each recipient you select — each with a “cc” list, so every authority knows who else has been notified.</p>
+      <p class="note" data-i18n="s2note">Im więcej instytucji otrzyma zgłoszenie, tym trudniej sprawę zignorować. Generator poniżej przygotuje osobne pismo do każdego wybranego adresata — z listą „do wiadomości”, żeby każdy urząd wiedział, kto jeszcze dostał zgłoszenie.</p>
     </div>
 
     <!-- ============ 03 ============ -->
     <div class="card" id="gen-card">
       <div class="num">03</div>
-      <h2 data-i18n="s3h">Complaint generator</h2>
-      <p class="sub" data-i18n="s3sub">Fill in the fields and this page will prepare an official letter ready to print and sign. The letter is generated in Polish — the language in which Polish authorities process complaints — and you will get an English summary of what it says. Everything happens in your browser: no data is sent or stored anywhere.</p>
+      <h2 data-i18n="s3h">Generator pisma</h2>
+      <p class="sub" data-i18n="s3sub">Wypełnij pola, a strona przygotuje gotowe do wydruku i podpisu pismo po polsku — w języku, w którym polskie urzędy rozpatrują skargi. Wszystko dzieje się w Twojej przeglądarce: żadne dane nie są nigdzie wysyłane ani zapisywane.</p>
 
       <form id="f" onsubmit="return false">
         <fieldset>
-          <legend data-i18n="f-you">Your details</legend>
+          <legend data-i18n="f-you">Twoje dane</legend>
           <div class="inst-grid" style="gap:14px">
-            <div><label data-i18n="f-name">Full name <span class="req">*</span></label><input type="text" id="p-name" autocomplete="name"></div>
-            <div><label data-i18n="f-addr">Home address (with country) <span class="req">*</span></label><input type="text" id="p-addr" autocomplete="street-address"></div>
+            <div><label data-i18n="f-name">Imię i nazwisko <span class="req">*</span></label><input type="text" id="p-name" autocomplete="name"></div>
+            <div><label data-i18n="f-addr">Adres zamieszkania (z krajem) <span class="req">*</span></label><input type="text" id="p-addr" autocomplete="street-address"></div>
             <div><label data-i18n="f-mail">E-mail</label><input type="email" id="p-mail" autocomplete="email"></div>
-            <div><label data-i18n="f-tel">Phone</label><input type="tel" id="p-tel" autocomplete="tel"></div>
+            <div><label data-i18n="f-tel">Telefon</label><input type="tel" id="p-tel" autocomplete="tel"></div>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend data-i18n="f-kantor">The exchange office and the incident</legend>
+          <legend data-i18n="f-kantor">Kantor i zdarzenie</legend>
           <div class="inst-grid" style="gap:14px">
-            <div><label data-i18n="f-kname">Name of the exchange office <span class="req">*</span></label><input type="text" id="k-name"></div>
-            <div><label data-i18n="f-kaddr">Address of the office <span class="req">*</span></label><input type="text" id="k-addr" placeholder="ul. …, Kraków"></div>
-            <div><label data-i18n="f-knip">Tax ID / NIP (from the receipt, if you have it)</label><input type="text" id="k-nip"></div>
-            <div><label data-i18n="f-txn">Transaction number (from the receipt)</label><input type="text" id="k-txn"></div>
+            <div><label data-i18n="f-kname">Nazwa kantoru <span class="req">*</span></label><input type="text" id="k-name"></div>
+            <div><label data-i18n="f-kaddr">Adres kantoru <span class="req">*</span></label><input type="text" id="k-addr" placeholder="ul. …, Kraków"></div>
+            <div><label data-i18n="f-knip">NIP (z paragonu, jeśli masz)</label><input type="text" id="k-nip"></div>
+            <div><label data-i18n="f-txn">Nr transakcji (z dowodu kupna-sprzedaży)</label><input type="text" id="k-txn"></div>
             <div class="row2">
-              <div><label data-i18n="f-date">Date of exchange <span class="req">*</span></label><input type="date" id="k-date"></div>
-              <div><label data-i18n="f-time">Time</label><input type="time" id="k-time"></div>
+              <div><label data-i18n="f-date">Data wymiany <span class="req">*</span></label><input type="date" id="k-date"></div>
+              <div><label data-i18n="f-time">Godzina</label><input type="time" id="k-time"></div>
             </div>
             <div class="row2">
-              <div><label data-i18n="f-amt">Amount exchanged <span class="req">*</span></label><input type="number" id="k-amt" min="0" step="0.01" placeholder="100"></div>
-              <div><label data-i18n="f-cur">Currency</label>
-                <select id="k-cur"><option>EUR</option><option>USD</option><option>GBP</option><option>CHF</option><option>SEK</option><option>NOK</option><option>DKK</option><option>CZK</option><option>UAH</option><option data-i18n="f-cur-other" value="__other">other…</option></select>
+              <div><label data-i18n="f-amt">Wymieniona kwota <span class="req">*</span></label><input type="number" id="k-amt" min="0" step="0.01" placeholder="100"></div>
+              <div><label data-i18n="f-cur">Waluta</label>
+                <select id="k-cur"><option>EUR</option><option>USD</option><option>GBP</option><option>CHF</option><option>SEK</option><option>NOK</option><option>DKK</option><option>CZK</option><option>UAH</option><option data-i18n="f-cur-other" value="__other">inna…</option></select>
                 <input type="text" id="k-cur-other" style="display:none;margin-top:8px" placeholder="np. JPY">
               </div>
             </div>
             <div class="row2">
-              <div><label data-i18n="f-got">Amount received in PLN <span class="req">*</span></label><input type="number" id="k-got" min="0" step="0.01" placeholder="360"></div>
-              <div><label data-i18n="f-board">Rate on the board (if known)</label><input type="number" id="k-board" min="0" step="0.0001" placeholder="4.30"></div>
+              <div><label data-i18n="f-got">Otrzymana kwota w PLN <span class="req">*</span></label><input type="number" id="k-got" min="0" step="0.01" placeholder="360"></div>
+              <div><label data-i18n="f-board">Kurs na tablicy (jeśli znasz)</label><input type="number" id="k-board" min="0" step="0.0001" placeholder="4.30"></div>
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend data-i18n="f-what">How you were misled</legend>
-          <label class="chk"><input type="checkbox" id="w1" checked=""><span data-i18n="f-w1">the buy rate (the rate for selling my currency) was hidden, unreadable or not displayed at all</span></label>
-          <label class="chk"><input type="checkbox" id="w2"><span data-i18n="f-w2">the attractive rates on display actually referred to exotic currencies, despite being shown next to $, €, £ symbols</span></label>
-          <label class="chk"><input type="checkbox" id="w3"><span data-i18n="f-w3">the rate applied at the counter was different from the rate shown on the board</span></label>
-          <label class="chk"><input type="checkbox" id="w4"><span data-i18n="f-w4">before the transaction I was not informed of the actual rate or the amount I would receive</span></label>
-          <label class="chk"><input type="checkbox" id="w5"><span data-i18n="f-w5">despite complaining immediately at the counter, I was refused a cancellation and refund</span></label>
-          <label class="chk"><input type="checkbox" id="w6"><span data-i18n="f-w6">I was not given a receipt (proof of purchase/sale)</span></label>
-          <div style="margin-top:14px"><label data-i18n="f-desc">Additional description (optional)</label><textarea id="k-desc"></textarea>
-          <p class="sig-hint" style="margin:8px 0 0" data-i18n="f-desc-hint">Polish authorities process complaints in Polish. Best option: translate this text yourself (e.g. with Google Translate or DeepL) and paste the Polish version here. If you write in English, the letter will clearly mark this part as an English-language description — authorities generally still accept it, but Polish is safer.</p></div>
+          <legend data-i18n="f-what">Na czym polegało wprowadzenie w błąd</legend>
+          <label class="chk"><input type="checkbox" id="w1" checked=""><span data-i18n="f-w1">kurs skupu (sprzedaży waluty przez klienta) był ukryty, nieczytelny lub w ogóle niewywieszony</span></label>
+          <label class="chk"><input type="checkbox" id="w2"><span data-i18n="f-w2">wyeksponowane atrakcyjne kursy dotyczyły w rzeczywistości walut egzotycznych, mimo umieszczenia ich przy symbolach $, €, £</span></label>
+          <label class="chk"><input type="checkbox" id="w3"><span data-i18n="f-w3">kurs zastosowany przy okienku był inny niż kurs prezentowany na tablicy</span></label>
+          <label class="chk"><input type="checkbox" id="w4"><span data-i18n="f-w4">przed dokonaniem transakcji nie poinformowano mnie o rzeczywistym kursie ani o kwocie, jaką otrzymam</span></label>
+          <label class="chk"><input type="checkbox" id="w5"><span data-i18n="f-w5">mimo natychmiastowej reklamacji przy okienku odmówiono mi anulowania transakcji i zwrotu pieniędzy</span></label>
+          <label class="chk"><input type="checkbox" id="w6"><span data-i18n="f-w6">nie wydano mi dowodu kupna-sprzedaży (paragonu)</span></label>
+          <div style="margin-top:14px"><label data-i18n="f-desc">Dodatkowy opis (opcjonalnie)</label><textarea id="k-desc"></textarea>
+          <p class="sig-hint" style="margin:8px 0 0" data-i18n="f-desc-hint">Urzędy rozpatrują pisma w języku polskim. Jeśli wpiszesz opis po angielsku, pismo wyraźnie oznaczy ten fragment jako sporządzony w języku angielskim.</p></div>
         </fieldset>
 
         <fieldset>
-          <legend data-i18n="f-ev">Evidence you have</legend>
-          <label class="chk"><input type="checkbox" id="e1" checked=""><span data-i18n="f-e1">exchange receipt</span></label>
-          <label class="chk"><input type="checkbox" id="e2"><span data-i18n="f-e2">photos of the rate board and premises</span></label>
-          <label class="chk"><input type="checkbox" id="e3"><span data-i18n="f-e3">video recording</span></label>
-          <label class="chk"><input type="checkbox" id="e4"><span data-i18n="f-e4">witness details</span></label>
+          <legend data-i18n="f-ev">Posiadane dowody</legend>
+          <label class="chk"><input type="checkbox" id="e1" checked=""><span data-i18n="f-e1">dowód kupna-sprzedaży (paragon)</span></label>
+          <label class="chk"><input type="checkbox" id="e2"><span data-i18n="f-e2">zdjęcia tablicy kursów i lokalu</span></label>
+          <label class="chk"><input type="checkbox" id="e3"><span data-i18n="f-e3">nagranie video</span></label>
+          <label class="chk"><input type="checkbox" id="e4"><span data-i18n="f-e4">dane świadków</span></label>
         </fieldset>
 
         <fieldset>
-          <legend data-i18n="f-sig">Signature</legend>
-          <p class="sig-hint" data-i18n="f-sig-hint">Sign with your finger (on a phone) or your mouse — the signature will be embedded in the generated letter. You can also leave this blank and sign the printout with a pen.</p>
+          <legend data-i18n="f-sig">Podpis</legend>
+          <p class="sig-hint" data-i18n="f-sig-hint">Podpisz się palcem (na telefonie) lub myszką — podpis zostanie umieszczony w wygenerowanym piśmie. Możesz też zostawić puste pole i podpisać wydruk długopisem.</p>
           <canvas id="sig-pad" height="160" width="884"></canvas>
           <div class="sig-tools">
-            <button type="button" class="btn ghost sig-clear" onclick="clearSig()" data-i18n="f-sig-clear">Clear</button>
+            <button type="button" class="btn ghost sig-clear" onclick="clearSig()" data-i18n="f-sig-clear">Wyczyść</button>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend data-i18n="f-to">Recipients</legend>
-          <label class="chk"><input type="checkbox" id="r-nbp" checked=""><span>Narodowy Bank Polski — Oddział Okręgowy w Krakowie<small data-i18n="f-r1s">Recommended — direct supervisor of exchange offices</small></span></label>
+          <legend data-i18n="f-to">Adresaci pisma</legend>
+          <label class="chk"><input type="checkbox" id="r-nbp" checked=""><span>Narodowy Bank Polski — Oddział Okręgowy w Krakowie<small data-i18n="f-r1s">Zalecane — bezpośredni nadzór nad kantorami</small></span></label>
           <label class="chk"><input type="checkbox" id="r-uokik"><span>Urząd Ochrony Konkurencji i Konsumentów</span></label>
-          <label class="chk"><input type="checkbox" id="r-wt"><span data-i18n="f-r3">Kraków City Hall — Tourism Department</span></label>
-          <label class="chk"><input type="checkbox" id="r-mrk"><span data-i18n="f-r4">Municipal Consumer Ombudsman in Kraków</span></label>
+          <label class="chk"><input type="checkbox" id="r-wt"><span data-i18n="f-r3">Urząd Miasta Krakowa — Wydział ds. Turystyki</span></label>
+          <label class="chk"><input type="checkbox" id="r-mrk"><span data-i18n="f-r4">Miejski Rzecznik Konsumentów w Krakowie</span></label>
         </fieldset>
 
         <div class="btnrow">
-          <button class="btn" onclick="generate()" data-i18n="f-go">Generate the letter</button>
-          <button class="btn ghost" id="btn-print" style="display:none" onclick="window.print()" data-i18n="f-print">Print / save as PDF</button>
-          <button class="btn ghost" id="btn-copy" style="display:none" onclick="copyLetters(this)" data-i18n="f-copy">Copy text</button>
+          <button class="btn" onclick="generate()" data-i18n="f-go">Generuj pismo</button>
+          <button class="btn ghost" id="btn-print" style="display:none" onclick="window.print()" data-i18n="f-print">Drukuj / zapisz PDF</button>
+          <button class="btn ghost" id="btn-copy" style="display:none" onclick="copyLetters(this)" data-i18n="f-copy">Kopiuj treść</button>
         </div>
-        <div class="err" id="err" data-i18n="f-err">Fill in the fields marked with an asterisk and select at least one recipient.</div>
+        <div class="err" id="err" data-i18n="f-err">Uzupełnij pola oznaczone gwiazdką i wybierz co najmniej jednego adresata.</div>
       </form>
 
       <div id="output">
@@ -416,16 +417,16 @@
   </section>
 
   <div class="cta">
-    <a class="btn" href="index.html" data-i18n="cta">Back to Exchange Kantor Black Sheep</a>
+    <a class="btn" href="index.html" data-i18n="cta">Wróć do Exchange Kantor Black Sheep</a>
   </div>
 
-  <p class="disclaimer" data-i18n="disc">The information on this page is general and educational — it is not legal advice. The generator runs entirely in your browser; nothing you type is sent or stored anywhere. Exchange Kantor Black Sheep is not a party to the disputes described.</p>
+  <p class="disclaimer" data-i18n="disc">Informacje na tej stronie mają charakter ogólny i edukacyjny — nie stanowią porady prawnej. Generator działa w całości w Twojej przeglądarce; żadne wpisane dane nie są przesyłane ani zapisywane. Exchange Kantor Black Sheep nie jest stroną opisywanych sporów.</p>
 
 </main>
 
-<footer>© 2026 Exchange Kantor Black Sheep · Floriańska 37, Kraków · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacy / Prywatność</a></footer>
+<footer>© 2026 Exchange Kantor Black Sheep · Floriańska 37, Kraków · <a href="../privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacy / Prywatność</a></footer>
 
-<script>
+<script is:inline>
 /* ================= i18n ================= */
 const T = {
  pl:{
@@ -564,7 +565,7 @@ const T = {
  }
 };
 
-const PAGE_LANG = 'en', ALT_URL = 'pl/oszukal-cie-kantor.html';
+const PAGE_LANG = 'pl', ALT_URL = '../scam-help.html';
 let DETECTED = PAGE_LANG;
 try { DETECTED = localStorage.getItem('bs-lang') || (navigator.language && navigator.language.toLowerCase().startsWith('pl') ? 'pl' : 'en'); } catch (e) {}
 let LANG = PAGE_LANG;
@@ -785,9 +786,9 @@ function copyLetters(btn){
   });
 }
 
-if (DETECTED === 'pl') { window.location.replace(ALT_URL); } else { setLang('en'); }
+setLang('pl');
 </script>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;fce89aac099a4854bc0afdcbf74b9904&quot;}"></script><!-- End Cloudflare Web Analytics -->
+<Analytics />
 
 
 </body></html>

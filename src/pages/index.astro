@@ -1,12 +1,14 @@
+---
+import Logo from '../components/Logo.astro';
+import GeoMeta from '../components/GeoMeta.astro';
+import Analytics from '../components/Analytics.astro';
+---
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Exchange Kantor Black Sheep | Currency Exchange Kraków | Floriańska 37 | 0% Commission</title>
-    <meta name="geo.region" content="PL-12">
-    <meta name="geo.placename" content="Kraków">
-    <meta name="geo.position" content="50.06373;19.9408">
-    <meta name="ICBM" content="50.06373, 19.9408">
+    <GeoMeta />
     <meta name="description" content="Exchange Kantor Black Sheep: currency exchange at Floriańska 37 in Kraków Old Town. The best rates in the centre, a retail spread of a few groszy, negotiable wholesale rates, 0% commission.">
     <link rel="canonical" href="https://kantorblacksheep.pl/">
     <link rel="alternate" hreflang="en" href="https://kantorblacksheep.pl/">
@@ -28,7 +30,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="images/sygnet-512.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <script type="application/ld+json">
+    <script is:inline type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FinancialService",
@@ -139,10 +141,10 @@
 }
     </script>
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which rate applies to me — buy or sell?", "acceptedAnswer": {"@type": "Answer", "text": "Rates are always quoted from the kantor's side — WE BUY or WE SELL the currency. We buy = you bring us currency. At a buy rate of EUR 4.40, for 100 euro you receive 440 zł. We sell = you buy currency from us. At a sell rate of GBP 5.10, for 100 British pounds you pay 510 zł."}}, {"@type": "Question", "name": "What is your spread?", "acceptedAnswer": {"@type": "Answer", "text": "A few groszy. At retail the difference between our buy and sell rate is at most 0.09 PLN (9 groszy). At wholesale it is 0.02–0.03 PLN: that is the rate we show for 5 000 EUR, and you can negotiate from the equivalent of as little as 500 EUR. Both tables, retail and wholesale, are always on our board and on this page."}}, {"@type": "Question", "name": "What is the difference between złoty (zł) and PLN?", "acceptedAnswer": {"@type": "Answer", "text": "None — it is the same currency. PLN is the international code of the Polish złoty (like EUR for the euro), and zł is the everyday abbreviation you will see on price tags. 10 zł = 10 PLN."}}, {"@type": "Question", "name": "Which currencies do you exchange?", "acceptedAnswer": {"@type": "Answer", "text": "🇪🇺 EUR (euro), 🇺🇸 USD (US dollars), 🇬🇧 GBP (British pounds), 🇨🇭 CHF (Swiss francs), 🇨🇦 CAD (Canadian dollars), 🇦🇺 AUD (Australian dollars), 🇩🇰 DKK (Danish krone), 🇸🇪 SEK (Swedish krona), 🇳🇴 NOK (Norwegian krone), 🇨🇿 CZK (Czech koruna), 🇭🇺 HUF (Hungarian forints), 🇯🇵 JPY (Japanese yen), 🇦🇪 AED (UAE dirhams)— plus euro coins and withdrawn or damaged banknotes, after contacting us first. You can send photos on WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Are the rates negotiable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. For larger amounts the rate is agreed individually at the counter. The wholesale rate can be negotiated from the equivalent of as little as 500 EUR; it depends on the amount, so just ask. The wholesale table on this page shows rates for 5 000 EUR (spread 0.02–0.03 PLN)."}}, {"@type": "Question", "name": "Can I pay by card?", "acceptedAnswer": {"@type": "Answer", "text": "We exchange cash only — like every traditional kantor in Poland."}}, {"@type": "Question", "name": "Do you buy old, withdrawn or damaged banknotes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — withdrawn series, damaged banknotes and euro coins. Call us first at +48 889 505 057 or send photos on WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Do I need an ID to exchange money?", "acceptedAnswer": {"@type": "Answer", "text": "For everyday amounts — no. Polish anti-money-laundering law requires identification only for transactions from the equivalent of 15,000 EUR."}}, {"@type": "Question", "name": "Are you open on weekends?", "acceptedAnswer": {"@type": "Answer", "text": "Saturday: 09:30–20:30; Sunday: closed; Monday–Friday: 09:30–20:30"}}, {"@type": "Question", "name": "Is Floriańska a safe street to exchange money?", "acceptedAnswer": {"@type": "Answer", "text": "Honestly? The street's reputation is mixed — some offices in the area display only one attractive rate, which applies to the opposite direction of the exchange. Others display no rates at all, and some show rates for other currencies, such as ALL, RSD or JOD, labelled with € $ £ symbols to mislead you. That is exactly why we play with open cards: the full buy and sell table on display, 0% commission, and you can verify any exchange office — including ours — in 30 seconds via fresh Google Maps reviews. Honest exchange on Floriańska exists; just check the board and the reviews, and ask for the rate at the counter before you hand over cash."}}, {"@type": "Question", "name": "Is this the former \"Kantor U Górali\"?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the same exchange office at Floriańska 37 and the same owner. We changed the name so it says out loud who we are: the black sheep among Kraków's exchange offices — the one that plays with open cards. Full buy and sell rates on display, 0% commission, no asterisks. The name changed; the rules didn't."}}]}</script>
+    <script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which rate applies to me — buy or sell?", "acceptedAnswer": {"@type": "Answer", "text": "Rates are always quoted from the kantor's side — WE BUY or WE SELL the currency. We buy = you bring us currency. At a buy rate of EUR 4.40, for 100 euro you receive 440 zł. We sell = you buy currency from us. At a sell rate of GBP 5.10, for 100 British pounds you pay 510 zł."}}, {"@type": "Question", "name": "What is your spread?", "acceptedAnswer": {"@type": "Answer", "text": "A few groszy. At retail the difference between our buy and sell rate is at most 0.09 PLN (9 groszy). At wholesale it is 0.02–0.03 PLN: that is the rate we show for 5 000 EUR, and you can negotiate from the equivalent of as little as 500 EUR. Both tables, retail and wholesale, are always on our board and on this page."}}, {"@type": "Question", "name": "What is the difference between złoty (zł) and PLN?", "acceptedAnswer": {"@type": "Answer", "text": "None — it is the same currency. PLN is the international code of the Polish złoty (like EUR for the euro), and zł is the everyday abbreviation you will see on price tags. 10 zł = 10 PLN."}}, {"@type": "Question", "name": "Which currencies do you exchange?", "acceptedAnswer": {"@type": "Answer", "text": "🇪🇺 EUR (euro), 🇺🇸 USD (US dollars), 🇬🇧 GBP (British pounds), 🇨🇭 CHF (Swiss francs), 🇨🇦 CAD (Canadian dollars), 🇦🇺 AUD (Australian dollars), 🇩🇰 DKK (Danish krone), 🇸🇪 SEK (Swedish krona), 🇳🇴 NOK (Norwegian krone), 🇨🇿 CZK (Czech koruna), 🇭🇺 HUF (Hungarian forints), 🇯🇵 JPY (Japanese yen), 🇦🇪 AED (UAE dirhams)— plus euro coins and withdrawn or damaged banknotes, after contacting us first. You can send photos on WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Are the rates negotiable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. For larger amounts the rate is agreed individually at the counter. The wholesale rate can be negotiated from the equivalent of as little as 500 EUR; it depends on the amount, so just ask. The wholesale table on this page shows rates for 5 000 EUR (spread 0.02–0.03 PLN)."}}, {"@type": "Question", "name": "Can I pay by card?", "acceptedAnswer": {"@type": "Answer", "text": "We exchange cash only — like every traditional kantor in Poland."}}, {"@type": "Question", "name": "Do you buy old, withdrawn or damaged banknotes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — withdrawn series, damaged banknotes and euro coins. Call us first at +48 889 505 057 or send photos on WhatsApp: wa.me/48889505057"}}, {"@type": "Question", "name": "Do I need an ID to exchange money?", "acceptedAnswer": {"@type": "Answer", "text": "For everyday amounts — no. Polish anti-money-laundering law requires identification only for transactions from the equivalent of 15,000 EUR."}}, {"@type": "Question", "name": "Are you open on weekends?", "acceptedAnswer": {"@type": "Answer", "text": "Saturday: 09:30–20:30; Sunday: closed; Monday–Friday: 09:30–20:30"}}, {"@type": "Question", "name": "Is Floriańska a safe street to exchange money?", "acceptedAnswer": {"@type": "Answer", "text": "Honestly? The street's reputation is mixed — some offices in the area display only one attractive rate, which applies to the opposite direction of the exchange. Others display no rates at all, and some show rates for other currencies, such as ALL, RSD or JOD, labelled with € $ £ symbols to mislead you. That is exactly why we play with open cards: the full buy and sell table on display, 0% commission, and you can verify any exchange office — including ours — in 30 seconds via fresh Google Maps reviews. Honest exchange on Floriańska exists; just check the board and the reviews, and ask for the rate at the counter before you hand over cash."}}, {"@type": "Question", "name": "Is this the former \"Kantor U Górali\"?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the same exchange office at Floriańska 37 and the same owner. We changed the name so it says out loud who we are: the black sheep among Kraków's exchange offices — the one that plays with open cards. Full buy and sell rates on display, 0% commission, no asterisks. The name changed; the rules didn't."}}]}</script>
     <link rel="stylesheet" href="styles.css">
 
-    <style>
+    <style is:inline>
 
         :root {
             --ink: #0a0a0a;
@@ -284,11 +286,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="flex items-center justify-between h-16">
                 <a href="#top" class="flex items-center gap-3">
-                    <img src="images/sygnet-96.png" alt="Exchange Kantor Black Sheep" class="w-10 h-10 rounded-xl" width="40" height="40">
-                    <span class="lockup" style="font-size: 0.62rem;">
-                        <span class="top">Exchange</span>
-                        <span class="sub"><b>Kantor</b> Black Sheep</span>
-                    </span>
+                    <Logo variant="lockup" base="" />
                 </a>
 
                 <div class="hidden md:flex items-center gap-8">
@@ -638,7 +636,7 @@
         <span data-i18n="toast_copied">Address copied</span>
     </div>
 
-    <script>
+    <script is:inline>
         /* =====================================================
            RATES are loaded from rates.json (same folder).
            To change rates: edit ONLY rates.json — never this file.
@@ -983,7 +981,7 @@
             loadRates();
         }
     </script>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;fce89aac099a4854bc0afdcbf74b9904&quot;}"></script><!-- End Cloudflare Web Analytics -->
+<Analytics />
 
 
 </body></html>
