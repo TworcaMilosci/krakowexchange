@@ -1,0 +1,94 @@
+---
+// Układ artykułu bazy wiedzy. Artykuł to plik .md z nagłówkiem (frontmatter):
+// title, description, lang (pl|en), date, updated, alt (adres wersji w drugim języku), faq [{q, a}]
+import Logo from '../components/Logo.astro';
+import GeoMeta from '../components/GeoMeta.astro';
+import Analytics from '../components/Analytics.astro';
+import { SITE } from '../data/site.js';
+const fm = Astro.props.frontmatter || Astro.props;
+const lang = fm.lang === 'pl' ? 'pl' : 'en';
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
+const canonical = SITE.url + path;
+const altUrl = fm.alt ? SITE.url + fm.alt : null;
+const enUrl = lang === 'en' ? canonical : altUrl;
+const plUrl = lang === 'pl' ? canonical : altUrl;
+const T = lang === 'pl'
+  ? { home: '/pl/', kb: '/pl/baza-wiedzy/', kbName: 'Baza wiedzy', back: '← BAZA WIEDZY', updated: 'Aktualizacja', by: 'Autor: zespół Exchange Kantor Black Sheep, Floriańska 37, Kraków', faq: 'Najczęstsze pytania', cta: 'Dzisiejsze kursy', cta2: 'Jak nas znaleźć', disc: 'Piszemy z perspektywy kantoru przy Floriańskiej 37 w Krakowie. To informacje ogólne, nie porada finansowa. Kursy w przykładach są poglądowe; aktualne znajdziesz na stronie głównej.', homeName: 'Strona główna' }
+  : { home: '/', kb: '/knowledge-base/', kbName: 'Knowledge base', back: '← KNOWLEDGE BASE', updated: 'Updated', by: 'By the team at Exchange Kantor Black Sheep, Floriańska 37, Kraków', faq: 'Frequently asked questions', cta: "Today's rates", cta2: 'Find us', disc: 'Written from the counter of a currency exchange office at Floriańska 37 in Kraków. General information, not financial advice. Rates in examples are illustrative; current rates are on our home page.', homeName: 'Home' };
+const fmtDate = (d) => new Date(d).toISOString().slice(0, 10);
+const org = { '@type': 'FinancialService', '@id': SITE.url + '/#business', name: SITE.name, url: SITE.url };
+const ld = [{
+  '@context': 'https://schema.org', '@type': 'Article', headline: fm.title, description: fm.description, inLanguage: lang,
+  mainEntityOfPage: canonical, image: SITE.ogImage, datePublished: fmtDate(fm.date), dateModified: fmtDate(fm.updated || fm.date), author: org, publisher: org,
+}, {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: T.homeName, item: SITE.url + T.home },
+    { '@type': 'ListItem', position: 2, name: T.kbName, item: SITE.url + T.kb },
+    { '@type': 'ListItem', position: 3, name: fm.title, item: canonical },
+  ],
+}];
+if (fm.faq?.length) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: fm.faq.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) });
+---
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>{fm.title} · {SITE.name}</title>
+<meta name="description" content={fm.description}>
+<link rel="canonical" href={canonical}>
+{enUrl && <link rel="alternate" hreflang="en" href={enUrl}>}
+{plUrl && <link rel="alternate" hreflang="pl" href={plUrl}>}
+{enUrl && <link rel="alternate" hreflang="x-default" href={enUrl}>}
+<meta property="og:type" content="article">
+<meta property="og:title" content={fm.title}>
+<meta property="og:description" content={fm.description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:site_name" content={SITE.name}>
+<meta property="og:image" content={SITE.ogImage}>
+<GeoMeta />
+<link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/guide.css">
+<link rel="stylesheet" href="/article.css">
+{ld.map((x) => <script is:inline type="application/ld+json" set:html={JSON.stringify(x)}></script>)}
+</head>
+<body>
+<header>
+  <div class="wrap hd">
+    <a class="logo" href={T.home}><Logo variant="txt" base="/" /></a>
+    <div class="hd-right">
+      <div class="lang" role="group" aria-label="Language">
+        {lang === 'en' ? <a class="lang-a on" href={path}>EN</a> : (fm.alt ? <a class="lang-a" href={fm.alt}>EN</a> : <a class="lang-a" href="/knowledge-base/">EN</a>)}
+        {lang === 'pl' ? <a class="lang-a on" href={path}>PL</a> : (fm.alt ? <a class="lang-a" href={fm.alt}>PL</a> : <a class="lang-a" href="/pl/baza-wiedzy/">PL</a>)}
+      </div>
+      <a class="backlink" href={T.kb}>{T.back}</a>
+      <a class="backcircle" href={T.kb} aria-label={T.kbName}>←</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <article class="article">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href={T.home}>{T.homeName}</a> › <a href={T.kb}>{T.kbName}</a></nav>
+    <h1>{fm.title}</h1>
+    <p class="lead">{fm.description}</p>
+    <p class="meta">{T.by} · {T.updated}: <time datetime={fmtDate(fm.updated || fm.date)}>{fmtDate(fm.updated || fm.date)}</time></p>
+    <div class="prose"><slot /></div>
+    {fm.faq?.length && (
+      <section class="faq-block">
+        <h2>{T.faq}</h2>
+        {fm.faq.map((x) => (<Fragment><h3>{x.q}</h3><p>{x.a}</p></Fragment>))}
+      </section>
+    )}
+    <div class="cta">
+      <a class="btn" href={T.home + '#rates'}>{T.cta}</a>
+      <a class="btn ghost" href={T.home + '#visit'}>{T.cta2}</a>
+    </div>
+    <p class="disclaimer">{T.disc}</p>
+  </article>
+</main>
+<footer>© 2026 {SITE.name} · {SITE.street}, {SITE.city} · <a href="/privacy" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacy / Prywatność</a></footer>
+<Analytics />
+</body>
+</html>

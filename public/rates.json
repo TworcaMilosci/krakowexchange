@@ -33,5 +33,34 @@
     "HUF",
     "JPY",
     "AED"
-  ]
+  ],
+  "wholesaleAuto": {
+    "enabled": true,
+    "dayStart": 9,
+    "dayEnd": 17,
+    "day": {
+      "buy": {
+        "EUR": 0.02,
+        "USD": 0.02,
+        "GBP": 0.029
+      },
+      "sell": {
+        "EUR": 0.005,
+        "USD": 0.005,
+        "GBP": 0.005
+      }
+    },
+    "night": {
+      "buy": {
+        "EUR": 0.03,
+        "USD": 0.03,
+        "GBP": 0.039
+      },
+      "sell": {
+        "EUR": 0.01,
+        "USD": 0.01,
+        "GBP": 0.01
+      }
+    }
+  }
 }

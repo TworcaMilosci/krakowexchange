@@ -1,0 +1,32 @@
+/* Typografia artykułów bazy wiedzy (uzupełnia guide.css). */
+.article{max-width:760px;margin:0 auto;padding:40px 0 24px}
+.crumbs{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.crumbs a{text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.article h1{font-weight:800;font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.15;letter-spacing:.01em;margin-bottom:16px}
+.article .lead{font-size:1.08rem;color:#d4d4d4;margin-bottom:14px}
+.article .meta{font-size:.8rem;color:var(--muted);margin-bottom:34px;padding-bottom:22px;border-bottom:1px solid var(--card-border)}
+.prose h2,.faq-block h2{font-weight:800;font-size:1.45rem;line-height:1.25;margin:44px 0 14px;scroll-margin-top:90px}
+.prose h3,.faq-block h3{font-weight:700;font-size:1.08rem;margin:28px 0 8px}
+.prose p,.faq-block p{margin:0 0 16px;color:#dedede}
+.prose ul,.prose ol{margin:0 0 18px 1.3em;color:#dedede}
+.prose li{margin-bottom:8px}
+.prose a,.faq-block a{text-decoration:underline;text-underline-offset:3px}
+.prose strong{color:#fff;font-weight:700}
+.prose blockquote{border-left:3px solid #fff;margin:22px 0;padding:6px 0 6px 18px;color:#fff;font-weight:600}
+.prose table{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:.95rem;display:block;overflow-x:auto}
+.prose th,.prose td{border:1px solid var(--card-border);padding:10px 12px;text-align:left;vertical-align:top}
+.prose th{background:var(--card);font-weight:700;color:#fff}
+.prose img{max-width:100%;height:auto;border-radius:14px;border:1px solid var(--card-border);margin:8px 0 18px}
+.faq-block{margin-top:20px;padding-top:6px;border-top:1px solid var(--card-border)}
+.lang a.lang-a{display:inline-block;text-decoration:none;font:700 12px 'Montserrat',sans-serif;letter-spacing:.06em;padding:6px 12px;border-radius:999px;color:#8a8a8a}
+.lang a.lang-a.on{background:#fff;color:#000}
+.kb-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px}
+.kb-list li{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:22px 24px}
+.kb-list a{text-decoration:none;font-weight:800;font-size:1.15rem;line-height:1.3}
+.kb-list a:hover{text-decoration:underline}
+.kb-list p{color:#c9c9c9;margin:8px 0 0;font-size:.95rem}
+.kb-list time{display:block;color:var(--muted);font-size:.78rem;margin-top:10px}
+@media(max-width:400px){.lang a.lang-a{padding:5px 9px;font-size:11px}}
+.prose .kb-list{margin-left:0}
+.prose table{display:table}
+@media(max-width:560px){.prose table{display:block}}

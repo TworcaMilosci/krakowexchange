@@ -1,0 +1,5 @@
+---
+import KbIndex from '../../components/KbIndex.astro';
+const posts = Object.values(import.meta.glob('./*.md', { eager: true }));
+---
+<KbIndex lang="en" posts={posts} />

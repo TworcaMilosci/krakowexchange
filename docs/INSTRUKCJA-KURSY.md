@@ -53,3 +53,27 @@ Najczęstsza przyczyna: literówka w `rates.json` (przecinek zamiast kropki,
 brakujący cudzysłów). Wejdź na https://jsonlint.com, wklej zawartość pliku —
 pokaże, w której linii jest błąd. Strona ma wbudowane kursy awaryjne, więc
 nigdy nie pokaże pustej tabeli.
+
+---
+
+## Kursy hurtowe liczone z rynku (od wersji Astro / Cloudflare)
+
+Plik kursów to teraz `public/rates.json`. Kursy **detaliczne** (`buy`, `sell`) wpisujesz ręcznie jak dotąd.
+
+Kursy **hurtowe** strona liczy sama z kursu rynkowego (funkcja `functions/api/rates.js`):
+
+| | Skup EUR, USD | Skup GBP | Sprzedaż |
+|---|---|---|---|
+| Dni robocze 9:00-17:00 (kurs na żywo) | rynek -2 gr | rynek -2,9 gr | rynek +0,5 gr |
+| Wieczór, weekend, święta, brak kursu na żywo | rynek -3 gr | rynek -3,9 gr | rynek +1 gr |
+
+Marże i godziny zmienisz w `rates.json`, w polu `wholesaleAuto`.
+
+Zabezpieczenia:
+- `"wholesaleAuto": { "enabled": false }` wyłącza automat: strona pokazuje ręczne `buyHurt` i `sellHurt`.
+- Jeśli kurs rynkowy wypada poza Twoje kursy detaliczne (kupno-sprzedaż), strona uznaje dane za nieaktualne i pokazuje ręczne kursy hurtowe. Dlatego detal trzeba aktualizować.
+- Jeśli źródło kursów nie odpowiada, strona pokazuje ręczne kursy hurtowe.
+
+Źródła kursu rynkowego: Twelve Data (na żywo; wymaga zmiennej `TWELVEDATA_KEY` w ustawieniach Cloudflare Pages), zapasowo NBP (jeden kurs dziennie; wtedy zawsze obowiązują szersze marże).
+
+Podgląd tego, co strona policzyła: adres `/api/rates` (pole `wholesaleAutoInfo` mówi, z jakiego źródła i w jakim trybie).

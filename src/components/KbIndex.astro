@@ -1,0 +1,17 @@
+---
+// Lista artykułów bazy wiedzy dla danego języka.
+import Article from '../layouts/Article.astro';
+const { lang, posts } = Astro.props;
+const T = lang === 'pl'
+  ? { title: 'Baza wiedzy: wymiana walut w Krakowie', description: 'Praktyczne poradniki o wymianie walut, kursach, spreadzie i pieniądzach w Krakowie. Pisane przez kantor przy Floriańskiej 37.', alt: '/knowledge-base/' }
+  : { title: 'Knowledge base: currency exchange in Kraków', description: 'Practical guides to exchanging money in Kraków: rates, spreads, cards, cash and common traps. Written by an exchange office at Floriańska 37.', alt: '/pl/baza-wiedzy/' };
+const list = posts.map((p) => ({ ...p.frontmatter, url: p.url.replace(/\.html$/, '') })).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+const latest = list.length ? list[0].updated || list[0].date : '2026-11-13';
+---
+<Article title={T.title} description={T.description} lang={lang} date={latest} alt={T.alt}>
+  <ul class="kb-list">
+    {list.map((p) => (
+      <li><a href={p.url}>{p.title}</a><p>{p.description}</p><time datetime={new Date(p.date).toISOString().slice(0, 10)}>{new Date(p.date).toISOString().slice(0, 10)}</time></li>
+    ))}
+  </ul>
+</Article>
