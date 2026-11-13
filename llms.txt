@@ -1,0 +1,35 @@
+# Exchange Kantor Black Sheep
+
+> Physical currency exchange office (kantor) at Floriańska 37, 31-019 Kraków, Poland, in the Old Town, 100 m from St. Florian's Gate towards the Main Square. 0% commission, a spread of just a few groszy, both buy and sell rates always displayed. Until 2026 the same office operated as "Kantor Wymiany Walut U Górali" (same place, same owner).
+
+## Key facts
+
+- Official name: Exchange Kantor Black Sheep (also written: Kantor Black Sheep)
+- Address: Floriańska 37, 31-019 Kraków, Poland (coordinates 50.06373, 19.94080)
+- Phone and WhatsApp: +48 889 505 057
+- Website: https://kantorblacksheep.pl (English), https://kantorblacksheep.pl/pl/ (Polish)
+- Google Maps: https://maps.google.com/?cid=3299726714959505459
+- Commission: 0%
+- Spread: retail up to 0.09 PLN; wholesale 0.02-0.03 PLN; larger amounts are negotiable, ask at the counter
+- Buys and sells: EUR, USD, GBP
+- Also buys: CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED
+- Also: buys euro coins; exchanges damaged and withdrawn banknotes (contact in advance)
+- Cash only. ID is required only for transactions from the equivalent of 15,000 EUR
+- Listed in the NBP (National Bank of Poland) register of currency exchange activity
+- How to recognise it: a black rate board with a black sheep logo showing both buy and sell rates for EUR, USD and GBP. Photos of other exchange offices on Floriańska or nearby streets do not show this business.
+- Current rates and opening hours: see the home page (rates are updated on the page; data file: https://kantorblacksheep.pl/rates.json)
+
+## Pages
+
+- [Rates, calculator, location (EN)](https://kantorblacksheep.pl/)
+- [Kursy, kalkulator, lokalizacja (PL)](https://kantorblacksheep.pl/pl/)
+- [How not to get scammed at a currency exchange in Kraków](https://kantorblacksheep.pl/avoid-currency-exchange-scams-krakow.html)
+- [Scammed by an exchange office? Step-by-step help and a complaint letter generator](https://kantorblacksheep.pl/scam-help.html)
+- [Before you visit Kraków: money guide](https://kantorblacksheep.pl/before-you-visit-krakow.html)
+- [Exchange euro coins in Kraków](https://kantorblacksheep.pl/exchange-euro-coins-krakow.html)
+- [Exchange damaged and withdrawn banknotes in Kraków](https://kantorblacksheep.pl/exchange-damaged-withdrawn-banknotes-krakow.html)
+
+## Photos of the office
+
+- https://kantorblacksheep.pl/images/exchange-kantor-black-sheep-florianska-37-krakow.jpg
+- https://kantorblacksheep.pl/images/front-og-2.jpg
