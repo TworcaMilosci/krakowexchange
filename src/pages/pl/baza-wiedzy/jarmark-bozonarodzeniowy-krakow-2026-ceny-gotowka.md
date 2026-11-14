@@ -2,36 +2,36 @@
 layout: ../../../layouts/Article.astro
 title: "Jarmark bożonarodzeniowy w Krakowie 2026: termin, ceny i ile gotówki zabrać na Rynek"
 seoTitle: "Jarmark bożonarodzeniowy Kraków 2026: termin i ceny"
-description: "Jarmark na Rynku Głównym w Krakowie ma ruszyć 27 listopada 2026 r. Ile co kosztuje, czy potrzebna jest gotówka i gdzie goście z zagranicy wymienią walutę."
+description: "Jarmark na Rynku Głównym w Krakowie: od 27 listopada 2026 do 6 stycznia 2027. Ile co kosztuje, czy potrzebna jest gotówka i gdzie wymienić walutę."
 lang: pl
 date: 2026-11-14
 alt: /knowledge-base/krakow-christmas-market-2026-prices-cash
 faq:
   - q: "Kiedy jest jarmark bożonarodzeniowy w Krakowie w 2026 roku?"
-    a: "Jarmark na Rynku Głównym ma ruszyć w piątek 27 listopada 2026 r. i potrwać do Nowego Roku. Jako datę zakończenia miasto podaje 1 stycznia 2027 r., a organizator wspominał także o 3 i 6 stycznia, dlatego przed późniejszą wizytą warto to sprawdzić."
+    a: "Jarmark na Rynku Głównym ma ruszyć w piątek 27 listopada 2026 r. i potrwać do 6 stycznia 2027 r."
   - q: "W jakich godzinach czynny jest jarmark na Rynku Głównym?"
-    a: "W chwili pisania poradnika oficjalne godziny dla odwiedzających w 2026 r. nie były jeszcze ogłoszone. W poprzednich latach stoiska otwierały się około 10:00 i działały do wieczora, a najdłużej czynne były stoiska z jedzeniem i grzańcem."
+    a: "W chwili pisania poradnika oficjalne godziny dla odwiedzających w 2026 r. nie były jeszcze ogłoszone. W zeszłym roku stoiska otwierały się około 10:00 i działały do późnych godzin nocnych. Każde stoisko ma własne godziny, a część była czynna jeszcze o 23:00."
   - q: "Czy na jarmarku w Krakowie można płacić kartą?"
-    a: "Na wielu stoiskach tak, ale nie na wszystkich, a przy dużym ruchu gotówka jest szybsza. Płaci się wyłącznie w złotówkach, więc goście z zagranicy powinni wcześniej wymienić euro, funty lub dolary."
+    a: "W zeszłym roku na wielu stoiskach tak, ale nie na wszystkich, a przy dużym ruchu gotówka jest szybsza. Płaci się wyłącznie w złotówkach, więc goście z zagranicy powinni wcześniej wymienić euro, funty lub dolary."
   - q: "Ile kosztuje jedzenie na jarmarku bożonarodzeniowym w Krakowie?"
     a: "Ceny na 2026 r. będą znane w dniu otwarcia. W ostatnich edycjach porcja pierogów kosztowała około 42–50 zł, żurek około 35 zł, a grzaniec od około 18 do 45 zł, zależnie od wielkości i rodzaju."
   - q: "Gdzie wymienić walutę blisko jarmarku?"
     a: "Exchange Kantor Black Sheep mieści się przy ul. Floriańskiej 37, około 230 metrów od Rynku Głównego, niespełna dwie minuty pieszo. Jest czynny od poniedziałku do piątku 9:30–20:30 i w sobotę 10:00–20:30, bez prowizji."
 ---
 
-**W skrócie:** Jarmark bożonarodzeniowy na Rynku Głównym w Krakowie ma ruszyć w **piątek 27 listopada 2026 r.** i potrwać do Nowego Roku. Wstęp jest bezpłatny. Na stoiskach płaci się **wyłącznie w złotówkach**; wiele z nich przyjmuje karty, ale na grzańca, oscypka i drobne upominki najwygodniejsza jest gotówka. Na wieczór z jedzeniem i zakupami warto mieć około **100–200 zł na osobę**. Nasz kantor przy ul. Floriańskiej 37 jest niespełna dwie minuty od stoisk.
+**W skrócie:** Jarmark bożonarodzeniowy na Rynku Głównym w Krakowie ma ruszyć w **piątek 27 listopada 2026 r.** i potrwać do **6 stycznia 2027 r.** Wstęp jest bezpłatny. Na stoiskach płaci się **wyłącznie w złotówkach**; w zeszłym roku wiele z nich przyjmowało karty, ale na grzańca, oscypka i drobne upominki najwygodniejsza jest gotówka. Na wieczór z jedzeniem i zakupami warto mieć około **100–200 zł na osobę**. Nasz kantor przy ul. Floriańskiej 37 jest niespełna dwie minuty od stoisk.
 
 ![Drewniane stoiska jarmarku bożonarodzeniowego w Krakowie o zmierzchu, w tle Sukiennice i Wieża Ratuszowa](/images/krakow-christmas-market-stalls-cloth-hall.webp)
 
-*Stoiska na Rynku Głównym, w tle Sukiennice i Wieża Ratuszowa. Zdjęcie z poprzedniej edycji.*
+*Stoiska na Rynku Głównym, w tle Sukiennice i Wieża Ratuszowa. Zdjęcie z grudnia 2025 r.*
 
 Pracujemy dwie minuty od Rynku i co roku w grudniu przechodzimy przez jarmark w drodze do pracy. W tym poradniku zebraliśmy stronę praktyczną: kiedy przyjść, ile co kosztuje, jak płacić i co podpowiedzieć gościom z zagranicy, którzy przyjeżdżają do Krakowa właśnie na jarmark.
 
 ## Termin i godziny otwarcia w 2026 roku
 
 - **Otwarcie:** planowane na piątek 27 listopada 2026 r.
-- **Zakończenie:** w umowie z miastem widnieje 1 stycznia 2027 r.; organizator wspominał też o 3 i 6 stycznia. Jeśli wybierasz się po Nowym Roku, sprawdź termin przed wyjazdem.
-- **Godziny:** w chwili pisania poradnika (połowa listopada 2026 r.) nie były oficjalnie ogłoszone. W poprzednich latach stoiska otwierały się około 10:00 i działały do wieczora, a gastronomia była czynna najdłużej.
+- **Zakończenie:** 6 stycznia 2027 r.
+- **Godziny:** w chwili pisania poradnika (połowa listopada 2026 r.) nie były oficjalnie ogłoszone. W zeszłym roku stoiska otwierały się około 10:00 i działały do późnych godzin nocnych. Każde stoisko ma własne godziny, a część punktów z jedzeniem i grzańcem była czynna jeszcze o 23:00.
 - **Święta i Nowy Rok:** nie ogłoszono jeszcze, czy stoiska będą czynne 24–26 grudnia i 1 stycznia. W Wigilię należy się spodziewać krótszych godzin.
 
 W tym samym czasie zapowiadane są dwa mniejsze jarmarki: na Małym Rynku i na placu św. Marii Magdaleny, kilka minut spacerem od Rynku Głównego.
@@ -40,11 +40,11 @@ Najlepsza pora to okolice zmierzchu, gdy zapalają się światła, a niebo za ko
 
 ![Kościół Mariacki i podświetlana gwiazda nad jarmarkiem bożonarodzeniowym na Rynku Głównym w Krakowie](/images/krakow-christmas-market-st-marys-basilica.webp)
 
-*Kościół Mariacki nad jarmarkiem o zmierzchu.*
+*Kościół Mariacki nad jarmarkiem o zmierzchu. Zdjęcie z grudnia 2025 r.*
 
 ## Co znajdziesz na jarmarku
 
-Rzędy drewnianych stoisk zajmują sporą część Rynku wokół Sukiennic.
+Rzędy drewnianych stoisk zajmują sporą część Rynku wokół Sukiennic. Poniżej opisujemy, jak jarmark wyglądał w zeszłym roku; tegoroczne szczegóły będą znane w dniu otwarcia.
 
 - **Jedzenie:** grillowany oscypek z żurawiną, pierogi, żurek i inne zupy, kiełbasy z rusztu, pajda ze smalcem i ogórkiem, pierniki i słodycze.
 - **Napoje:** grzaniec, gorąca czekolada, herbata z sokiem malinowym.
@@ -72,7 +72,7 @@ Dla porównania pełny obiad w barze mlecznym kilka ulic dalej kosztuje 25–45 
 
 Na stoiskach płaci się **wyłącznie w złotówkach**. Euro, funtów ani dolarów sprzedawcy nie przyjmują.
 
-Wiele stoisk ma terminale, ale nie wszystkie, a w zatłoczony wieczór połączenie bywa wolne. Gotówka jest szybsza w kolejce i działa wszędzie, dlatego warto mieć w kieszeni kilka banknotów i trochę drobnych.
+W zeszłym roku wiele stoisk miało terminale, ale nie wszystkie, a w zatłoczony wieczór połączenie bywa wolne. Gotówka jest szybsza w kolejce i działa wszędzie, dlatego warto mieć w kieszeni kilka banknotów i trochę drobnych.
 
 **Ile zabrać:** na wieczór z grzańcem, czymś z rusztu i jednym lub dwoma drobnymi upominkami zwykle wystarcza 100–200 zł na osobę. Więcej potrzeba tylko przy większych zakupach, a wtedy warto najpierw zapytać sprzedawcę o płatność kartą.
 
@@ -84,7 +84,7 @@ W grudniu do Krakowa przyjeżdża wielu gości z euro, funtami i dolarami w port
 
 ![Ulica Floriańska w Krakowie ze świąteczną iluminacją o zachodzie słońca, widok w stronę kościoła Mariackiego](/images/florianska-street-christmas-lights-krakow.webp)
 
-*Ulica Floriańska w grudniu, widok w stronę Rynku. Nasz kantor jest przy tej ulicy, pod numerem 37.*
+*Ulica Floriańska w grudniu 2025 r., widok w stronę Rynku. Nasz kantor jest przy tej ulicy, pod numerem 37.*
 
 - Skup i sprzedaż euro, dolarów amerykańskich i funtów brytyjskich, bez prowizji, z oboma kursami na tablicy.
 - Czynne od poniedziałku do piątku 9:30–20:30 i w sobotę 10:00–20:30. **W niedzielę zamknięte**, więc goście weekendowi powinni wymienić walutę w sobotę.
@@ -97,17 +97,17 @@ Goście z Wielkiej Brytanii powinni przywieźć banknoty Banku Anglii; funtów s
 1. **Weź tyle gotówki, ile chcesz wydać.** Łatwiej wtedy trzymać się budżetu, a goście z zagranicy nie zostają z nadmiarem złotówek.
 2. **Miej drobniejsze nominały.** Sprzedawcy chętniej przyjmą banknot 20 lub 50 zł niż 200 zł.
 3. **Pilnuj kieszeni.** Jarmark jest bezpieczny, ale każdy gęsty tłum przyciąga kieszonkowców. Portfel najlepiej trzymać w wewnętrznej kieszeni.
-4. **Zapytaj o kaucję za kubek.** Na części stoisk grzaniec podaje się w ozdobnym kubku z kaucją zwrotną.
+4. **Zapytaj o kaucję za kubek.** W zeszłym roku na części stoisk grzaniec podawano w ozdobnym kubku z kaucją zwrotną.
 5. **Ubierz się na stanie w miejscu.** Grudniowe wieczory często są mroźne, a na Rynku spędza się więcej czasu, niż się planuje.
 6. **Omijaj wolnostojące bankomaty wokół Rynku**, które zagranicznym kartom proponują przewalutowanie. Lepszy jest bankomat przy oddziale banku.
 
 ![Choinka na Rynku Głównym w Krakowie o zmierzchu, w tle Sukiennice](/images/krakow-main-square-christmas-tree.webp)
 
-*Choinka na Rynku Głównym o zmierzchu.*
+*Choinka na Rynku Głównym o zmierzchu. Zdjęcie z grudnia 2025 r.*
 
 ## Podsumowanie
 
-- Planowane otwarcie: piątek 27 listopada 2026 r., Rynek Główny; jarmark trwa do Nowego Roku. Datę zakończenia i godziny sprawdź przed późniejszą wizytą.
+- Rynek Główny, od piątku 27 listopada 2026 r. do 6 stycznia 2027 r.; stoiska działają do późnych godzin nocnych.
 - Wstęp jest bezpłatny, a jedzenie i napoje kosztują więcej niż w innych częściach miasta.
-- Płaci się w złotówkach. Wiele stoisk przyjmuje karty, ale warto mieć 100–200 zł w gotówce na osobę.
+- Płaci się w złotówkach. W zeszłym roku wiele stoisk przyjmowało karty, ale warto mieć 100–200 zł w gotówce na osobę.
 - Goście z zagranicy wymienią walutę przy Floriańskiej 37, niespełna dwie minuty od Rynku, do 20:30 od poniedziałku do soboty.
