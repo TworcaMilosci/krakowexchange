@@ -2,7 +2,10 @@
 // Zasady i marże są w rates.json w polu "wholesaleAuto"; tu są tylko wartości domyślne.
 // Źródła kursu rynkowego: źródło na żywo (do podłączenia w liveMids), zapasowo NBP (raz dziennie).
 // Kursy hurtowe zaokrąglamy do 3 miejsc po przecinku (najwyżej 4 cyfry w tabeli).
-// Gdy cokolwiek zawiedzie albo kurs wygląda podejrzanie, zwracamy ręczne kursy hurtowe z rates.json.
+// Hurt reguluje się sam. Gdy wyliczony kurs wychodzi poza detal, hurt = detal.
+// Gdy brak kursu rynkowego albo rynek odbiega od detalu o więcej niż errorOutsideRetail,
+// zwracamy błąd (mode: 'error') zamiast starych kursów ręcznych. Ręczne buyHurt/sellHurt
+// są używane tylko po wyłączeniu automatu: "wholesaleAuto": { "enabled": false }.
 
 const CODES = ['EUR', 'USD', 'GBP'];
 const DEFAULTS = {
@@ -11,7 +14,8 @@ const DEFAULTS = {
   dayEnd: 17,
   day:   { buy: { EUR: 0.02, USD: 0.02, GBP: 0.029 }, sell: { EUR: 0.005, USD: 0.005, GBP: 0.005 } },
   night: { buy: { EUR: 0.03, USD: 0.03, GBP: 0.039 }, sell: { EUR: 0.01,  USD: 0.01,  GBP: 0.01  } },
-  maxDeviationFromNbp: 0.03, // kurs na żywo różni się od NBP o więcej niż 3%: nie ufamy mu
+  maxDeviationFromNbp: 0.03,
+  errorOutsideRetail: 0.05,  // kurs rynkowy dalej niż 5 gr poza widełkami detalu: błąd // kurs na żywo różni się od NBP o więcej niż 3%: nie ufamy mu
 };
 const CACHE_SECONDS = 600;
 
@@ -116,8 +120,12 @@ export function compute(manual, market, now) {
   const info = { mode: 'manual', source: 'manual', quoteTime: null, reason: null, period: period(now, cfg), generatedAt: now.toISOString() };
   out.wholesaleAutoInfo = info;
   if (!cfg.enabled) { info.reason = 'auto wyłączone w rates.json'; return out; }
-  if (!market || !market.mids) { info.reason = 'brak kursu rynkowego'; return out; }
-
+  const fail = (reason) => {
+    info.mode = 'error'; info.reason = reason;
+    for (const c of CODES) if (out.rates?.[c]) { out.rates[c].buyHurt = null; out.rates[c].sellHurt = null; }
+    return out;
+  };
+  if (!market || !market.mids) return fail('brak kursu rynkowego');
   info.marketSource = market.source; info.marketTime = market.time;
   const live = market.source !== 'nbp' && market.source !== 'wise-stale';
   const day = live && isDayMode(now, cfg);
@@ -125,13 +133,14 @@ export function compute(manual, market, now) {
   const next = {};
   for (const c of CODES) {
     const r = manual.rates?.[c]; const mid = market.mids[c];
-    if (!r || !Number.isFinite(mid)) { info.reason = 'brak danych dla ' + c; return out; }
-    // Kurs rynkowy musi leżeć między ręcznym detalicznym kupnem a sprzedażą.
-    // Jeśli nie leży, detal jest nieaktualny albo źródło się myli: zostają kursy ręczne.
-    if (!(mid > r.buy && mid < r.sell)) { info.reason = `kurs rynkowy ${c} ${mid} poza widełkami detalu ${r.buy}-${r.sell}`; return out; }
-    const buyHurt = round3(mid - m.buy[c]); const sellHurt = round3(mid + m.sell[c]);
+    if (!r || !Number.isFinite(mid)) return fail('brak danych dla ' + c);
+    if (mid < r.buy - cfg.errorOutsideRetail || mid > r.sell + cfg.errorOutsideRetail) return fail(`kurs rynkowy ${c} ${mid} daleko poza detalem ${r.buy}-${r.sell}`);
     // Hurt nie może być gorszy dla klienta niż detal.
-    next[c] = { buyHurt: Math.max(buyHurt, r.buy), sellHurt: Math.min(sellHurt, r.sell) };
+    let buyHurt = Math.max(round3(mid - m.buy[c]), r.buy);
+    let sellHurt = Math.min(round3(mid + m.sell[c]), r.sell);
+    // Rynek uciekł poza detal i marża się nie mieści: hurt = detal.
+    if (buyHurt >= sellHurt) { buyHurt = r.buy; sellHurt = r.sell; }
+    next[c] = { buyHurt, sellHurt };
   }
   for (const c of CODES) Object.assign(out.rates[c], next[c]);
   info.mode = day ? 'day' : 'night'; info.source = market.source; info.quoteTime = market.time;

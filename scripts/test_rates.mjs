@@ -27,10 +27,16 @@ assert.equal(r.wholesaleAutoInfo.mode, 'night');
 assert.deepEqual([r.rates.EUR.buyHurt, r.rates.EUR.sellHurt, r.rates.GBP.buyHurt, r.rates.GBP.sellHurt], [4.37, 4.41, 5.221, 5.27]);
 r = compute(manual, { mids, source: 'nbp', time: '2026-11-13' }, fri); // NBP w dzień: zawsze szerzej
 assert.equal(r.wholesaleAutoInfo.mode, 'night');
-r = compute(manual, { mids: { ...mids, EUR: 4.50 }, source: 'live', time: 'x' }, fri); // poza widełkami detalu
-assert.equal(r.wholesaleAutoInfo.mode, 'manual'); assert.equal(r.rates.EUR.buyHurt, manual.rates.EUR.buyHurt); assert.equal(r.rates.USD.buyHurt, manual.rates.USD.buyHurt);
-r = compute(manual, null, fri); assert.equal(r.wholesaleAutoInfo.mode, 'manual');
-r = compute({ ...manual, wholesaleAuto: { enabled: false } }, { mids, source: 'live', time: 'x' }, fri); assert.equal(r.wholesaleAutoInfo.mode, 'manual');
+r = compute(manual, { mids: { ...mids, EUR: 4.50 }, source: 'live', time: 'x' }, fri); // daleko poza detalem: błąd, bez starych kursów
+assert.equal(r.wholesaleAutoInfo.mode, 'error'); assert.equal(r.rates.EUR.buyHurt, null); assert.equal(r.rates.USD.sellHurt, null); assert.equal(r.rates.EUR.buy, manual.rates.EUR.buy);
+r = compute(manual, null, fri); assert.equal(r.wholesaleAutoInfo.mode, 'error'); assert.equal(r.rates.GBP.buyHurt, null);
+r = compute(manual, { mids: { ...mids, EUR: manual.rates.EUR.sell + 0.004 }, source: 'live', time: 'x' }, sat); // tuż nad detalem: sprzedaż hurt = detal
+assert.equal(r.wholesaleAutoInfo.mode, 'night'); assert.equal(r.rates.EUR.sellHurt, manual.rates.EUR.sell); assert.ok(r.rates.EUR.buyHurt < r.rates.EUR.sellHurt);
+r = compute(manual, { mids: { ...mids, EUR: manual.rates.EUR.sell + 0.04 }, source: 'live', time: 'x' }, fri); // marża się nie mieści: hurt = detal
+assert.deepEqual([r.rates.EUR.buyHurt, r.rates.EUR.sellHurt], [manual.rates.EUR.buy, manual.rates.EUR.sell]);
+r = compute(manual, { mids: { ...mids, EUR: manual.rates.EUR.buy - 0.01 }, source: 'live', time: 'x' }, fri);
+assert.deepEqual([r.rates.EUR.buyHurt, r.rates.EUR.sellHurt], [manual.rates.EUR.buy, manual.rates.EUR.sell]);
+r = compute({ ...manual, wholesaleAuto: { enabled: false } }, { mids, source: 'live', time: 'x' }, fri); assert.equal(r.wholesaleAutoInfo.mode, 'manual'); assert.equal(r.rates.EUR.buyHurt, manual.rates.EUR.buyHurt);
 r = compute({ ...manual, wholesaleAuto: { day: { buy: { EUR: 0.015, USD: 0.02, GBP: 0.029 } } } }, { mids, source: 'live', time: 'x' }, fri);
 assert.equal(r.rates.EUR.buyHurt, 4.385); assert.equal(r.rates.EUR.sellHurt, 4.405);
 r = compute(manual, { mids: { EUR: 4.335, USD: 3.98, GBP: 5.26 }, source: 'live', time: 'x' }, fri); // blisko detalu: nie gorzej niż detal
