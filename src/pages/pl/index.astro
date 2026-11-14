@@ -228,18 +228,37 @@ import Analytics from '../../components/Analytics.astro';
         .tier-name { background: #fff; color: var(--ink); border-radius: 9999px; padding: 0.3rem 0.95rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; }
         .tier-sub { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--mist); text-align: right; }
         /* Pasek kursów nad hasłem (tylko telefon i tablet; na komputerze tablica jest obok) */
-        .rate-strip { display: block; margin-bottom: 1.1rem; padding: .7rem .9rem .75rem; border: 1px solid #262626; border-radius: 1rem; background: #141414; text-decoration: none; }
-        .rate-strip .rs-cap { display: block; font-size: .58rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #a3a3a3; margin-bottom: .4rem; }
+        .rate-strip { display: block; margin-bottom: .9rem; padding: .6rem .8rem .7rem; border: 1px solid #262626; border-radius: 1rem; background: #141414; cursor: pointer; }
+        .rate-strip .rs-head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-bottom: .45rem; }
+        .rate-strip .rs-cap { font-size: .56rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #a3a3a3; white-space: nowrap; }
+        .rate-strip .rs-seg { display: inline-flex; border: 1px solid #3a3a3a; border-radius: 999px; padding: 2px; flex: none; }
+        .rate-strip .rs-seg button { font: 800 .56rem/1 'Montserrat', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #8a8a8a; background: none; border: 0; border-radius: 999px; padding: .38rem .6rem; cursor: pointer; }
+        .rate-strip .rs-seg button.on { background: #fff; color: #000; }
         .rate-strip .rs-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
         .rate-strip .rs-item { min-width: 0; white-space: nowrap; font-size: clamp(.72rem, 3.3vw, .9rem); color: #e5e5e5; font-variant-numeric: tabular-nums; }
         .rate-strip .rs-item b { display: block; font-weight: 800; color: #fff; font-size: .78em; letter-spacing: .08em; margin-bottom: .1rem; }
         @media (min-width: 1024px) { .rate-strip { display: none; } }
-        /* Otwarte teraz / zamknięte */
-        .open-now { display: flex; align-items: center; gap: .5rem; font-size: .85rem; font-weight: 600; color: #e5e5e5; margin: 0 0 1.25rem; min-height: 1.3rem; }
+        /* Telefon: cała góra strony (pasek, hasło, przyciski) ma się mieścić na pierwszym ekranie */
+        @media (max-width: 1023px) {
+            #top { padding-top: 4.4rem; }
+            .rate-strip { margin-bottom: .7rem; padding: .5rem .8rem .55rem; }
+            #top h1 { margin-bottom: .2rem; }
+            #top .open-now { margin-bottom: .75rem; }
+            #top .hero-art { width: 58%; margin: -1.5rem 0 .3rem; }
+            #top .hero-text .eyebrow { margin-bottom: .45rem; }
+            #top .hero-slogan { margin-bottom: .6rem; font-size: .95rem; line-height: 1.5; }
+            #top .hero-cta { gap: .5rem; }
+            #top .hero-cta a { padding-top: .75rem; padding-bottom: .75rem; }
+        }
+        /* Otwarte teraz / zamknięte: zielona pulsująca kropka, gdy otwarte */
+        @keyframes dot-pulse { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,.55); } 50% { opacity: .55; box-shadow: 0 0 0 5px rgba(34,197,94,0); } }
+        .live-dot { background: #22c55e !important; animation: dot-pulse 1.8s ease-in-out infinite; }
+        .open-now { display: flex; align-items: center; gap: .55rem; font-size: .85rem; font-weight: 600; color: #e5e5e5; margin: 0 0 1rem; min-height: 1.3rem; }
         .open-now:empty { display: none; }
-        .open-now .dot { width: .55rem; height: .55rem; border-radius: 50%; background: #fff; flex: none; }
+        .open-now .dot { width: .55rem; height: .55rem; border-radius: 50%; flex: none; background: #22c55e; animation: dot-pulse 1.8s ease-in-out infinite; }
         .open-now.closed { color: #a3a3a3; }
-        .open-now.closed .dot { background: transparent; border: 1.5px solid #a3a3a3; }
+        .open-now.closed .dot { background: transparent; border: 1.5px solid #a3a3a3; animation: none; }
+        #find { scroll-margin-top: 4.5rem; }
         /* Jak nas rozpoznać: panel pod zdjęciem */
         .spot { margin-top: .9rem; padding: 1.25rem 1.5rem; border: 1px solid #262626; border-radius: 1rem; background: #141414; }
         .spot p:not(.eyebrow) { margin: 0; font-size: 1rem; line-height: 1.6; color: #d4d4d4; }
@@ -364,11 +383,11 @@ import Analytics from '../../components/Analytics.astro';
         <div class="hero-grid relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
 
             <div class="hero-text">
-                <a href="#rates" class="rate-strip" aria-label="Dzisiejsze kursy detaliczne. Dotknij, aby zobaczyć pełną tablicę."><span class="rs-cap">Kupno · Sprzedaż</span><span class="rs-row"><span class="rs-item"><b>EUR</b><span id="rs-EUR">4.33 · 4.42</span></span><span class="rs-item"><b>USD</b><span id="rs-USD">3.92 · 4.01</span></span><span class="rs-item"><b>GBP</b><span id="rs-GBP">5.19 · 5.28</span></span></span></a>
+                <div class="rate-strip" role="link" tabindex="0" aria-label="Dzisiejsze kursy. Dotknij, aby zobaczyć pełną tablicę." onclick="location.hash='#rates'"><div class="rs-head"><span class="rs-cap">Kupno · Sprzedaż</span><span class="rs-seg" role="group"><button type="button" data-tier="retail" class="on" onclick="setStripTier('retail', event)">Detal</button><button type="button" data-tier="wholesale" onclick="setStripTier('wholesale', event)">Hurt</button></span></div><div class="rs-row"><span class="rs-item"><b>EUR</b><span id="rs-EUR">4.33 · 4.42</span></span><span class="rs-item"><b>USD</b><span id="rs-USD">3.92 · 4.01</span></span><span class="rs-item"><b>GBP</b><span id="rs-GBP">5.19 · 5.28</span></span></div></div>
                 <p class="eyebrow mb-3"><span class="whitespace-nowrap" data-i18n="hero_eyebrow_1">Kantor wymiany walut</span> · <span class="whitespace-nowrap" data-i18n="hero_eyebrow_2">Stare Miasto</span></p>
                 <h1 class="display text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-2 lg:mb-3" data-i18n="hero_title">Nie daj się oskubać.</h1>
-                <img src="../images/hero-flock.webp" width="1408" height="768" fetchpriority="high" alt="Ostrzyżone białe owce i jedna nietknięta czarna owca — nie daj się oskubać" class="w-full -mt-12 mb-6 lg:-mt-14 lg:mb-3 lg:max-w-lg pointer-events-none select-none">
-                <p class="text-neutral-400 text-base sm:text-lg mb-4 max-w-md" data-i18n="hero_slogan">Najlepsze kursy walut w centrum Krakowa, spread tylko kilka groszy. Kurs, który widzisz, to kurs, który dostajesz.</p>
+                <img src="../images/hero-flock.webp" width="1408" height="768" fetchpriority="high" alt="Ostrzyżone białe owce i jedna nietknięta czarna owca — nie daj się oskubać" class="hero-art w-full -mt-12 mb-6 lg:-mt-14 lg:mb-3 lg:max-w-lg pointer-events-none select-none">
+                <p class="hero-slogan text-neutral-400 text-base sm:text-lg mb-4 max-w-md" data-i18n="hero_slogan">Najlepsze kursy walut w centrum Krakowa, spread tylko kilka groszy. Kurs, który widzisz, to kurs, który dostajesz.</p>
 
                 <a href="https://maps.google.com/?cid=3299726714959505459" target="_blank" rel="noopener" class="group inline-flex items-center mb-3" aria-label="4.8 out of 5 stars on Google Maps">
                     <span class="stars text-lg" style="--rating: 96%;" aria-hidden="true">
@@ -380,9 +399,9 @@ import Analytics from '../../components/Analytics.astro';
                 </a>
                 <p class="open-now" aria-live="polite"></p>
 
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="hero-cta flex flex-col sm:flex-row gap-4">
                     <a href="#rates" class="btn-solid" data-i18n="btn_rates">Zobacz dzisiejsze kursy</a>
-                    <a href="#visit" class="btn-ghost" data-i18n="btn_visit">Jak nas znaleźć</a>
+                    <a href="#find" class="btn-ghost" data-i18n="btn_visit">Jak nas znaleźć</a>
                 </div>
 
             </div>
@@ -493,7 +512,7 @@ import Analytics from '../../components/Analytics.astro';
                     <div class="px-6 py-4 border-t border-neutral-800 flex items-center justify-between gap-4 flex-wrap">
                         <span class="display text-xs sm:text-sm" data-i18n="board_commission">0% Prowizji</span>
                         <span class="flex items-center gap-2 text-[0.65rem] text-neutral-500 uppercase tracking-widest">
-                            <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse" aria-hidden="true"></span>
+                            <span class="live-dot w-1.5 h-1.5 rounded-full" aria-hidden="true"></span>
                             <span data-i18n="board_updated">Aktualizacja</span>: <span id="board-date" class="num">2026-11-13</span>
                         </span>
                     </div>
@@ -555,7 +574,7 @@ import Analytics from '../../components/Analytics.astro';
             <p class="eyebrow text-center mb-2" data-i18n="visit_eyebrow">Stare Miasto</p>
             <h2 class="display text-2xl sm:text-3xl text-center mb-12" data-i18n="visit_title">Lokalizacja</h2>
 
-            <div class="loc-wrap">
+            <div class="loc-wrap" id="find">
             <div class="loc-photo">
                 <img src="../images/street2-800.webp" srcset="../images/street2-800.webp 800w, ../images/street2-1400.webp 1400w" sizes="(max-width: 1024px) 100vw, 896px" loading="lazy" width="1400" height="875" alt="Exchange Kantor Black Sheep, Floriańska 37 w Krakowie: tablica kursów z czarną owcą po lewej, w tle kościół Mariacki" class="w-full rounded-2xl border border-neutral-800 object-cover">
                 <div class="spot"><p class="eyebrow mb-2">Jak nas rozpoznać</p><p data-i18n="visit_photo_caption" data-i18n-html="">Szukaj <b>tablicy z czarną owcą</b> i kursami skupu i sprzedaży EUR, USD, GBP. Floriańska 37, między Bramą Floriańską a Rynkiem Głównym. Nie daj się oskubać.</p></div>
@@ -640,8 +659,8 @@ import Analytics from '../../components/Analytics.astro';
     <section id="about" class="diamonds py-14 sm:py-16 px-4 sm:px-6 scroll-mt-16">
         <div class="max-w-3xl mx-auto text-center">
             <p class="eyebrow mb-2" data-i18n="about_eyebrow">Kim jesteśmy</p>
-            <h2 class="display text-2xl sm:text-3xl mb-6" data-i18n="about_title">Kantor w Krakowie od 2010 roku</h2>
-            <p class="text-neutral-400 leading-relaxed" data-i18n="about_body">Exchange Kantor Black Sheep to stacjonarny kantor wymiany walut przy ul. Floriańskiej 37 na Starym Mieście w Krakowie, wpisany do rejestru działalności kantorowej NBP. Wymieniamy walutę od 2010 roku: do 2026 jako Kantor Wymiany Walut „U Górali”, dziś pod nową nazwą, z tym samym właścicielem. Wymieniamy gotówkę w okienku sześć dni w tygodniu: uczciwy kurs, 0% prowizji oraz szybka i miła obsługa po polsku i angielsku. W ponad 250 opiniach w Google (średnia 4,8) klienci najczęściej piszą o dobrych kursach, sprawnej obsłudze i o tym, że dostają dokładnie tyle, ile pokazuje tablica. Poradniki na tej stronie piszemy sami, bo na tę ulicę patrzymy codziennie.</p>
+            <h2 class="display text-2xl sm:text-3xl mb-6" data-i18n="about_title">Kantor przy Floriańskiej 37 od 2010 roku</h2>
+            <p class="text-neutral-400 leading-relaxed" data-i18n="about_body">Exchange Kantor Black Sheep to stacjonarny kantor wymiany walut przy ul. Floriańskiej 37 na Starym Mieście w Krakowie, wpisany do rejestru działalności kantorowej NBP. Działamy pod tym samym adresem od 2010 roku: do 2026 jako Kantor Wymiany Walut „U Górali”, dziś pod nową nazwą, z tym samym właścicielem. Wymieniamy gotówkę w okienku sześć dni w tygodniu: uczciwy kurs, 0% prowizji oraz szybka i miła obsługa po polsku i angielsku. W ponad 250 opiniach w Google (średnia 4,8) klienci najczęściej piszą o dobrych kursach, sprawnej obsłudze i o tym, że dostają dokładnie tyle, ile pokazuje tablica. Poradniki na tej stronie piszemy sami, bo na tę ulicę patrzymy codziennie.</p>
             <div class="facts bg-[--panel] border border-neutral-800 rounded-2xl" style="margin-top:2rem;padding:1.25rem 1.5rem;text-align:left" data-i18n="about_facts" data-i18n-html=""><p><b>Nazwa:</b> Exchange Kantor Black Sheep (do 2026 r.: Kantor Wymiany Walut U Górali)</p><p><b>Działa od:</b> 2010 r.</p><p><b>Adres:</b> ul. Floriańska 37, 31-019 Kraków, Stare Miasto, 100 m od Bramy Floriańskiej w stronę Rynku Głównego</p><p><b>Prowizja:</b> 0%</p><p><b>Spread:</b> w detalu do 9 gr, w hurcie 1–3 gr*; większe kwoty negocjujemy</p><p><b>Skup i sprzedaż:</b> EUR, USD, GBP</p><p><b>Skupujemy też:</b> CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED, bilon euro, zniszczone i wycofane banknoty</p><p><b>Płatność:</b> tylko gotówka; dokument wymagany dopiero od równowartości 15&nbsp;000&nbsp;EUR</p><p><b>Telefon i WhatsApp:</b> +48 889 505 057</p><p><b>Jak nas rozpoznać:</b> tablica z czarną owcą i kursami skupu i sprzedaży</p><p><small>* w godzinach pracy polskiego rynku walutowego</small></p></div>
         </div>
     </section>
@@ -783,8 +802,8 @@ import Analytics from '../../components/Analytics.astro';
                 visit_photo_caption: "Look for <b>the board with the black sheep</b> and the buy and sell rates for EUR, USD and GBP. Floriańska 37, between St. Florian's Gate and the Main Square. Don't get fleeced.",
                 footer_coins: "Euro coins exchange →", footer_notes: "Damaged & withdrawn banknotes →",
                 footer_kb: "Knowledge base: currency exchange guides →", footer_guide: "Before you visit Kraków — money guide →",
-                about_eyebrow: "Who we are", about_facts: "<p><b>Name:</b> Exchange Kantor Black Sheep (until 2026: Kantor Wymiany Walut U Górali)</p><p><b>Operating since:</b> 2010</p><p><b>Address:</b> Floriańska 37, 31-019 Kraków, Old Town, 100 m from St. Florian's Gate towards the Main Square</p><p><b>Commission:</b> 0%</p><p><b>Spread:</b> retail up to 0.09 PLN, wholesale 0.01–0.03 PLN*; larger amounts negotiable</p><p><b>We buy and sell:</b> EUR, USD, GBP</p><p><b>We also buy:</b> CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED, euro coins, damaged and withdrawn banknotes</p><p><b>Payment:</b> cash only; ID required only from the equivalent of 15,000 EUR</p><p><b>Phone and WhatsApp:</b> +48 889 505 057</p><p><b>How to recognise us:</b> the board with the black sheep and both buy and sell rates</p><p><small>* during Polish FX market hours</small></p>", about_title: "A currency exchange in Kraków since 2010",
-                about_body: "Exchange Kantor Black Sheep is a physical currency exchange office (kantor) at Floriańska 37 in Kraków's Old Town, listed in the NBP register of currency exchange activity. We have been exchanging money since 2010: until 2026 as Kantor Wymiany Walut \"U Górali\", today under a new name with the same owner. We exchange cash at the counter six days a week, with fair rates, 0% commission and fast, friendly service in English and Polish. In more than 250 Google reviews (4.8 average) customers most often mention good rates, quick service, and getting exactly what the board shows. The guides on this site are written by us, because we watch this street every day.",
+                about_eyebrow: "Who we are", about_facts: "<p><b>Name:</b> Exchange Kantor Black Sheep (until 2026: Kantor Wymiany Walut U Górali)</p><p><b>Operating since:</b> 2010</p><p><b>Address:</b> Floriańska 37, 31-019 Kraków, Old Town, 100 m from St. Florian's Gate towards the Main Square</p><p><b>Commission:</b> 0%</p><p><b>Spread:</b> retail up to 0.09 PLN, wholesale 0.01–0.03 PLN*; larger amounts negotiable</p><p><b>We buy and sell:</b> EUR, USD, GBP</p><p><b>We also buy:</b> CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED, euro coins, damaged and withdrawn banknotes</p><p><b>Payment:</b> cash only; ID required only from the equivalent of 15,000 EUR</p><p><b>Phone and WhatsApp:</b> +48 889 505 057</p><p><b>How to recognise us:</b> the board with the black sheep and both buy and sell rates</p><p><small>* during Polish FX market hours</small></p>", about_title: "A currency exchange at Floriańska 37 since 2010",
+                about_body: "Exchange Kantor Black Sheep is a physical currency exchange office (kantor) at Floriańska 37 in Kraków's Old Town, listed in the NBP register of currency exchange activity. We have been at the same address since 2010: until 2026 as Kantor Wymiany Walut \"U Górali\", today under a new name with the same owner. We exchange cash at the counter six days a week, with fair rates, 0% commission and fast, friendly service in English and Polish. In more than 250 Google reviews (4.8 average) customers most often mention good rates, quick service, and getting exactly what the board shows. The guides on this site are written by us, because we watch this street every day.",
                 faq_eyebrow: "Good to know", faq_title: "Frequently asked questions",
                 faq_q10: "Is Floriańska a safe street to exchange money?",
                 faq_a10: "Honestly? The street's reputation is mixed — some offices in the area display only one attractive rate, which applies to the opposite direction of the exchange. Others display no rates at all, and some show rates for other currencies, such as ALL, RSD or JOD, labelled with € $ £ symbols to mislead you. That is exactly why we play with open cards: the full buy and sell table on display, 0% commission, and you can verify any exchange office — including ours — in 30 seconds via fresh Google Maps reviews. Honest exchange on Floriańska exists; just check the board and the reviews, and ask for the rate at the counter before you hand over cash.",
@@ -849,8 +868,8 @@ import Analytics from '../../components/Analytics.astro';
                 visit_photo_caption: "Szukaj <b>tablicy z czarną owcą</b> i kursami skupu i sprzedaży EUR, USD, GBP. Floriańska 37, między Bramą Floriańską a Rynkiem Głównym. Nie daj się oskubać.",
                 footer_coins: "Skup bilonu euro →", footer_notes: "Zniszczone i wycofane banknoty →",
                 footer_kb: "Baza wiedzy: poradniki o wymianie walut →", footer_guide: "Zanim przyjedziesz do Krakowa — przewodnik po pieniądzach →",
-                about_eyebrow: "Kim jesteśmy", about_facts: "<p><b>Nazwa:</b> Exchange Kantor Black Sheep (do 2026 r.: Kantor Wymiany Walut U Górali)</p><p><b>Działa od:</b> 2010 r.</p><p><b>Adres:</b> ul. Floriańska 37, 31-019 Kraków, Stare Miasto, 100 m od Bramy Floriańskiej w stronę Rynku Głównego</p><p><b>Prowizja:</b> 0%</p><p><b>Spread:</b> w detalu do 9 gr, w hurcie 1–3 gr*; większe kwoty negocjujemy</p><p><b>Skup i sprzedaż:</b> EUR, USD, GBP</p><p><b>Skupujemy też:</b> CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED, bilon euro, zniszczone i wycofane banknoty</p><p><b>Płatność:</b> tylko gotówka; dokument wymagany dopiero od równowartości 15&nbsp;000&nbsp;EUR</p><p><b>Telefon i WhatsApp:</b> +48 889 505 057</p><p><b>Jak nas rozpoznać:</b> tablica z czarną owcą i kursami skupu i sprzedaży</p><p><small>* w godzinach pracy polskiego rynku walutowego</small></p>", about_title: "Kantor w Krakowie od 2010 roku",
-                about_body: "Exchange Kantor Black Sheep to stacjonarny kantor wymiany walut przy ul. Floriańskiej 37 na Starym Mieście w Krakowie, wpisany do rejestru działalności kantorowej NBP. Wymieniamy walutę od 2010 roku: do 2026 jako Kantor Wymiany Walut „U Górali”, dziś pod nową nazwą, z tym samym właścicielem. Wymieniamy gotówkę w okienku sześć dni w tygodniu: uczciwy kurs, 0% prowizji oraz szybka i miła obsługa po polsku i angielsku. W ponad 250 opiniach w Google (średnia 4,8) klienci najczęściej piszą o dobrych kursach, sprawnej obsłudze i o tym, że dostają dokładnie tyle, ile pokazuje tablica. Poradniki na tej stronie piszemy sami, bo na tę ulicę patrzymy codziennie.",
+                about_eyebrow: "Kim jesteśmy", about_facts: "<p><b>Nazwa:</b> Exchange Kantor Black Sheep (do 2026 r.: Kantor Wymiany Walut U Górali)</p><p><b>Działa od:</b> 2010 r.</p><p><b>Adres:</b> ul. Floriańska 37, 31-019 Kraków, Stare Miasto, 100 m od Bramy Floriańskiej w stronę Rynku Głównego</p><p><b>Prowizja:</b> 0%</p><p><b>Spread:</b> w detalu do 9 gr, w hurcie 1–3 gr*; większe kwoty negocjujemy</p><p><b>Skup i sprzedaż:</b> EUR, USD, GBP</p><p><b>Skupujemy też:</b> CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED, bilon euro, zniszczone i wycofane banknoty</p><p><b>Płatność:</b> tylko gotówka; dokument wymagany dopiero od równowartości 15&nbsp;000&nbsp;EUR</p><p><b>Telefon i WhatsApp:</b> +48 889 505 057</p><p><b>Jak nas rozpoznać:</b> tablica z czarną owcą i kursami skupu i sprzedaży</p><p><small>* w godzinach pracy polskiego rynku walutowego</small></p>", about_title: "Kantor przy Floriańskiej 37 od 2010 roku",
+                about_body: "Exchange Kantor Black Sheep to stacjonarny kantor wymiany walut przy ul. Floriańskiej 37 na Starym Mieście w Krakowie, wpisany do rejestru działalności kantorowej NBP. Działamy pod tym samym adresem od 2010 roku: do 2026 jako Kantor Wymiany Walut „U Górali”, dziś pod nową nazwą, z tym samym właścicielem. Wymieniamy gotówkę w okienku sześć dni w tygodniu: uczciwy kurs, 0% prowizji oraz szybka i miła obsługa po polsku i angielsku. W ponad 250 opiniach w Google (średnia 4,8) klienci najczęściej piszą o dobrych kursach, sprawnej obsłudze i o tym, że dostają dokładnie tyle, ile pokazuje tablica. Poradniki na tej stronie piszemy sami, bo na tę ulicę patrzymy codziennie.",
                 faq_eyebrow: "Warto wiedzieć", faq_title: "Częste pytania",
                 faq_q10: "Czy Floriańska to bezpieczne miejsce na wymianę walut?",
                 faq_a10: "Szczerze? Reputacja ulicy jest mieszana — część punktów w okolicy eksponuje tylko jeden, atrakcyjny kurs, który dotyczy odwrotnego kierunku wymiany niż ten, którego potrzebujesz. Inne nie wyświetlają kursów wcale, a jeszcze inne pokazują kursy innych walut, np. ALL, RSD czy JOD, opisane symbolami € $ £, żeby zmylić. Właśnie dlatego gramy w otwarte karty: pełna tabela kupna i sprzedaży, 0% prowizji, a każdy kantor — także nasz — zweryfikujesz w 30 sekund po świeżych opiniach w Google Maps. Uczciwa wymiana na Floriańskiej istnieje; po prostu sprawdź tablicę i opinie oraz zapytaj o kurs w okienku, zanim podasz gotówkę.",
@@ -951,7 +970,9 @@ import Analytics from '../../components/Analytics.astro';
         }
 
         // ----- Otwarte teraz -----
-        const OPENING = { 1: [570, 1230], 2: [570, 1230], 3: [570, 1230], 4: [570, 1230], 5: [570, 1230], 6: [600, 1230] }; // minuty od północy; 0 = niedziela (zamknięte)
+        // Stałe godziny tygodnia (minuty od północy; brak dnia = zamknięte). Wyjątki na konkretne daty
+        // wpisuje się w rates.json: "specialHours": { "2026-11-15": "12:30-14:30", "2026-12-25": "closed" }
+        const OPENING = { 1: [570, 1230], 2: [570, 1230], 3: [570, 1230], 4: [570, 1230], 5: [570, 1230], 6: [600, 1230] };
         function plHoliday(y, m, d) {
             if (["1-1", "1-6", "5-1", "5-3", "8-15", "11-1", "11-11", "12-24", "12-25", "12-26"].includes(m + "-" + d)) return true;
             const a = y % 19, b = Math.floor(y / 100), c = y % 100, dd = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - dd - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, mm = Math.floor((a + 11 * h + 22 * l) / 451);
@@ -959,33 +980,58 @@ import Analytics from '../../components/Analytics.astro';
             return [0, 1, 49, 60].some(o => { const t = new Date(base + o * 86400000); return t.getUTCMonth() + 1 === m && t.getUTCDate() === d; });
         }
         function hm(min) { return String(Math.floor(min / 60)).padStart(2, "0") + ":" + String(min % 60).padStart(2, "0"); }
+        // Godziny dla daty (obiekt Date w UTC oznaczający dzień kalendarzowy w Polsce):
+        // [od, do] w minutach, null = zamknięte, undefined = święto bez wpisu (nie wiemy)
+        function hoursFor(day) {
+            const y = day.getUTCFullYear(), m = day.getUTCMonth() + 1, d = day.getUTCDate();
+            const key = y + "-" + String(m).padStart(2, "0") + "-" + String(d).padStart(2, "0");
+            const sp = DATA && DATA.specialHours ? DATA.specialHours[key] : undefined;
+            if (typeof sp === "string") {
+                const mt = sp.match(/^\s*(\d{1,2})[:.](\d{2})\s*[-–]\s*(\d{1,2})[:.](\d{2})\s*$/);
+                return mt ? [+mt[1] * 60 + +mt[2], +mt[3] * 60 + +mt[4]] : null;
+            }
+            if (plHoliday(y, m, d)) return undefined;
+            return OPENING[day.getUTCDay()] || null;
+        }
+        function openStatus(nowDate) {
+            const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Warsaw", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(nowDate).map(x => [x.type, x.value]));
+            const today = new Date(Date.UTC(+p.year, +p.month - 1, +p.day)), now = (+p.hour % 24) * 60 + +p.minute;
+            const t = hoursFor(today);
+            if (t === undefined) return { state: "holiday" };
+            if (t && now >= t[0] && now < t[1]) return { state: "open", until: t[1] };
+            if (t && now < t[0]) return { state: "closed", inDays: 0, at: t[0], wd: today.getUTCDay() };
+            for (let n = 1; n <= 14; n++) {
+                const day = new Date(today.getTime() + n * 86400000), h = hoursFor(day);
+                if (h) return { state: "closed", inDays: n, at: h[0], wd: day.getUTCDay() };
+            }
+            return { state: "closed" };
+        }
         function renderOpenNow() {
-            const pl = currentLang === "pl";
-            const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Warsaw", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", weekday: "short", hour12: false }).formatToParts(new Date()).map(x => [x.type, x.value]));
-            const wd = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(p.weekday), now = (+p.hour % 24) * 60 + +p.minute;
+            const pl = currentLang === "pl", s = openStatus(new Date());
             const names = pl ? ["w niedzielę", "w poniedziałek", "we wtorek", "w środę", "w czwartek", "w piątek", "w sobotę"] : ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             let cls = "open-now closed", text;
-            if (plHoliday(+p.year, +p.month, +p.day)) {
-                text = pl ? "Dziś święto: sprawdź godziny w Mapach Google" : "Public holiday today: check hours on Google Maps";
-            } else {
-                const t = OPENING[wd];
-                if (t && now >= t[0] && now < t[1]) { cls = "open-now"; text = (pl ? "Otwarte teraz · do " : "Open now · until ") + hm(t[1]); }
-                else if (t && now < t[0]) text = (pl ? "Zamknięte · otwieramy dziś o " : "Closed · opens today at ") + hm(t[0]);
-                else {
-                    let n = 1; while (!OPENING[(wd + n) % 7]) n++;
-                    const nd = (wd + n) % 7, when = n === 1 ? (pl ? "jutro" : "tomorrow") : names[nd];
-                    text = (pl ? "Zamknięte · otwieramy " : "Closed · opens ") + when + (pl ? " o " : " at ") + hm(OPENING[nd][0]);
-                }
+            if (s.state === "holiday") text = pl ? "Dziś święto: sprawdź godziny w Mapach Google" : "Public holiday today: check hours on Google Maps";
+            else if (s.state === "open") { cls = "open-now"; text = (pl ? "Otwarte teraz · do " : "Open now · until ") + hm(s.until); }
+            else if (s.at === undefined) text = pl ? "Zamknięte" : "Closed";
+            else {
+                const when = s.inDays === 0 ? (pl ? "dziś" : "today") : s.inDays === 1 ? (pl ? "jutro" : "tomorrow") : names[s.wd];
+                text = (pl ? "Zamknięte · otwieramy " : "Closed · opens ") + when + (pl ? " o " : " at ") + hm(s.at);
             }
             document.querySelectorAll(".open-now").forEach(el => { el.className = cls; el.innerHTML = '<span class="dot" aria-hidden="true"></span><span></span>'; el.lastChild.textContent = text; });
         }
         setInterval(renderOpenNow, 60000);
+        // ----- Pasek kursów na telefonie: detal / hurt -----
+        let stripTier = "retail";
         function renderRateStrip() {
+            const w = stripTier === "wholesale";
             for (const [code, r] of Object.entries(DATA.rates)) {
-                const el = document.getElementById("rs-" + code);
-                if (el && typeof r.buy === "number") el.textContent = fmtRate(r.buy) + " · " + fmtRate(r.sell);
+                const el = document.getElementById("rs-" + code); if (!el) continue;
+                const b = w ? r.buyHurt : r.buy, s = w ? r.sellHurt : r.sell;
+                el.textContent = (typeof b === "number" && typeof s === "number") ? fmtRate(b) + " · " + fmtRate(s) : "—";
             }
+            document.querySelectorAll(".rs-seg button").forEach(btn => btn.classList.toggle("on", btn.dataset.tier === stripTier));
         }
+        function setStripTier(tier, ev) { if (ev) ev.stopPropagation(); stripTier = tier; renderRateStrip(); }
 
         function tierSpreads(buyKey, sellKey) {
             return Object.entries(DATA.rates)

@@ -77,3 +77,22 @@ Zabezpieczenia:
 Źródła kursu rynkowego: Wise (kurs środkowy rynku na żywo; wymaga zmiennej `WISE_TOKEN` w Cloudflare Pages: Settings, Variables and Secrets), zapasowo NBP (jeden kurs dziennie; wtedy zawsze obowiązują szersze marże). Kursy hurtowe są zaokrąglane do 3 miejsc po przecinku.
 
 Podgląd tego, co strona policzyła: adres `/api/rates` (pole `wholesaleAutoInfo` mówi, z jakiego źródła i w jakim trybie).
+
+---
+
+## Godziny otwarcia: wyjątki na konkretne dni
+
+Znacznik "Otwarte teraz" na stronie liczy się ze stałych godzin (pon.-pt. 9:30-20:30, sob. 10:00-20:30, niedziela zamknięte).
+Gdy danego dnia masz wolne albo inne godziny, dopisz ten dzień w `public/rates.json` w polu `specialHours`:
+
+    "specialHours": {
+      "2026-11-15": "12:30-14:30",
+      "2026-12-24": "9:30-14:00",
+      "2026-12-25": "closed"
+    }
+
+- Data w formacie RRRR-MM-DD, godziny jako OD-DO, a dzień wolny jako "closed".
+- Wpis dotyczy tylko tej jednej daty; w pozostałe dni obowiązują stałe godziny.
+- W polskie święta bez wpisu strona pokazuje "sprawdź godziny w Mapach Google". Jeśli w święto pracujesz, dopisz godziny; jeśli nie, dopisz "closed", wtedy strona policzy czas do następnego otwarcia.
+- Stare daty można usuwać, ale nie trzeba.
+- Pamiętaj o przecinkach między wpisami (po ostatnim bez przecinka).
