@@ -72,11 +72,39 @@ async function nbpMids() {
   return { mids: out, time: date };
 }
 
-// Źródło kursu na żywo. Na razie żadne nie jest podłączone: funkcja zwraca null
-// i strona korzysta z NBP (zawsze szersze marże). Tu podłączamy wybranego dostawcę,
-// np. API pipser.pl: klucz trafia do zmiennej środowiskowej w Cloudflare, nigdy do repozytorium.
+// Źródło kursu na żywo: Wise (kurs środkowy rynku, aktualizowany na bieżąco).
+// Wymaga zmiennej WISE_TOKEN w ustawieniach Cloudflare Pages (token tylko do odczytu z konta Wise).
+// Bez tokenu funkcja zwraca null i strona korzysta z NBP (zawsze szersze marże).
+const WISE_URLS = ['https://api.wise.com/v1/rates', 'https://api.wise.com/2026Q4/rates'];
+export const MAX_LIVE_AGE_MIN = 30; // starszy kurs nie jest traktowany jako "na żywo"
+
+export function parseWise(json, code) {
+  const row = Array.isArray(json) ? json.find((r) => r.source === code && r.target === 'PLN') : null;
+  const rate = Number(row?.rate);
+  if (!Number.isFinite(rate) || rate <= 0) throw new Error('wise: brak kursu ' + code);
+  return { rate, time: row.time };
+}
+
+async function wisePair(base, code, token) {
+  const res = await fetch(`${base}?source=${code}&target=PLN`, { headers: { accept: 'application/json', authorization: `Bearer ${token}` } });
+  if (!res.ok) throw new Error(`wise ${code} -> ${res.status}`);
+  return parseWise(await res.json(), code);
+}
+
 async function liveMids(env) {
-  return null;
+  if (!env.WISE_TOKEN) return null;
+  let lastErr;
+  for (const base of WISE_URLS) {
+    try {
+      const rows = await Promise.all(CODES.map((c) => wisePair(base, c, env.WISE_TOKEN)));
+      const mids = {}; let oldest = Infinity;
+      rows.forEach((r, i) => { mids[CODES[i]] = r.rate; const t = Date.parse(r.time); if (Number.isFinite(t)) oldest = Math.min(oldest, t); });
+      const time = Number.isFinite(oldest) ? new Date(oldest).toISOString() : new Date().toISOString();
+      const fresh = (Date.now() - Date.parse(time)) / 60000 <= MAX_LIVE_AGE_MIN;
+      return { mids, time, source: fresh ? 'wise' : 'wise-stale' };
+    } catch (e) { lastErr = e; }
+  }
+  throw lastErr;
 }
 
 // Czysta funkcja: z ręcznych danych, kursów rynkowych i czasu wylicza odpowiedź. Łatwa do testowania.
@@ -90,7 +118,7 @@ export function compute(manual, market, now) {
   if (!cfg.enabled) { info.reason = 'auto wyłączone w rates.json'; return out; }
   if (!market || !market.mids) { info.reason = 'brak kursu rynkowego'; return out; }
 
-  const live = market.source !== 'nbp';
+  const live = market.source !== 'nbp' && market.source !== 'wise-stale';
   const day = live && isDayMode(now, cfg);
   const m = day ? cfg.day : cfg.night;
   const next = {};

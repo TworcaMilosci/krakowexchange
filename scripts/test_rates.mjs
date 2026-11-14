@@ -1,4 +1,4 @@
-import { compute, isDayMode, isPolishHoliday, warsawParts, period } from '../functions/api/rates.js';
+import { parseWise, compute, isDayMode, isPolishHoliday, warsawParts, period } from '../functions/api/rates.js';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const manual = JSON.parse(fs.readFileSync('public/rates.json', 'utf8'));
@@ -35,4 +35,8 @@ r = compute({ ...manual, wholesaleAuto: { day: { buy: { EUR: 0.015, USD: 0.02, G
 assert.equal(r.rates.EUR.buyHurt, 4.385); assert.equal(r.rates.EUR.sellHurt, 4.405);
 r = compute(manual, { mids: { EUR: 4.335, USD: 3.98, GBP: 5.26 }, source: 'live', time: 'x' }, fri); // blisko detalu: nie gorzej niż detal
 assert.equal(r.rates.EUR.buyHurt, 4.33);
+assert.deepEqual(parseWise([{ rate: 4.2351, source: 'EUR', target: 'PLN', time: '2026-11-14T10:00:00+0000' }], 'EUR'), { rate: 4.2351, time: '2026-11-14T10:00:00+0000' });
+assert.throws(() => parseWise([], 'EUR')); assert.throws(() => parseWise({ error: 'x' }, 'EUR'));
+r = compute(manual, { mids, source: 'wise-stale', time: 'x' }, fri); assert.equal(r.wholesaleAutoInfo.mode, 'night');
+r = compute(manual, { mids, source: 'wise', time: 'x' }, fri); assert.equal(r.wholesaleAutoInfo.mode, 'day'); assert.equal(r.wholesaleAutoInfo.source, 'wise');
 console.log('rates tests OK', warsawParts(fri));

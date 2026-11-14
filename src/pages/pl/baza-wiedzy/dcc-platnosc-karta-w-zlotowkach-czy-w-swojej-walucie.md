@@ -83,6 +83,12 @@ Przy wymianie gotówki obowiązuje ta sama logika co przy DCC: liczy się kurs, 
 
 W naszym kantorze przy Floriańskiej 37 wymieniamy wyłącznie gotówkę, bez prowizji, a kursy kupna i sprzedaży są zawsze widoczne. [Dzisiejsze kursy](/pl/#rates) możesz sprawdzić przed przyjściem.
 
+## Gdy potrzebujesz gotówki w Krakowie
+
+Jeśli jesteś w Krakowie i potrzebujesz złotówek, masz dwie rozsądne drogi. Pierwsza to bankomat przy oddziale banku, z odrzuconym przewalutowaniem. Druga to wymiana gotówki, którą masz przy sobie, w kantorze z widocznymi kursami kupna i sprzedaży. W obu przypadkach unikasz podwójnej marży, o której mowa wyżej.
+
+Nasz kantor znajduje się przy Floriańskiej 37, cztery minuty pieszo od Rynku Głównego i dwie minuty od Bramy Floriańskiej. Dokładne trasy z Rynku, dworca i Plant opisujemy w poradniku [jak dojść do kantoru przy Rynku Głównym](/pl/baza-wiedzy/kantor-rynek-glowny-krakow-jak-dojsc).
+
 ## Krótka ściąga
 
 - Terminal pyta o walutę: **wybierz walutę lokalną**.
