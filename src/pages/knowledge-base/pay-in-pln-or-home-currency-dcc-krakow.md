@@ -87,7 +87,7 @@ At our office at Floriańska 37 we exchange cash only, with 0% commission and bo
 
 If you are in Kraków and need złoty, you have two sensible routes. One is an ATM at a bank branch, with the conversion declined. The other is exchanging the cash you already carry at an exchange office that displays both buy and sell rates. Either way you avoid the double markup described above.
 
-Our office is at Floriańska 37, four minutes on foot from the Main Square and two minutes from St. Florian's Gate. Step-by-step routes from the Square, the station and the Planty are in our guide on [how to find the exchange office near the Main Square](/knowledge-base/currency-exchange-near-main-square-krakow).
+Our office is at Floriańska 37, three minutes on foot from the Main Square and two minutes from St. Florian's Gate. Step-by-step routes from the Square, the station and the Planty are in our guide on [how to find the exchange office near the Main Square](/knowledge-base/currency-exchange-near-main-square-krakow).
 
 ## A quick checklist
 

@@ -118,6 +118,7 @@ export function compute(manual, market, now) {
   if (!cfg.enabled) { info.reason = 'auto wyłączone w rates.json'; return out; }
   if (!market || !market.mids) { info.reason = 'brak kursu rynkowego'; return out; }
 
+  info.marketSource = market.source; info.marketTime = market.time;
   const live = market.source !== 'nbp' && market.source !== 'wise-stale';
   const day = live && isDayMode(now, cfg);
   const m = day ? cfg.day : cfg.night;
