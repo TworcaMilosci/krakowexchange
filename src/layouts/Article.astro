@@ -1,6 +1,6 @@
 ---
 // Układ artykułu bazy wiedzy. Artykuł to plik .md z nagłówkiem (frontmatter):
-// title, description, lang (pl|en), date, updated, alt (adres wersji w drugim języku), faq [{q, a}]
+// title, seoTitle (krótki tytuł do wyszukiwarki, do ok. 55 znaków), description, lang (pl|en), date, updated, alt (adres wersji w drugim języku), faq [{q, a}]
 import Logo from '../components/Logo.astro';
 import GeoMeta from '../components/GeoMeta.astro';
 import Analytics from '../components/Analytics.astro';
@@ -35,7 +35,7 @@ if (fm.faq?.length) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPag
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<title>{fm.title} · {SITE.name}</title>
+<title>{fm.seoTitle || fm.title} | {SITE.name}</title>
 <meta name="description" content={fm.description}>
 <link rel="canonical" href={canonical}>
 {enUrl && <link rel="alternate" hreflang="en" href={enUrl}>}

@@ -3,6 +3,7 @@ layout: ../../layouts/Article.astro
 title: "Buy rate vs sell rate at a Polish kantor: which one applies to you"
 description: "Two numbers on the board, one mistake most visitors make. How to read a kantor's rate board, work out the spread and check a rate in one minute."
 lang: en
+seoTitle: "Buy rate vs sell rate at a Polish kantor"
 date: 2026-11-13
 alt: /pl/baza-wiedzy/kurs-kupna-i-sprzedazy-w-kantorze
 faq:

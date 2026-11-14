@@ -3,6 +3,7 @@ layout: ../../../layouts/Article.astro
 title: "DCC: płacić kartą w lokalnej walucie czy w swojej? Jak nie przepłacać za przewalutowanie"
 description: "Terminal lub bankomat proponuje rozliczenie w Twojej walucie i „gwarantowany kurs”? Wyjaśniamy, czym jest DCC, ile kosztuje i co wybrać zamiast niego."
 lang: pl
+seoTitle: "DCC: płacić kartą w lokalnej walucie czy w swojej?"
 date: 2026-11-13
 alt: /knowledge-base/pay-in-pln-or-home-currency-dcc-krakow
 faq:
@@ -68,7 +69,7 @@ Niektóre ekrany są zaprojektowane tak, żeby odmowa wyglądała jak rezygnacja
 
 ## Masz prawo zobaczyć koszt
 
-W Unii Europejskiej operator proponujący przewalutowanie w bankomacie lub na terminalu musi przed potwierdzeniem pokazać jego koszt, w tym marżę wyrażoną w procentach w odniesieniu do kursu referencyjnego Europejskiego Banku Centralnego. W praktyce to linijka drobnego tekstu na ekranie z propozycją. Warto ją raz przeczytać: procent napisany czarno na białym ułatwia decyzję.
+Przepisy unijne wymagają, żeby operator proponujący przewalutowanie w bankomacie lub na terminalu pokazał jego koszt przed potwierdzeniem, jako procentową marżę w odniesieniu do kursu referencyjnego Europejskiego Banku Centralnego. Przepisy te dotyczą przeliczeń między walutami krajów Unii, na przykład płatności polską kartą w strefie euro; poza Unią zwykle zobaczysz sam kurs i kwotę końcową, bez marży. W praktyce to linijka drobnego tekstu na ekranie z propozycją. Warto ją raz przeczytać: procent napisany czarno na białym ułatwia decyzję.
 
 Niezależnie od tego, co jest na ekranie, przewalutowanie jest dobrowolne. Żaden sklep, hotel ani bankomat nie może go wymagać.
 

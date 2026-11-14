@@ -3,6 +3,7 @@ layout: ../../layouts/Article.astro
 title: "Pay in PLN or your home currency? Dynamic currency conversion in Kraków explained"
 description: "Card terminals and ATMs in Poland often offer to charge you in your own currency. Here is what that offer really is, what it costs and what to press instead."
 lang: en
+seoTitle: "Pay in PLN or your currency? DCC in Kraków explained"
 date: 2026-11-13
 alt: /pl/baza-wiedzy/dcc-platnosc-karta-w-zlotowkach-czy-w-swojej-walucie
 faq:
@@ -68,7 +69,7 @@ Some screens are designed so that declining looks like cancelling. It is not. If
 
 ## Your right to see the cost
 
-Within the European Union, operators offering currency conversion at an ATM or card terminal must show you the charge before you confirm, including how the offered rate compares with the European Central Bank reference rate, expressed as a percentage markup. In practice this is a line of small text on the conversion screen. It is worth reading once: seeing the percentage in black and white makes the decision easy.
+EU rules require operators that offer currency conversion at an ATM or card terminal to show you the cost before you confirm, expressed as a percentage markup over the European Central Bank reference rate. The rules were written for conversions between EU currencies, for example a euro card used in Poland; with cards in other currencies you will usually still see the offered rate and the final amount, but not always the markup. In practice this is a line of small text on the conversion screen. It is worth reading once: seeing the percentage in black and white makes the decision easy.
 
 Whatever the screen says, the conversion is optional. No shop, hotel or ATM can require you to accept it.
 

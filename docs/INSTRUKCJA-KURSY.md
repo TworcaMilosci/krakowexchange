@@ -74,6 +74,6 @@ Zabezpieczenia:
 - Jeśli kurs rynkowy wypada poza Twoje kursy detaliczne (kupno-sprzedaż), strona uznaje dane za nieaktualne i pokazuje ręczne kursy hurtowe. Dlatego detal trzeba aktualizować.
 - Jeśli źródło kursów nie odpowiada, strona pokazuje ręczne kursy hurtowe.
 
-Źródła kursu rynkowego: Twelve Data (na żywo; wymaga zmiennej `TWELVEDATA_KEY` w ustawieniach Cloudflare Pages), zapasowo NBP (jeden kurs dziennie; wtedy zawsze obowiązują szersze marże).
+Źródła kursu rynkowego: źródło na żywo (jeszcze niepodłączone, wybór w toku), zapasowo NBP (jeden kurs dziennie; wtedy zawsze obowiązują szersze marże). Kursy hurtowe są zaokrąglane do 3 miejsc po przecinku.
 
 Podgląd tego, co strona policzyła: adres `/api/rates` (pole `wholesaleAutoInfo` mówi, z jakiego źródła i w jakim trybie).

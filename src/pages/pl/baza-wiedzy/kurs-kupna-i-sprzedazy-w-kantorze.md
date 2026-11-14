@@ -3,6 +3,7 @@ layout: ../../../layouts/Article.astro
 title: "Kurs kupna i sprzedaży w kantorze: który Cię dotyczy i ile naprawdę dostaniesz"
 description: "Kupno czy sprzedaż? Wyjaśniamy, jak czytać tablicę kursów w kantorze, jak policzyć spread i jak w minutę sprawdzić, czy kurs jest uczciwy."
 lang: pl
+seoTitle: "Kurs kupna i sprzedaży w kantorze: który Cię dotyczy"
 date: 2026-11-13
 alt: /knowledge-base/buy-rate-vs-sell-rate-kantor
 faq:
