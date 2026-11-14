@@ -2,13 +2,13 @@
 layout: ../../layouts/Article.astro
 title: "Currency exchange near Kraków Main Square: how to find Floriańska 37 from the Square, St. Florian's Gate and the station"
 seoTitle: "Currency exchange near Kraków Main Square: how to get there"
-description: "A kantor 3 minutes' walk from the Main Square and 2 minutes from St. Florian's Gate. Walking routes, opening hours and how to recognise the right board."
+description: "A kantor under 2 minutes' walk from the Main Square and a minute from St. Florian's Gate. Walking routes, opening hours and how to recognise the right board."
 lang: en
 date: 2026-11-14
 alt: /pl/baza-wiedzy/kantor-rynek-glowny-krakow-jak-dojsc
 faq:
   - q: "Where can I exchange money near the Main Square in Kraków?"
-    a: "Several exchange offices operate in the Old Town. Exchange Kantor Black Sheep is at Floriańska 37, about 230 metres from the Main Square: a 3-minute walk from St. Mary's Basilica towards St. Florian's Gate."
+    a: "Several exchange offices operate in the Old Town. Exchange Kantor Black Sheep is at Floriańska 37, about 230 metres from the Main Square: a walk of under 2 minutes from St. Mary's Basilica towards St. Florian's Gate."
   - q: "Is the exchange office at Floriańska 37 open on Saturday and in the evening?"
     a: "Yes. It is open Monday to Friday 09:30–20:30 and Saturday 10:00–20:30. It is closed on Sunday."
   - q: "How do I get to the exchange office from Kraków Główny station?"
@@ -19,7 +19,7 @@ faq:
     a: "No. The office exchanges cash only, with no commission. If you need złoty from your card, use an ATM at a bank branch and decline the currency conversion offered on screen."
 ---
 
-**In short:** Exchange Kantor Black Sheep is at Floriańska 37 in Kraków's Old Town, between the Main Square and St. Florian's Gate. It is about a 3-minute walk from St. Mary's Basilica, 2 minutes from St. Florian's Gate and roughly 12 minutes from Kraków Główny railway station. Open Monday to Friday 09:30–20:30 and Saturday 10:00–20:30. Look for the board with the black sheep showing both buy and sell rates.
+**In short:** Exchange Kantor Black Sheep is at Floriańska 37 in Kraków's Old Town, between the Main Square and St. Florian's Gate. It is under 2 minutes' walk from St. Mary's Basilica, less than a minute from St. Florian's Gate and roughly 12 minutes from Kraków Główny railway station. Open Monday to Friday 09:30–20:30 and Saturday 10:00–20:30. Look for the board with the black sheep showing both buy and sell rates.
 
 Below are step-by-step routes from the usual starting points, the distances, and a few practical tips that will save you from wandering around.
 
@@ -31,10 +31,10 @@ Number 37 is in the half nearer St. Florian's Gate, right by the junction with �
 
 | From | Distance | Walking time |
 |---|---|---|
-| St. Florian's Gate | about 120 m | 2 minutes |
-| The Barbican | about 200 m | 3 minutes |
-| St. Mary's Basilica, Main Square | about 230 m | 3 minutes |
-| Cloth Hall (Sukiennice) | about 350 m | 5 minutes |
+| St. Florian's Gate | about 120 m | under a minute |
+| The Barbican | about 200 m | about 2 minutes |
+| St. Mary's Basilica, Main Square | about 230 m | under 2 minutes |
+| Cloth Hall (Sukiennice) | about 350 m | about 4 minutes |
 | Kraków Główny railway station | about 900 m | 12 minutes |
 
 Distances are approximate and assume a relaxed pace. In summer and at weekends Floriańska gets crowded, so allow an extra minute or two.
@@ -119,7 +119,7 @@ For everyday amounts you do not need any document. The law requires ID only for 
 ## Summary
 
 - Address: Floriańska 37, 31-019 Kraków, between the Main Square and St. Florian's Gate.
-- 3 minutes on foot from St. Mary's Basilica, 2 minutes from St. Florian's Gate, about 12 minutes from the station.
+- Under 2 minutes on foot from St. Mary's Basilica, less than a minute from St. Florian's Gate, about 12 minutes from the station.
 - Monday–Friday 09:30–20:30, Saturday 10:00–20:30, closed on Sunday.
 - What to look for: the board with the black sheep and both buy and sell rates.
 - Cash only, 0% commission, rates online before you come.

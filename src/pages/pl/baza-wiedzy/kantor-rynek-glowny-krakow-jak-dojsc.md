@@ -2,13 +2,13 @@
 layout: ../../../layouts/Article.astro
 title: "Kantor przy Rynku Głównym w Krakowie: jak dojść na Floriańską 37 z Rynku, spod Bramy Floriańskiej i z dworca"
 seoTitle: "Kantor przy Rynku Głównym w Krakowie: jak dojść"
-description: "Kantor 3 minuty pieszo od Rynku Głównego i 2 minuty od Bramy Floriańskiej. Trasy z Rynku, dworca i Plant, godziny otwarcia i jak rozpoznać tablicę."
+description: "Kantor niespełna 2 minuty pieszo od Rynku Głównego i minutę od Bramy Floriańskiej. Trasy z Rynku, dworca i Plant, godziny otwarcia i jak rozpoznać tablicę."
 lang: pl
 date: 2026-11-14
 alt: /knowledge-base/currency-exchange-near-main-square-krakow
 faq:
   - q: "Gdzie jest kantor najbliżej Rynku Głównego w Krakowie?"
-    a: "W ścisłym centrum działa kilka kantorów. Exchange Kantor Black Sheep znajduje się przy ul. Floriańskiej 37, około 230 metrów od Rynku Głównego, czyli 3 minuty spacerem od kościoła Mariackiego w stronę Bramy Floriańskiej."
+    a: "W ścisłym centrum działa kilka kantorów. Exchange Kantor Black Sheep znajduje się przy ul. Floriańskiej 37, około 230 metrów od Rynku Głównego, czyli niespełna 2 minuty spacerem od kościoła Mariackiego w stronę Bramy Floriańskiej."
   - q: "Czy kantor przy Floriańskiej 37 jest otwarty w sobotę i wieczorem?"
     a: "Tak. Od poniedziałku do piątku kantor jest czynny w godzinach 9:30–20:30, w sobotę 10:00–20:30. W niedzielę jest zamknięty."
   - q: "Jak dojść do kantoru z dworca Kraków Główny?"
@@ -19,7 +19,7 @@ faq:
     a: "Nie. Wymieniamy wyłącznie gotówkę, bez prowizji. Jeśli potrzebujesz złotówek z karty, wypłać je z bankomatu przy oddziale banku i wybierz rozliczenie bez przewalutowania."
 ---
 
-**W skrócie:** Exchange Kantor Black Sheep mieści się przy ul. Floriańskiej 37 w Krakowie, na Starym Mieście, między Rynkiem Głównym a Bramą Floriańską. Od kościoła Mariackiego to około 3 minuty pieszo, od Bramy Floriańskiej 2 minuty, od dworca Kraków Główny około 12 minut. Czynne od poniedziałku do piątku 9:30–20:30, w sobotę 10:00–20:30. Szukaj tablicy z czarną owcą i kursami skupu i sprzedaży.
+**W skrócie:** Exchange Kantor Black Sheep mieści się przy ul. Floriańskiej 37 w Krakowie, na Starym Mieście, między Rynkiem Głównym a Bramą Floriańską. Od kościoła Mariackiego to niespełna 2 minuty pieszo, od Bramy Floriańskiej niecała minuta, od dworca Kraków Główny około 12 minut. Czynne od poniedziałku do piątku 9:30–20:30, w sobotę 10:00–20:30. Szukaj tablicy z czarną owcą i kursami skupu i sprzedaży.
 
 Poniżej znajdziesz dokładne trasy z najczęstszych punktów startu, odległości oraz kilka praktycznych wskazówek, które oszczędzą Ci krążenia po okolicy.
 
@@ -31,10 +31,10 @@ Numer 37 leży w części bliższej Bramy Floriańskiej, tuż przy skrzyżowaniu
 
 | Skąd | Odległość | Czas pieszo |
 |---|---|---|
-| Brama Floriańska | ok. 120 m | 2 minuty |
-| Barbakan | ok. 200 m | 3 minuty |
-| Kościół Mariacki, Rynek Główny | ok. 230 m | 3 minuty |
-| Sukiennice | ok. 350 m | 5 minut |
+| Brama Floriańska | ok. 120 m | poniżej minuty |
+| Barbakan | ok. 200 m | ok. 2 minuty |
+| Kościół Mariacki, Rynek Główny | ok. 230 m | poniżej 2 minut |
+| Sukiennice | ok. 350 m | ok. 4 minuty |
 | Dworzec Kraków Główny | ok. 900 m | 12 minut |
 
 Odległości są przybliżone i liczone dla spokojnego tempa. Latem i w weekendy Floriańska bywa zatłoczona, więc dolicz minutę lub dwie.
@@ -119,7 +119,7 @@ Przy zwykłych kwotach nie potrzebujesz żadnego dokumentu. Przepisy wymagają o
 ## Podsumowanie
 
 - Adres: ul. Floriańska 37, 31-019 Kraków, między Rynkiem Głównym a Bramą Floriańską.
-- 3 minuty pieszo od kościoła Mariackiego, 2 minuty od Bramy Floriańskiej, około 12 minut od dworca.
+- Niespełna 2 minuty pieszo od kościoła Mariackiego, niecała minuta od Bramy Floriańskiej, około 12 minut od dworca.
 - Poniedziałek–piątek 9:30–20:30, sobota 10:00–20:30, niedziela zamknięte.
 - Znak rozpoznawczy: tablica z czarną owcą i kursami skupu oraz sprzedaży.
 - Tylko gotówka, 0% prowizji, kursy na stronie przed przyjściem.

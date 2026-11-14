@@ -226,7 +226,24 @@ import Analytics from '../../components/Analytics.astro';
         .tier-head-2 { border-top: 1px solid #262626; margin-top: 0.25rem; }
         .tier-name { background: #fff; color: var(--ink); border-radius: 9999px; padding: 0.3rem 0.95rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; }
         .tier-sub { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--mist); text-align: right; }
-        .spread-line { padding: 0.35rem 1.5rem 0.2rem; font-size: 0.8rem; font-weight: 600; color: #d4d4d4; }
+        /* Sekcja lokalizacji. Telefon: zdjęcie, adres z przyciskiem, mapka, godziny, kontakt. Komputer: zdjęcie obok mapki, karty pod spodem. */
+        .loc-wrap { max-width: 60rem; margin: 0 auto; display: grid; gap: 1.25rem; grid-template-areas: "photo" "addr" "map" "hours" "contact"; }
+        .loc-photo { grid-area: photo; min-width: 0; }
+        .loc-wrap .loc-cards { display: contents; }
+        .loc-cards > :nth-child(1) { grid-area: addr; }
+        .loc-cards > :nth-child(2) { grid-area: hours; }
+        .loc-cards > :nth-child(3) { grid-area: contact; }
+        #area-map { grid-area: map; width: 100%; max-width: 440px; margin: 0 auto; }
+        @media (min-width: 768px) {
+            .loc-wrap { grid-template-areas: "photo" "map" "cards"; }
+            .loc-wrap .loc-cards { display: grid; grid-area: cards; min-width: 0; }
+            .loc-cards > :nth-child(n) { grid-area: auto; }
+        }
+        @media (min-width: 900px) {
+            .loc-wrap { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); grid-template-areas: "photo map" "cards cards"; align-items: start; column-gap: 1.5rem; }
+            #area-map { max-width: none; }
+        }
+        .spread-line { padding: 0.35rem 1.5rem 0.2rem; font-size: clamp(0.66rem, 3.05vw, 0.8rem); font-weight: 600; color: #d4d4d4; white-space: nowrap; }
         .stale-note { margin: 0 1.5rem 1rem; padding: 0.7rem 0.9rem; border: 1px solid #525252; border-radius: 0.75rem; font-size: 0.78rem; color: #e5e5e5; }
 
         /* Retail / wholesale segmented control */
@@ -390,7 +407,7 @@ import Analytics from '../../components/Analytics.astro';
                     <td class="px-6 py-4 text-right board-digit num text-xl sm:text-2xl">5.28</td>
                 </tr></tbody>
                     </table>
-                    <p id="board-note" class="px-6 pb-4 pt-1 text-xs text-neutral-500">Możliwość negocjacji kursu przy większych kwotach — zapytaj w okienku.</p>
+                    <p id="board-note" class="px-6 pb-4 pt-1 text-xs text-neutral-500">Możliwość negocjacji kursu przy większych kwotach.</p>
 
                     <div id="wholesale-block">
                         <div class="tier-head tier-head-2">
@@ -509,10 +526,12 @@ import Analytics from '../../components/Analytics.astro';
             <p class="eyebrow text-center mb-2" data-i18n="visit_eyebrow">Stare Miasto</p>
             <h2 class="display text-2xl sm:text-3xl text-center mb-12" data-i18n="visit_title">Lokalizacja</h2>
 
-            <div class="max-w-4xl mx-auto mb-4">
+            <div class="loc-wrap">
+            <div class="loc-photo">
                 <img src="../images/street2-800.webp" srcset="../images/street2-800.webp 800w, ../images/street2-1400.webp 1400w" sizes="(max-width: 1024px) 100vw, 896px" loading="lazy" width="1400" height="875" alt="Exchange Kantor Black Sheep, Floriańska 37 w Krakowie: tablica kursów z czarną owcą po lewej, w tle kościół Mariacki" class="w-full rounded-2xl border border-neutral-800 object-cover">
                 <p class="text-center" style="font-size:clamp(1rem,2.6vw,1.2rem);line-height:1.5;color:#e5e5e5;font-weight:500;margin-top:1rem" data-i18n="visit_photo_caption" data-i18n-html=""><strong style="color:#fff;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px">Szukaj tablicy z czarną owcą</strong> i kursami skupu i sprzedaży EUR, USD, GBP.<br>Floriańska 37 — między Bramą Floriańską a Rynkiem Głównym. Nie daj się oskubać.</p>
-                <a id="area-map" href="https://maps.google.com/?cid=3299726714959505459" target="_blank" rel="noopener" aria-label="Mapka dojścia: Exchange Kantor Black Sheep, Floriańska 37, 120 m od Bramy Floriańskiej i 230 m od Rynku Głównego. Kliknij, aby otworzyć Mapy Google." style="display:block;max-width:440px;margin:1.75rem auto 0;text-decoration:none">
+            </div>
+                <a id="area-map" href="https://maps.google.com/?cid=3299726714959505459" target="_blank" rel="noopener" aria-label="Mapka dojścia: Exchange Kantor Black Sheep, Floriańska 37, 120 m od Bramy Floriańskiej i 230 m od Rynku Głównego. Kliknij, aby otworzyć Mapy Google." style="display:block;text-decoration:none">
                     <svg viewBox="0 0 400 470" role="img" aria-label="Mapka okolicy" style="display:block;width:100%;height:auto;border:1px solid #232323;border-radius:20px;background:#141414;font-family:'Montserrat','Montserrat Fallback',system-ui,sans-serif">
                         <rect x="0" y="0" width="400" height="40" fill="#19211b"/>
                         <text x="16" y="25" fill="#5f7a66" font-size="10" font-weight="700" letter-spacing="2">PLANTY</text>
@@ -530,29 +549,30 @@ import Analytics from '../../components/Analytics.astro';
                         <text x="376" y="70" fill="#6f6f6f" font-size="9.5" text-anchor="end">ul. Pijarska</text>
                         <text x="376" y="230" fill="#6f6f6f" font-size="9.5" text-anchor="end">ul. św. Marka</text>
                         <text x="376" y="334" fill="#6f6f6f" font-size="9.5" text-anchor="end">ul. św. Tomasza</text>
-                        <text x="228" y="300" fill="#8a8a8a" font-size="10" font-weight="700" letter-spacing="3" transform="rotate(-90 228 300)">FLORIAŃSKA</text>
+                        <text x="228" y="300" fill="#8a8a8a" font-size="9.5" font-weight="700" letter-spacing="2" transform="rotate(-90 228 300)">FLORIAŃSKA</text>
                         <text x="112" y="431" fill="#bdbdbd" font-size="11" font-weight="800" letter-spacing="2" text-anchor="middle">RYNEK GŁÓWNY</text>
                         <rect x="212" y="404" width="40" height="44" rx="4" fill="#141414" stroke="#8a8a8a" stroke-width="1.5"/>
                         <path d="M232 414v24M224 422h16" stroke="#8a8a8a" stroke-width="2" stroke-linecap="round"/>
                         <text x="262" y="430" fill="#8a8a8a" font-size="9.5">Kościół Mariacki</text>
-                        <text x="160" y="186" fill="#6f6f6f" font-size="9" text-anchor="end">Hotel Wyndham Grand</text>
+                        <text x="160" y="186" fill="#6f6f6f" font-size="9" text-anchor="end">Hotel Wyndham Grand · Swatch</text>
                         <path d="M176 84v94M171 84h10M171 178h10" stroke="#6f6f6f" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
-                        <text x="166" y="135" fill="#e5e5e5" font-size="11" font-weight="700" text-anchor="end">120 m · 2 min</text>
+                        <text x="166" y="135" fill="#e5e5e5" font-size="11" font-weight="700" text-anchor="end">120 m · &lt; 1 min</text>
                         <path d="M176 194v198M171 194h10M171 392h10" stroke="#6f6f6f" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
-                        <text x="166" y="372" fill="#e5e5e5" font-size="11" font-weight="700" text-anchor="end">230 m · 3 min</text>
-                        <circle cx="200" cy="186" r="5" fill="#fff"/>
-                        <line x1="200" y1="186" x2="232" y2="170" stroke="#fff" stroke-width="2"/>
+                        <text x="166" y="372" fill="#e5e5e5" font-size="11" font-weight="700" text-anchor="end">230 m · &lt; 2 min</text>
+                        <circle cx="212" cy="186" r="5" fill="#fff"/>
+                        <line x1="212" y1="186" x2="232" y2="172" stroke="#fff" stroke-width="2"/>
+                        <text x="222" y="203" fill="#8a8a8a" font-size="9">Souvenirs I Love Krakow</text>
+                        <text x="216" y="97" fill="#8a8a8a" font-size="9">McDonald's</text>
                         <rect x="228" y="142" width="40" height="40" rx="10" fill="#dadada" stroke="#fff" stroke-width="2"/>
                         <image href="../images/sygnet-96.png" x="231" y="145" width="34" height="34"/>
-                        <text x="276" y="156" fill="#fff" font-size="12" font-weight="800" letter-spacing=".5">EXCHANGE</text>
-                        <text x="276" y="169" fill="#fff" font-size="8.6" font-weight="800">KANTOR <tspan fill="#a3a3a3" font-weight="700">BLACK SHEEP</tspan></text>
+                        <text x="276" y="157" fill="#fff" font-size="14" font-weight="800" textLength="104" lengthAdjust="spacingAndGlyphs">EXCHANGE</text>
+                        <text x="276" y="169" fill="#fff" font-size="8.6" font-weight="800" textLength="104" lengthAdjust="spacingAndGlyphs">KANTOR <tspan fill="#a3a3a3" font-weight="700">BLACK SHEEP</tspan></text>
                         <text x="276" y="183" fill="#bdbdbd" font-size="9.5">Floriańska 37</text>
                     </svg>
                     <span style="display:block;text-align:center;margin-top:.6rem;font-size:.8rem;color:#bdbdbd;text-decoration:underline;text-underline-offset:4px">Otwórz w Mapach Google →</span>
                 </a>
-            </div>
 
-            <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div class="loc-cards grid md:grid-cols-3 gap-4">
                 <div class="bg-[--panel] border border-neutral-800 rounded-2xl p-8">
                     <p class="eyebrow mb-3" data-i18n="visit_address">Adres</p>
                     <p class="text-lg font-semibold" data-i18n="visit_street">ul. Floriańska 37</p>
@@ -580,6 +600,7 @@ import Analytics from '../../components/Analytics.astro';
                     <p class="text-sm text-neutral-500 mt-4" data-i18n="visit_languages">Mówimy po polsku i angielsku.</p>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -710,8 +731,8 @@ import Analytics from '../../components/Analytics.astro';
                 seg_retail: "Retail", seg_wholesale: "Wholesale",
                 tier_retail_sub: "any amount", tier_wholesale_sub: "rates for", spread_label: "Spread", spread_weekend: "Weekend spread",
                 stale_note: "Rates as of {D}. Call or WhatsApp +48 889 505 057 to confirm today's rate.",
-                retail_note: "Rates negotiable for larger amounts — just ask at the counter.",
-                wholesale_note_auto: "Indicative wholesale rate, calculated from the market rate ({T}). Confirm it at the counter, on WhatsApp or by phone before you come.", reserve_btn: "Reserve this rate", reserve_call: "or call us", reserve_msg: "Hello, I would like to reserve the wholesale rate. Currency and amount: ",
+                retail_note: "Rates negotiable for larger amounts.",
+                wholesale_note_auto: "Indicative wholesale rate – confirmation required.", reserve_btn: "Reserve this rate", reserve_call: "or call us", reserve_msg: "Hello, I would like to reserve the wholesale rate. Currency and amount: ",
                 wholesale_error: "Error: wholesale rates are temporarily unavailable. Ask for the rate at the counter, on WhatsApp or by phone.",
                 wholesale_note: "The wholesale table shows rates for {X}. We negotiate wholesale from the equivalent of as little as 500 EUR: ask at the counter.",
                 th_currency: "Currency", th_buy_main: "We buy", th_buy_sub: "kupno",
@@ -774,10 +795,10 @@ import Analytics from '../../components/Analytics.astro';
                 board_updated: "Aktualizacja",
                 board_commission: "0% Prowizji",
                 seg_retail: "Detal", seg_wholesale: "Hurt",
-                tier_retail_sub: "każda kwota", tier_wholesale_sub: "kursy dla", spread_label: "Spread", spread_weekend: "Weekendowy spread",
+                tier_retail_sub: "każda kwota", tier_wholesale_sub: "kursy dla", spread_label: "Spread", spread_weekend: "Weekend spread",
                 stale_note: "Kursy z dnia {D}. Aktualny kurs potwierdzisz telefonicznie lub na WhatsApp: +48 889 505 057.",
-                retail_note: "Możliwość negocjacji kursu przy większych kwotach — zapytaj w okienku.",
-                wholesale_note_auto: "Kurs hurtowy orientacyjny, liczony z kursu rynkowego ({T}). Potwierdź go w okienku, na WhatsAppie lub telefonicznie przed przyjściem.", reserve_btn: "Zarezerwuj kurs", reserve_call: "lub zadzwoń", reserve_msg: "Dzień dobry, chcę zarezerwować kurs hurtowy. Waluta i kwota: ",
+                retail_note: "Możliwość negocjacji kursu przy większych kwotach.",
+                wholesale_note_auto: "Kurs hurtowy orientacyjny – wymaga potwierdzenia.", reserve_btn: "Zarezerwuj kurs", reserve_call: "lub zadzwoń", reserve_msg: "Dzień dobry, chcę zarezerwować kurs hurtowy. Waluta i kwota: ",
                 wholesale_error: "Błąd: kursy hurtowe są chwilowo niedostępne. Zapytaj o kurs w okienku, na WhatsAppie lub telefonicznie.",
                 wholesale_note: "Kursy w tabeli hurtowej dotyczą kwoty {X}. Hurt negocjujemy nawet od równowartości 500 EUR: zapytaj w okienku.",
                 th_currency: "Waluta", th_buy_main: "Kupno", th_buy_sub: "we buy",
