@@ -4,3 +4,6 @@ dist/
 .DS_Store
 *.lock
 !package-lock.json
+
+# oryginały zdjęć (duże pliki); na stronę trafiają skompresowane kopie w public/images
+photos/

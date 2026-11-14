@@ -14,7 +14,7 @@ faq:
   - q: "Czy wymienię stare papierowe banknoty 20 i 50 funtów?"
     a: "Papierowe banknoty Banku Anglii nie są już prawnym środkiem płatniczym i wiele kantorów ich nie przyjmuje. Exchange Kantor Black Sheep skupuje wycofane i zniszczone banknoty po wcześniejszym kontakcie, po kursie ustalanym indywidualnie."
   - q: "Czy kantor przyjmuje funty szkockie?"
-    a: "Banknoty szkockie i północnoirlandzkie są emitowane przez banki komercyjne i poza Wielką Brytanią trudno je wymienić. Najprościej zamienić je na banknoty Banku Anglii jeszcze na Wyspach. Jeśli już je masz, zapytaj przed przyjściem."
+    a: "Nie. Wymieniamy wyłącznie banknoty Banku Anglii. Banknoty emitowane przez banki szkockie i północnoirlandzkie nie są wymieniane międzynarodowo, dlatego trzeba je zamienić na banknoty Banku Anglii w banku w Wielkiej Brytanii, jeszcze przed wyjazdem."
   - q: "Lepiej kupić funty w Polsce czy w Anglii?"
     a: "Gotówkę zwykle lepiej kupić w Polsce przed wyjazdem. W dużym polskim mieście funt jest walutą wymienianą codziennie, więc różnica między kursem kupna i sprzedaży jest niewielka, a oferty kilku kantorów porównasz w kilka minut."
 ---
@@ -42,11 +42,15 @@ Funt jest droższy od euro i dolara, więc ten sam spread w groszach oznacza prz
 
 ## Które banknoty funtowe są przyjmowane
 
-Nie każdy banknot funtowy da się łatwo wymienić poza Wielką Brytanią. Zanim przyjedziesz albo zanim przyjmiesz gotówkę od rodziny, sprawdź, co masz w portfelu.
+Nie każdy banknot funtowy da się wymienić poza Wielką Brytanią. Zanim przyjedziesz albo zanim przyjmiesz gotówkę od rodziny, sprawdź, co masz w portfelu. Najprostszy test: u góry banknotu musi być napis **„Bank of England"**.
+
+![Polimerowe banknoty Banku Anglii o nominałach 5, 10, 20 i 50 funtów z królem Karolem III i królową Elżbietą II, czyli funty wymieniane w kantorze przy Floriańskiej 37 w Krakowie](/images/bank-of-england-pound-notes.webp)
+
+*Takie funty wymieniamy: polimerowe banknoty Banku Anglii, z królem albo z królową.*
 
 - **Aktualne polimerowe banknoty Banku Anglii** (5, 10, 20 i 50 funtów), z wizerunkiem króla Karola III lub królowej Elżbiety II, są standardem i nie budzą pytań.
 - **Stare papierowe banknoty Banku Anglii** nie są już prawnym środkiem płatniczym. Papierowe 20 i 50 funtów wycofano z końcem września 2022 roku. Wiele kantorów ich nie przyjmuje. My skupujemy banknoty wycofane po wcześniejszym kontakcie, po kursie ustalanym indywidualnie. Szczegóły są w poradniku o [zniszczonych i wycofanych banknotach](/pl/wymiana-zniszczonych-wycofanych-banknotow-krakow).
-- **Banknoty szkockie i północnoirlandzkie** emitują banki komercyjne. Poza Wielką Brytanią trudno je wymienić, dlatego najlepiej zamienić je na banknoty Banku Anglii jeszcze na Wyspach. Jeśli już je masz, zapytaj nas przed przyjściem.
+- **Banknoty szkockie i północnoirlandzkie** emitują banki komercyjne, a nie Bank Anglii, i nie są one przedmiotem obrotu międzynarodowego. **Nie wymieniamy ich**, podobnie jak większość kantorów poza Wielką Brytanią. Jeśli bankomat w Szkocji wydał Ci takie banknoty, zamień je w banku na Wyspach na banknoty Banku Anglii przed wylotem. To samo dotyczy banknotów z Jersey, Guernsey, wyspy Man i Gibraltaru.
 - **Monety** z reguły nie są wymieniane za granicą. Przywoź banknoty.
 - **Banknoty naddarte, sklejone lub popisane** mogą być problemem w każdym kantorze. W takim przypadku skontaktuj się z nami wcześniej.
 
@@ -87,7 +91,7 @@ Jesteśmy czynni od poniedziałku do piątku w godzinach 9:30–20:30 i w sobot�
 ## Podsumowanie
 
 - Sprzedajesz funty: patrz na kurs kupna, czyli niższą liczbę przy GBP. Kupujesz funty: patrz na kurs sprzedaży.
-- Przywoź polimerowe banknoty Banku Anglii, bez monet. Banknoty szkockie zamień jeszcze na Wyspach.
+- Przywoź polimerowe banknoty Banku Anglii, bez monet. Banknotów szkockich i północnoirlandzkich nie wymieniamy, więc zamień je jeszcze na Wyspach.
 - Stare papierowe banknoty skupujemy po wcześniejszym kontakcie.
 - Przy większej kwocie zapytaj o kurs hurtowy i zarezerwuj go przez telefon lub WhatsApp.
 - Ul. Floriańska 37, 0% prowizji, oba kursy na tablicy, czynne do 20:30 od poniedziałku do soboty.

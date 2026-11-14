@@ -22,7 +22,7 @@ for p in files:
     if not alt or alt not in urls: issues.append(f'brak wersji w drugim języku: {alt}')
     if len(re.findall(r'^  - q:',fm,re.M))<4: issues.append('mniej niż 4 pytania w faq')
     if len(re.findall(r'^## ',body,re.M))<5: issues.append('mniej niż 5 nagłówków H2')
-    links=re.findall(r'\]\((/[^)]*)\)',body)
+    links=[l for l in re.findall(r'\]\((/[^)]*)\)',body) if not l.startswith('/images/')]
     if len(links)<4: issues.append(f'tylko {len(links)} linków wewnętrznych (min. 4)')
     if any('.html' in l for l in links): issues.append('link z .html')
     wrong=[l for l in links if (lang=='pl')!=l.startswith('/pl/')]

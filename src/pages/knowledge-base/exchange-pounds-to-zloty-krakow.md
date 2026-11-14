@@ -15,6 +15,8 @@ faq:
     a: "The buy rate. Rates are quoted from the exchange office's point of view, so the office buys your pounds. It is the lower of the two numbers shown next to GBP."
   - q: "Can I exchange old paper £20 or £50 notes in Kraków?"
     a: "Paper Bank of England notes are no longer legal tender and many offices refuse them. Exchange Kantor Black Sheep buys withdrawn and damaged banknotes after you contact the office first, at a rate agreed individually."
+  - q: "Do you accept Scottish or Northern Irish banknotes?"
+    a: "No. We exchange Bank of England notes only. Notes issued by Scottish and Northern Irish banks are not exchanged internationally, so swap them for Bank of England notes at a bank in the UK before you travel."
   - q: "Can I pay in pounds in Kraków?"
     a: "No. Poland's currency is the złoty (PLN). A few tourist businesses may accept foreign cash at their own rate, but you should expect to pay in złoty or by card."
 ---
@@ -52,11 +54,15 @@ A one-minute check that works anywhere:
 
 ## Which pound notes can be exchanged
 
-Not every pound note is equally easy to exchange abroad, so it is worth checking your wallet before you travel.
+Not every pound note can be exchanged abroad, so it is worth checking your wallet before you travel. The quick test: look for the words **"Bank of England"** at the top of the note.
+
+![Bank of England polymer notes of 5, 10, 20 and 50 pounds with King Charles III and Queen Elizabeth II, the pound notes exchanged at Floriańska 37 in Kraków](/images/bank-of-england-pound-notes.webp)
+
+*These are the pound notes we exchange: Bank of England polymer notes, with either the King or the late Queen.*
 
 - **Current Bank of England polymer notes** (£5, £10, £20, £50), with either King Charles III or Queen Elizabeth II, are the standard and are accepted without questions.
 - **Old paper Bank of England notes** are no longer legal tender. The paper £20 and £50 were withdrawn at the end of September 2022. Many exchange offices refuse them. We buy withdrawn notes after you contact us first, at a rate agreed individually. Details are in our guide to [damaged and withdrawn banknotes](/exchange-damaged-withdrawn-banknotes-krakow).
-- **Scottish and Northern Irish notes** are issued by commercial banks and are hard to exchange outside the UK. If that is what you have, the simplest solution is to swap them for Bank of England notes before you fly. Otherwise ask us before you come.
+- **Scottish and Northern Irish notes** are issued by commercial banks, not by the Bank of England, and are not traded internationally. **We do not exchange them**, and neither do most offices outside the UK. If that is what your cash machine gave you, swap the notes for Bank of England ones at a bank in the UK before you fly. The same applies to notes from Jersey, Guernsey, the Isle of Man and Gibraltar.
 - **Coins** are generally not exchanged abroad. Bring notes.
 - **Torn, taped or written-on notes** can be a problem at any office. If a note is damaged, contact us first.
 
@@ -84,7 +90,7 @@ Leftover złoty can be changed back before you leave. This time the **sell** rat
 
 ## Summary
 
-- Bring Bank of England polymer notes, not coins, and swap Scottish or Northern Irish notes before you travel.
+- Bring Bank of England polymer notes, not coins. We do not exchange Scottish or Northern Irish notes, so swap them in the UK before you travel.
 - Exchange in Kraków, not at home or at the airport.
 - Your rate is the buy rate, the lower number next to GBP.
 - Ask for the amount in złoty before handing over your notes.
