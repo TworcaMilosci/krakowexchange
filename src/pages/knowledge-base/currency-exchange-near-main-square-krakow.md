@@ -87,6 +87,10 @@ Hours may differ on public holidays. Current information is always on the Google
 
 By the entrance there is a black board with a black sheep logo and the name "Exchange Kantor Black Sheep". It shows two rates for each of three currencies, buy and sell for the euro, dollar and pound, and the words "0% commission".
 
+![Floriańska 37 in Kraków seen from the street: the entrance to Exchange Kantor Black Sheep with its rates board, and the souvenir shop at number 35 on the right](/images/florianska-37-krakow-exchange-office-and-souvenir-shop.webp)
+
+*The view from the street, November 2026: our entrance with the rates board, and the souvenir shop on the corner of św. Marka to the right.*
+
 A few landmarks that make it easy to find:
 
 - We are on the east side of the street: on the right when you walk from the Main Square, on the left when you walk from St. Florian's Gate.

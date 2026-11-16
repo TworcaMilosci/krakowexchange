@@ -87,6 +87,10 @@ W dni świąteczne godziny mogą się różnić. Aktualne informacje są zawsze 
 
 Przy wejściu wisi czarna tablica z logo czarnej owcy i napisem „Exchange Kantor Black Sheep". Są na niej dwa kursy dla każdej z trzech walut: kupno i sprzedaż euro, dolara i funta, oraz napis „0% commission".
 
+![Floriańska 37 w Krakowie od strony ulicy: wejście do Exchange Kantor Black Sheep z tablicą kursów, po prawej sklep z pamiątkami pod numerem 35](/images/florianska-37-krakow-exchange-office-and-souvenir-shop.webp)
+
+*Widok z ulicy, listopad 2026 r.: nasze wejście z tablicą kursów, a po prawej sklep z pamiątkami na rogu ze św. Marka.*
+
 Kilka punktów orientacyjnych, które ułatwiają trafienie:
 
 - Jesteśmy po wschodniej stronie ulicy: po prawej, gdy idziesz od Rynku, i po lewej, gdy idziesz od Bramy Floriańskiej.

@@ -23,9 +23,9 @@ faq:
 
 Ten poradnik napisaliśmy my, czyli kantor, więc nie udajemy niezależnego rankingu. Zamiast listy „top 5" dajemy coś, co sprawdzisz samodzielnie: mapę miejsc, w których w Krakowie wymienia się walutę, sposób na porównanie kursów w minutę i nasze własne liczby, z których można nas rozliczyć.
 
-![Wejście do Exchange Kantor Black Sheep przy ulicy Floriańskiej 37 w Krakowie, z tablicą kursów z czarną owcą](/images/street-1400.webp)
+![Wejście do Exchange Kantor Black Sheep przy ulicy Floriańskiej 37 w Krakowie: tablica z czarną owcą i kursami kupna oraz sprzedaży EUR, USD i GBP, w tle Brama Floriańska](/images/exchange-kantor-black-sheep-florianska-37-entrance-rates-board.webp)
 
-*Ulica Floriańska 37: tablica z czarną owcą i kursami kupna oraz sprzedaży.*
+*Ulica Floriańska 37, listopad 2026 r.: tablica z czarną owcą i kursami kupna oraz sprzedaży, w tle Brama Floriańska.*
 
 ## Co naprawdę decyduje o tym, ile dostaniesz
 
@@ -98,6 +98,10 @@ Kantor mieści się przy ul. Floriańskiej 37, na deptaku między Rynkiem Głów
 - Od kościoła Mariackiego: około 230 metrów, niespełna dwie minuty pieszo.
 - Od Bramy Floriańskiej: około 120 metrów, niecała minuta.
 - Od dworca Kraków Główny: około 900 metrów, 12 minut. Trasę opisujemy w poradniku [kantor przy dworcu Kraków Główny](/pl/baza-wiedzy/kantor-przy-dworcu-krakow-glowny).
+
+![Fasada kamienicy przy Floriańskiej 37 w Krakowie: wejście do Exchange Kantor Black Sheep z tablicą kursów, obok salon masażu](/images/exchange-kantor-black-sheep-florianska-37-facade.webp)
+
+*Tak wygląda nasze wejście od strony ulicy: tablica kursów po lewej stronie drzwi, obok tablica pamiątkowa i salon masażu.*
 
 Szukaj czarnej tablicy z czarną owcą. Więcej punktów orientacyjnych jest w poradniku [jak dojść do kantoru przy Rynku Głównym](/pl/baza-wiedzy/kantor-rynek-glowny-krakow-jak-dojsc), a o godzinach wieczornych i sobotnich piszemy w poradniku [kantor otwarty wieczorem i w sobotę](/pl/baza-wiedzy/kantor-otwarty-wieczorem-i-w-sobote-krakow).
 

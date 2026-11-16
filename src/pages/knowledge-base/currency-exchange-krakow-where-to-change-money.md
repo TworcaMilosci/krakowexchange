@@ -23,9 +23,9 @@ faq:
 
 We are an exchange office, and we wrote this guide ourselves, so we will not pretend it is an independent ranking. In place of a "top 5" list you get something you can verify: a map of where money is exchanged in Kraków, a one-minute method for comparing rates, and our own numbers, which you are welcome to hold us to.
 
-![The entrance to Exchange Kantor Black Sheep at Floriańska 37 in Kraków, with the black sheep rates board](/images/street-1400.webp)
+![The entrance to Exchange Kantor Black Sheep at Floriańska 37 in Kraków: the black sheep board with buy and sell rates for EUR, USD and GBP, St. Florian's Gate in the background](/images/exchange-kantor-black-sheep-florianska-37-entrance-rates-board.webp)
 
-*Floriańska 37: the board with the black sheep and both buy and sell rates.*
+*Floriańska 37, November 2026: the board with the black sheep and both buy and sell rates, with St. Florian's Gate behind.*
 
 ## What really decides how much you get
 
@@ -98,6 +98,10 @@ The office is at Floriańska 37, on the pedestrian street between the Main Squar
 - From St. Mary's Basilica: about 230 metres, under two minutes on foot.
 - From St. Florian's Gate: about 120 metres, less than a minute.
 - From Kraków Główny station: about 900 metres, 12 minutes. The route is in our guide to the [walk from Kraków Główny station](/knowledge-base/currency-exchange-near-krakow-glowny-station).
+
+![The façade at Floriańska 37 in Kraków: the entrance to Exchange Kantor Black Sheep with its rates board, next to a massage salon](/images/exchange-kantor-black-sheep-florianska-37-facade.webp)
+
+*Our entrance from the street: the rates board is to the left of the door, next to a memorial plaque and a massage salon.*
 
 Look for the black board with the black sheep. More landmarks are in the guide on [how to find the exchange office near the Main Square](/knowledge-base/currency-exchange-near-main-square-krakow), and evening and Saturday hours are covered in the guide to [exchanging money late and on Saturday](/knowledge-base/currency-exchange-open-late-saturday-krakow).
 
