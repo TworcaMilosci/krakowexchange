@@ -7,3 +7,6 @@ dist/
 
 # oryginały zdjęć (duże pliki); na stronę trafiają skompresowane kopie w public/images
 photos/
+
+# pliki do podglądu przed publikacją (nie trafiają na stronę)
+PODGLAD/
