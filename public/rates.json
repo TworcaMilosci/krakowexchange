@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-24",
   "specialHours": {},
   "wholesaleFrom": "1 000 EUR",
   "wholesaleMinAmount": 1000,
@@ -11,10 +11,10 @@
       "sellHurt": 4.455
     },
     "USD": {
-      "buy": 3.98,
-      "sell": 4.07,
+      "buy": 4.00,
+      "sell": 4.08,
       "buyHurt": 4.05,
-      "sellHurt": 4.07
+      "sellHurt": 4.08
     },
     "GBP": {
       "buy": 5.23,
