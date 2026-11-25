@@ -147,13 +147,27 @@ export function compute(manual, market, now) {
   return out;
 }
 
-export async function onRequestGet(context) {
+// Kurs rynkowy (Wise, NBP) jest pamiętany przez CACHE_SECONDS, żeby nie pytać o niego przy każdym wejściu.
+// Plik rates.json (kursy detaliczne, godziny) jest czytany przy każdym wejściu, więc jego zmiana
+// jest widoczna od razu po opublikowaniu strony.
+async function marketData(context) {
   const { request, env } = context;
-  const cacheKey = new Request(new URL('/api/rates', request.url).toString());
+  const cacheKey = new Request(new URL('/api/_market-cache', request.url).toString());
   const cache = caches.default;
   const hit = await cache.match(cacheKey);
-  if (hit) return hit;
+  if (hit) { try { return await hit.json(); } catch (e) { /* uszkodzony wpis: pobierz od nowa */ } }
+  const data = { nbp: null, live: null, errors: [] };
+  try { data.nbp = await nbpMids(); } catch (e) { data.errors.push(String(e.message || e)); }
+  try { data.live = await liveMids(env); } catch (e) { data.errors.push(String(e.message || e)); }
+  if (data.nbp || data.live) {
+    const res = new Response(JSON.stringify(data), { headers: { 'content-type': 'application/json', 'cache-control': `public, max-age=${CACHE_SECONDS}` } });
+    context.waitUntil(cache.put(cacheKey, res));
+  }
+  return data;
+}
 
+export async function onRequestGet(context) {
+  const { request, env } = context;
   let manual;
   try {
     const res = await env.ASSETS.fetch(new URL('/rates.json', request.url));
@@ -162,24 +176,19 @@ export async function onRequestGet(context) {
     return new Response(JSON.stringify({ error: 'rates.json niedostępny' }), { status: 502, headers: { 'content-type': 'application/json' } });
   }
 
-  let market = null; const errors = [];
-  let nbp = null;
-  try { nbp = await nbpMids(); } catch (e) { errors.push(String(e.message || e)); }
-  try {
-    const live = await liveMids(env);
-    if (live) {
-      const cfg = { ...DEFAULTS, ...(manual.wholesaleAuto || {}) };
-      const sane = !nbp || CODES.every((c) => Math.abs(live.mids[c] / nbp.mids[c] - 1) <= cfg.maxDeviationFromNbp);
-      if (sane) market = live; else errors.push('kurs na żywo odbiega od NBP');
-    }
-  } catch (e) { errors.push(String(e.message || e)); }
+  const { nbp, live, errors: marketErrors } = await marketData(context);
+  const errors = [...marketErrors];
+  let market = null;
+  if (live) {
+    const cfg = { ...DEFAULTS, ...(manual.wholesaleAuto || {}) };
+    const sane = !nbp || CODES.every((c) => Math.abs(live.mids[c] / nbp.mids[c] - 1) <= cfg.maxDeviationFromNbp);
+    if (sane) market = live; else errors.push('kurs na żywo odbiega od NBP');
+  }
   if (!market && nbp) market = { ...nbp, source: 'nbp' };
 
   const body = compute(manual, market, new Date());
   if (errors.length) body.wholesaleAutoInfo.errors = errors;
-  const response = new Response(JSON.stringify(body), {
-    headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': `public, max-age=60, s-maxage=${CACHE_SECONDS}` },
+  return new Response(JSON.stringify(body), {
+    headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' },
   });
-  context.waitUntil(cache.put(cacheKey, response.clone()));
-  return response;
 }
