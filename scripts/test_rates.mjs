@@ -2,6 +2,8 @@ import { parseWise, compute, isDayMode, isPolishHoliday, warsawParts, period } f
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const manual = JSON.parse(fs.readFileSync('public/rates.json', 'utf8'));
+// test nie zależy od bieżących kursów w pliku: stałe kursy detaliczne
+manual.rates = { EUR: { buy: 4.33, sell: 4.42 }, USD: { buy: 3.92, sell: 4.01 }, GBP: { buy: 5.19, sell: 5.28 } };
 const mids = { EUR: 4.40, USD: 3.98, GBP: 5.26 };
 const cfg = { dayStart: 9, dayEnd: 17 };
 // czas: piątek 13.11.2026 12:00 Warszawa (CET, UTC+1)

@@ -96,3 +96,30 @@ Gdy danego dnia masz wolne albo inne godziny, dopisz ten dzień w `public/rates.
 - W polskie święta bez wpisu strona pokazuje "sprawdź godziny w Mapach Google". Jeśli w święto pracujesz, dopisz godziny; jeśli nie, dopisz "closed", wtedy strona policzy czas do następnego otwarcia.
 - Stare daty można usuwać, ale nie trzeba.
 - Pamiętaj o przecinkach między wpisami (po ostatnim bez przecinka).
+
+---
+
+## Kursy detaliczne prosto z programu KANTOR
+
+Od listopada 2026 kursy detaliczne (EUR, USD, GBP) mogą trafiać na stronę automatycznie z programu KANTOR na komputerze w kantorze.
+
+Jak to działa:
+
+1. Program KANTOR zapisuje tabelę kursów, a skrypt tablicy (`C:\Tablica\kursy-watcher.ps1`) tworzy z niej plik `C:\Tablica\kursy.js`.
+2. Drugi skrypt, `C:\Tablica\kursy-www.ps1`, po każdej zmianie wysyła ten plik na adres `https://kantorblacksheep.pl/api/push-rates`, podpisany kluczem z pliku `C:\Tablica\www-klucz.txt`.
+3. Strona sprawdza kursy i zapisuje je w pamięci Cloudflare (KV). Zmiana jest widoczna po kilku sekundach, bez budowania strony.
+4. Kursy hurtowe dalej liczą się same z kursu rynkowego, w granicach nowych kursów detalicznych.
+
+Zabezpieczenia: strona odrzuca kursy, gdy kupno nie jest niższe od sprzedaży, gdy różnica przekracza 40 groszy, gdy kurs odbiega od rynkowego o ponad 4% albo gdy brakuje którejś z trzech walut. Po odrzuceniu na stronie zostają poprzednie kursy, a powód jest zapisany w `C:\Tablica\kursy-www.log`.
+
+Gdy komputer w kantorze jest wyłączony, strona pokazuje ostatnie przysłane kursy.
+
+Plik `public/rates.json` zostaje jako:
+
+- rezerwa: jego kursy detaliczne są używane, dopóki z kantoru nic nie przyszło;
+- miejsce na `specialHours`, `wholesaleFrom` i ustawienia hurtu;
+- wyłącznik: dopisanie `"retailFromKantor": { "enabled": false },` wraca do kursów wpisanych ręcznie w tym pliku.
+
+Ustawienia po stronie Cloudflare (projekt Pages `krakowexchange`): powiązanie KV o nazwie `RATES_KV` oraz sekret `RATES_PUSH_KEY` (ten sam klucz co w `www-klucz.txt`).
+
+Jak sprawdzić, skąd strona bierze kursy: otwórz `https://kantorblacksheep.pl/api/rates` i znajdź `retailInfo`. `"source": "kantor"` oznacza kursy z programu, `"source": "file"` kursy z `rates.json` (obok jest powód).

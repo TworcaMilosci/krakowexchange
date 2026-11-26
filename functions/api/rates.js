@@ -17,6 +17,8 @@ const DEFAULTS = {
   maxDeviationFromNbp: 0.03,
   errorOutsideRetail: 0.05,  // kurs rynkowy dalej niż 5 gr poza widełkami detalu: błąd // kurs na żywo różni się od NBP o więcej niż 3%: nie ufamy mu
 };
+import { RETAIL_KEY, applyRetail } from '../../lib/kantor-retail.js';
+
 const CACHE_SECONDS = 600;
 
 const round3 = (x) => Math.round(x * 1e3) / 1e3;
@@ -150,7 +152,7 @@ export function compute(manual, market, now) {
 // Kurs rynkowy (Wise, NBP) jest pamiętany przez CACHE_SECONDS, żeby nie pytać o niego przy każdym wejściu.
 // Plik rates.json (kursy detaliczne, godziny) jest czytany przy każdym wejściu, więc jego zmiana
 // jest widoczna od razu po opublikowaniu strony.
-async function marketData(context) {
+export async function marketData(context) {
   const { request, env } = context;
   const cacheKey = new Request(new URL('/api/_market-cache', request.url).toString());
   const cache = caches.default;
@@ -176,6 +178,13 @@ export async function onRequestGet(context) {
     return new Response(JSON.stringify({ error: 'rates.json niedostępny' }), { status: 502, headers: { 'content-type': 'application/json' } });
   }
 
+  // Kursy detaliczne z programu KANTOR (jeśli są w KV) zastępują te z rates.json.
+  let retailInfo = { source: 'file', reason: 'KV nie podpięte' };
+  if (env.RATES_KV) {
+    try { retailInfo = applyRetail(manual, await env.RATES_KV.get(RETAIL_KEY, 'json')); }
+    catch (e) { retailInfo = { source: 'file', reason: 'błąd odczytu KV: ' + String(e.message || e) }; }
+  }
+
   const { nbp, live, errors: marketErrors } = await marketData(context);
   const errors = [...marketErrors];
   let market = null;
@@ -188,6 +197,7 @@ export async function onRequestGet(context) {
 
   const body = compute(manual, market, new Date());
   if (errors.length) body.wholesaleAutoInfo.errors = errors;
+  body.retailInfo = retailInfo;
   return new Response(JSON.stringify(body), {
     headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' },
   });
