@@ -16,10 +16,10 @@ faq:
   - q: "Mam polską kartę do konta w złotówkach. Czy przewalutowanie mnie dotyczy?"
     a: "W Polsce nie, bo wypłacasz złotówki z konta w złotówkach. Ekran z przewalutowaniem zobaczysz za granicą oraz w Polsce, jeśli używasz karty do konta w euro, funtach lub dolarach albo karty wydanej w innym kraju."
   - q: "Co jest tańsze: bankomat czy kantor?"
-    a: "To zależy od tego, co masz przy sobie. Jeśli masz gotówkę w walucie, wymiana w kantorze z widocznym kursem kupna i sprzedaży jest prosta do policzenia. Jeśli masz tylko kartę, wypłać z bankomatu bez przewalutowania i sprawdź wcześniej opłaty swojego banku."
+    a: "Jeśli masz gotówkę w walucie, zwykle kantor ze spreadem kilku groszy i bez prowizji. W przykładzie z artykułu 1000 zł kosztuje w Exchange Kantor Black Sheep ok. 234,70 EUR, a w bankomacie z przewalutowaniem ok. 251,20 EUR. Jeśli masz tylko kartę, wypłać z bankomatu bez przewalutowania."
 ---
 
-**W skrócie:** Wybierz bankomat przy oddziale banku, przeczytaj każdy ekran i **zawsze odrzucaj przewalutowanie**: rachunek ma zostać obciążony w złotówkach. Jeśli bankomat pokazuje własną opłatę za wypłatę, możesz przerwać i poszukać innego. Kwotę wpisz samodzielnie i zabierz fizyczną kartę. A jeśli masz przy sobie euro, dolary lub funty w gotówce, możesz je po prostu wymienić: Exchange Kantor Black Sheep, Floriańska 37, 0% prowizji, oba kursy na tablicy.
+**W skrócie:** Wybierz bankomat przy oddziale banku, przeczytaj każdy ekran i **zawsze odrzucaj przewalutowanie**: rachunek ma zostać obciążony w złotówkach. Jeśli bankomat pokazuje własną opłatę za wypłatę, możesz przerwać i poszukać innego. Kwotę wpisz samodzielnie i zabierz fizyczną kartę. A jeśli masz przy sobie euro, dolary lub funty w gotówce, możesz je po prostu wymienić w Exchange Kantor Black Sheep przy Floriańskiej 37: najlepsze kursy walut w centrum Krakowa, spread tylko kilka groszy, 0% prowizji. Kurs, który widzisz, to kurs, który dostajesz.
 
 ## Dla kogo jest ten poradnik
 
@@ -74,16 +74,23 @@ Jeśli tłumaczysz to gościom z zagranicy, wystarczy jedno zdanie: na ekranie b
 
 Liczby poniżej są wymyślone i służą tylko pokazaniu mechanizmu. To nie są dzisiejsze kursy; aktualne znajdziesz zawsze na [stronie głównej](/pl/#rates).
 
-Załóżmy, że wypłacasz 1000 zł kartą do konta w euro, kurs rynkowy wynosi 4,30 zł za euro, a bankomat proponuje przewalutowanie z marżą 8%.
+Załóżmy, że potrzebujesz 1000 zł i masz pieniądze w euro. Kurs rynkowy wynosi 4,30 zł za euro. Porównujemy trzy drogi:
 
-| | Bez przewalutowania | Z przewalutowaniem bankomatu |
-|---|---|---|
-| Wypłata | 1000 zł | 1000 zł |
-| Kurs w przykładzie | ok. 4,30 | ok. 3,98 |
-| Obciążenie rachunku | ok. 232,60 EUR plus ewentualna opłata Twojego banku | ok. 251,20 EUR |
-| Różnica | | ok. 18,60 EUR na jednej wypłacie |
+- **gotówka w naszym kantorze**: kurs kupna euro w tym przykładzie to 4,26 (nasz spread detaliczny to najwyżej 9 groszy, prowizja 0%),
+- **bankomat bez przewalutowania**: kurs zbliżony do rynkowego, a Twój bank dolicza w tym przykładzie łącznie 3% za wypłatę za granicą i przeliczenie waluty,
+- **bankomat z przewalutowaniem**: operator bankomatu stosuje własny kurs z marżą 8%.
 
-Marże rzędu kilku procent są przy przewalutowaniu w bankomacie częste, a bywają wyższe. Nawet jeśli Twój bank dolicza własną opłatę za przeliczenie waluty, w zdecydowanej większości przypadków wychodzi ona taniej niż kurs bankomatu. Wyjątkiem może być karta z bardzo wysokimi opłatami za transakcje walutowe. Jeśli nie masz pewności, sprawdź tabelę opłat przed wyjazdem.
+| | Gotówka w Exchange Kantor Black Sheep | Bankomat bez przewalutowania | Bankomat z przewalutowaniem |
+|---|---|---|---|
+| Dostajesz | 1000 zł | 1000 zł | 1000 zł |
+| Kurs w przykładzie | 4,26 (kurs z tablicy) | ok. 4,30 i 3% opłat banku | ok. 3,98 |
+| Kosztuje Cię to | **ok. 234,70 EUR** | ok. 239,50 EUR | ok. 251,20 EUR |
+| Co może dojść | nic, prowizja 0% | opłata bankomatu za wypłatę | opłata bankomatu, czasem także opłata banku |
+| Drożej niż w kantorze | | o ok. 4,80 EUR | o ok. 16,40 EUR |
+
+W tym przykładzie wymiana gotówki u nas jest o około 16 euro tańsza od wypłaty z przewalutowaniem i o kilka euro tańsza od wypłaty bez przewalutowania kartą, do której bank dolicza opłaty. Przy wymianie w kantorze nie ma też ekranów, na których można się pomylić: kurs, który widzisz na tablicy, to kurs, który dostajesz.
+
+Uczciwie dodajemy drugą stronę. Jeśli Twoja karta nie ma żadnych opłat za wypłaty za granicą ani za przeliczenie waluty, a bankomat nie pobiera własnej opłaty, wypłata bez przewalutowania kosztowałaby w tym przykładzie ok. 232,60 EUR, czyli mniej więcej tyle samo co w kantorze. Dlatego warto znać tabelę opłat swojej karty. Przewalutowanie w bankomacie przegrywa w każdym wariancie: marże rzędu kilku procent są tam częste, a bywają wyższe.
 
 ## Co mówi prawo
 
@@ -132,4 +139,5 @@ Szukaj czarnej tablicy z czarną owcą. Dokładne trasy opisujemy w poradniku [j
 - Przewalutowanie w bankomacie **zawsze odrzucaj**. Gotówkę i tak dostaniesz, a rachunek zostanie obciążony w złotówkach.
 - Opłata bankomatu za wypłatę pojawia się na ekranie przed potwierdzeniem. Możesz przerwać i poszukać innego urządzenia.
 - Wpisz własną kwotę, zabierz fizyczną kartę i sprawdź przed wyjazdem opłaty swojego banku.
-- Masz gotówkę w walucie? Wymień ją w kantorze, w którym widać kurs kupna i sprzedaży: Floriańska 37, 0% prowizji, od poniedziałku do soboty do 20:30.
+- Masz gotówkę w walucie? W naszym przykładzie wymiana w kantorze wychodzi o kilkanaście euro taniej niż bankomat z przewalutowaniem.
+- Exchange Kantor Black Sheep, Floriańska 37: najlepsze kursy walut w centrum Krakowa, spread tylko kilka groszy, 0% prowizji. Kurs, który widzisz, to kurs, który dostajesz. Czynne od poniedziałku do soboty do 20:30.

@@ -16,10 +16,10 @@ faq:
   - q: "Do ATMs in Kraków charge a fee to foreign cards?"
     a: "Some do and some do not, and it can depend on your card. If an ATM charges its own fee, it shows the amount on screen and asks you to accept it. If you do not like it, cancel and try another machine. Your own bank may charge separately."
   - q: "Is it cheaper to use an ATM or an exchange office in Kraków?"
-    a: "It depends on what you carry. With cash in euros, dollars or pounds, an exchange office that displays both buy and sell rates is easy to check in advance. With a card only, use an ATM, decline the conversion and check your bank's fees before you travel."
+    a: "With cash in euros, dollars or pounds, usually an exchange office with a spread of a few groszy and no commission. In this article's example, 1,000 PLN costs about 234.70 EUR at Exchange Kantor Black Sheep and about 251.20 EUR at an ATM with conversion. With a card only, use an ATM and decline the conversion."
 ---
 
-**In short:** Use an ATM attached to a bank branch, read every screen, and **always decline the conversion** so that your account is charged in złoty (PLN). If the machine shows its own withdrawal fee, you can cancel and find another one. Type your own amount and bring the physical card. If you already carry euros, dollars or pounds in cash, you can simply exchange them: Exchange Kantor Black Sheep, Floriańska 37, 0% commission, both rates on the board.
+**In short:** Use an ATM attached to a bank branch, read every screen, and **always decline the conversion** so that your account is charged in złoty (PLN). If the machine shows its own withdrawal fee, you can cancel and find another one. Type your own amount and bring the physical card. If you already carry euros, dollars or pounds in cash, you can simply exchange them at Exchange Kantor Black Sheep, Floriańska 37: the best exchange rates in Kraków's Old Town, with a spread of just a few groszy and 0% commission. The rate you see is the rate you get.
 
 Poland is an easy country for cards, and many visitors spend a whole weekend in Kraków without touching a banknote. Sooner or later, though, most people want some złoty in their pocket for a market stall, a tip or a public toilet. We have worked behind a counter on Floriańska since 2010, and we regularly hear the same story: a visitor withdrew cash at a "guaranteed rate" and only saw the real cost on the statement at home. One button avoids it.
 
@@ -65,16 +65,23 @@ The Polish wording you may see is *bez przewalutowania* (without conversion) or 
 
 The figures below are made up to show the mechanism. They are not today's rates; current rates are always on our [home page](/#rates).
 
-Say you withdraw 1,000 PLN with a euro card, the market rate is 4.30 PLN per euro, and the ATM offers a conversion with an 8% markup.
+Say you need 1,000 PLN and your money is in euros. The market rate is 4.30 PLN per euro. We compare three routes:
 
-| | Conversion declined | ATM conversion accepted |
-|---|---|---|
-| Withdrawal | 1,000 PLN | 1,000 PLN |
-| Rate in this example | about 4.30 | about 3.98 |
-| Charged to your account | about 232.60 EUR, plus your bank's fee if it has one | about 251.20 EUR |
-| Difference | | about 18.60 EUR on one withdrawal |
+- **cash at our office**: the buy rate for euros in this example is 4.26 (our retail spread is at most 9 groszy, commission 0%),
+- **ATM, conversion declined**: a rate close to the market rate, and in this example your bank adds 3% in total for a withdrawal abroad and for converting the currency,
+- **ATM, conversion accepted**: the ATM operator applies its own rate with an 8% markup.
 
-Markups of several percent are common for ATM conversion, and they can be higher. Even if your bank adds its own foreign currency fee, in the great majority of cases it comes out cheaper than the ATM's rate. The exception may be a card with unusually high foreign transaction charges. If you are not sure, check your card's terms before you travel.
+| | Cash at Exchange Kantor Black Sheep | ATM, conversion declined | ATM, conversion accepted |
+|---|---|---|---|
+| You receive | 1,000 PLN | 1,000 PLN | 1,000 PLN |
+| Rate in this example | 4.26 (the rate on the board) | about 4.30, plus 3% in bank fees | about 3.98 |
+| It costs you | **about 234.70 EUR** | about 239.50 EUR | about 251.20 EUR |
+| What may be added | nothing, 0% commission | the ATM's withdrawal fee | the ATM's fee, sometimes a bank fee too |
+| More than at our office | | by about 4.80 EUR | by about 16.40 EUR |
+
+In this example, exchanging cash with us costs about 16 euros less than a withdrawal with conversion, and a few euros less than a declined-conversion withdrawal on a card whose bank adds fees. At an exchange office there are also no screens to get wrong: the rate you see on the board is the rate you get.
+
+To be fair, here is the other side. If your card has no fees at all for withdrawals abroad or for converting currency, and the ATM charges no fee of its own, a withdrawal with the conversion declined would cost about 232.60 EUR in this example, roughly the same as at our office. That is why it pays to know your card's terms. The ATM's own conversion loses in every version: markups of several percent are common there, and they can be higher.
 
 ## What the rules say
 
@@ -125,4 +132,5 @@ Look for the black board with the black sheep. Staff speak English and Polish. S
 - **Always decline** the ATM's conversion. You still get your cash, and your account is charged in złoty.
 - An ATM's own withdrawal fee is shown on screen before you confirm. You can cancel and try another machine.
 - Type your own amount, bring the physical card and check your bank's fees before you travel.
-- Carrying cash in euros, dollars or pounds? Exchange it where both the buy and sell rate are displayed: Floriańska 37, 0% commission, open until 20:30 Monday to Saturday.
+- Carrying cash in euros, dollars or pounds? In our example, exchanging it at the office costs about 16 euros less than an ATM withdrawal with conversion.
+- Exchange Kantor Black Sheep, Floriańska 37: the best exchange rates in Kraków's Old Town, with a spread of just a few groszy and 0% commission. The rate you see is the rate you get. Open until 20:30 Monday to Saturday.
