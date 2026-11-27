@@ -192,8 +192,17 @@ import Analytics from '../../components/Analytics.astro';
         .board-digit { font-weight: 700; color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.22); }
         .rb { display: inline-block; min-width: 4.7ch; padding: 0.3rem 0.55rem; border-radius: 0.55rem; text-align: center; background: #1f1f1f; border: 1px solid #3d3d3d; }
         #board-body-hurt .rb { min-width: 5.8ch; }
-        /* Wariant jasny (jak tablica na elewacji): dodaj klase rb-light do elementu #rates */
-        #rates.rb-light #board-body .rb { background: #f5f5f4; color: #0a0a0a; border-color: #f5f5f4; text-shadow: none; }
+        #rates tbody tr:nth-child(odd) { background: rgba(255,255,255,0.045); }
+        /* Telefon i tablet: jasne pola (jak tablica na elewacji), etykiety Detal/Hurt lekko szare */
+        @media (max-width: 1023px) {
+            #rates .rb { background: #f5f5f4; color: #0a0a0a; border-color: #f5f5f4; text-shadow: none; }
+            #rates .tier-name { background: #cfcfcf; }
+        }
+        /* Komputer: ciemnoszare tlo tablicy, czarne pola, biale cyfry */
+        @media (min-width: 1024px) {
+            #rates > div { background: #1e1e1e; }
+            #rates .rb { background: #000; border-color: #000; }
+        }
         #rates th.eyebrow { letter-spacing: 0.16em; color: #d4d4d4; }
         #rates tbody td { padding-top: 0.7rem; padding-bottom: 0.7rem; }
         @media (max-width: 480px) {
@@ -263,15 +272,18 @@ import Analytics from '../../components/Analytics.astro';
         .tier-name { background: #fff; color: var(--ink); border-radius: 9999px; padding: 0.3rem 0.95rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; }
         .tier-sub { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--mist); text-align: right; }
         /* Pasek kursów nad hasłem (tylko telefon i tablet; na komputerze tablica jest obok) */
-        .rate-strip { display: block; margin-bottom: .9rem; padding: .6rem .8rem .7rem; border: 1px solid #262626; border-radius: 1rem; background: #141414; cursor: pointer; }
+        .rate-strip { display: block; margin-bottom: .9rem; padding: .6rem .8rem .7rem; border: 1px solid #262626; border-radius: 1rem; background: #1e1e1e; cursor: pointer; }
         .rate-strip .rs-head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-bottom: .45rem; }
         .rate-strip .rs-cap { font-size: .56rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #a3a3a3; white-space: nowrap; }
         .rate-strip .rs-seg { display: inline-flex; border: 1px solid #3a3a3a; border-radius: 999px; padding: 2px; flex: none; }
         .rate-strip .rs-seg button { font: 800 .56rem/1 'Montserrat', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #8a8a8a; background: none; border: 0; border-radius: 999px; padding: .38rem .6rem; cursor: pointer; }
         .rate-strip .rs-seg button.on { background: #fff; color: #000; }
-        .rate-strip .rs-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
-        .rate-strip .rs-item { min-width: 0; white-space: nowrap; font-size: clamp(.72rem, 3.3vw, .9rem); color: #e5e5e5; font-variant-numeric: tabular-nums; }
-        .rate-strip .rs-item b { display: block; font-weight: 800; color: #fff; font-size: .78em; letter-spacing: .08em; margin-bottom: .1rem; }
+        .rate-strip .rs-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+        .rate-strip .rs-item { min-width: 0; white-space: nowrap; font-size: clamp(.78rem, 4.05vw, 1.02rem); font-weight: 700; color: #fff; font-variant-numeric: tabular-nums; }
+        .rate-strip .rs-item + .rs-item { border-left: 1px solid #3a3a3a; padding-left: clamp(.4rem, 2.4vw, .8rem); }
+        .rate-strip.w .rs-item { font-size: clamp(.66rem, 3.45vw, .86rem); }
+        .rate-strip .fl { font-size: 1.15em; margin-right: .3em; vertical-align: -.08em; }
+        .rate-strip .rs-item b { display: block; font-weight: 800; color: #b8b8b8; font-size: .7rem; letter-spacing: .08em; margin-bottom: .1rem; }
         @media (min-width: 1024px) { .rate-strip { display: none; } }
         /* Telefon: cała góra strony (pasek, hasło, przyciski) ma się mieścić na pierwszym ekranie */
         @media (max-width: 1023px) {
@@ -426,7 +438,7 @@ import Analytics from '../../components/Analytics.astro';
         <div class="hero-grid relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
 
             <div class="hero-text">
-                <div class="rate-strip" role="link" tabindex="0" aria-label="Dzisiejsze kursy. Dotknij, aby zobaczyć pełną tablicę." onclick="location.hash='#rates'"><div class="rs-head"><span class="rs-cap">Kupno · Sprzedaż</span><span class="rs-seg" role="group"><button type="button" data-tier="retail" class="on" onclick="setStripTier('retail', event)">Detal</button><button type="button" data-tier="wholesale" onclick="setStripTier('wholesale', event)">Hurt</button></span></div><div class="rs-row"><span class="rs-item"><b>EUR</b><span id="rs-EUR">4.33 · 4.42</span></span><span class="rs-item"><b>USD</b><span id="rs-USD">3.92 · 4.01</span></span><span class="rs-item"><b>GBP</b><span id="rs-GBP">5.19 · 5.28</span></span></div></div>
+                <div class="rate-strip" role="link" tabindex="0" aria-label="Dzisiejsze kursy. Dotknij, aby zobaczyć pełną tablicę." onclick="location.hash='#rates'"><div class="rs-head"><span class="rs-cap">Kupujemy · Sprzedajemy</span><span class="rs-seg" role="group"><button type="button" data-tier="retail" class="on" onclick="setStripTier('retail', event)">Detal</button><button type="button" data-tier="wholesale" onclick="setStripTier('wholesale', event)">Hurt</button></span></div><div class="rs-row"><span class="rs-item"><b><span class="fl" aria-hidden="true">🇪🇺</span>EUR</b><span id="rs-EUR">4.33 · 4.42</span></span><span class="rs-item"><b><span class="fl" aria-hidden="true">🇺🇸</span>USD</b><span id="rs-USD">3.92 · 4.01</span></span><span class="rs-item"><b><span class="fl" aria-hidden="true">🇬🇧</span>GBP</b><span id="rs-GBP">5.19 · 5.28</span></span></div></div>
                 <h1 class="hero-h1"><span class="eyebrow hero-eyebrow"><span class="whitespace-nowrap" data-i18n="hero_eyebrow_1">Kantor wymiany walut</span> · <span class="whitespace-nowrap" data-i18n="hero_eyebrow_2">Stare Miasto</span></span> <span class="hero-h display text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-2 lg:mb-3" data-i18n="hero_title">Nie daj się oskubać.</span></h1>
                 <img src="../images/hero-flock.webp" width="1408" height="768" fetchpriority="high" alt="Ostrzyżone białe owce i jedna nietknięta czarna owca — nie daj się oskubać" class="hero-art w-full -mt-12 mb-6 lg:-mt-14 lg:mb-3 lg:max-w-lg pointer-events-none select-none">
                 <p class="hero-slogan text-neutral-400 text-base sm:text-lg mb-4 max-w-md" data-i18n="hero_slogan" data-i18n-html="">Najlepsze kursy walut w centrum Krakowa<span class="sl-x">, spread tylko kilka groszy</span>. Kurs, który widzisz, to kurs, który dostajesz.</p>
@@ -1067,6 +1079,7 @@ import Analytics from '../../components/Analytics.astro';
                 el.textContent = (typeof b === "number" && typeof s === "number") ? fmtRate(b) + " · " + fmtRate(s) : "—";
             }
             document.querySelectorAll(".rs-seg button").forEach(btn => btn.classList.toggle("on", btn.dataset.tier === stripTier));
+            const strip = document.querySelector(".rate-strip"); if (strip) strip.classList.toggle("w", w);
         }
         function setStripTier(tier, ev) { if (ev) ev.stopPropagation(); stripTier = tier; renderRateStrip(); }
 
