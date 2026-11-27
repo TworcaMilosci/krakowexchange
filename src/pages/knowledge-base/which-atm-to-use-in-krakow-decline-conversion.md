@@ -16,7 +16,7 @@ faq:
   - q: "Do ATMs in Kraków charge a fee to foreign cards?"
     a: "Some do and some do not, and it can depend on your card. If an ATM charges its own fee, it shows the amount on screen and asks you to accept it. If you do not like it, cancel and try another machine. Your own bank may charge separately."
   - q: "Is it cheaper to use an ATM or an exchange office in Kraków?"
-    a: "With cash in euros, dollars or pounds, usually an exchange office with a spread of a few groszy and no commission. In this article's example, 1,000 PLN costs about 234.70 EUR at Exchange Kantor Black Sheep and about 251.20 EUR at an ATM with conversion. With a card only, use an ATM and decline the conversion."
+    a: "With cash in euros, dollars or pounds, usually an exchange office with a spread of a few groszy and no commission. In this article's example, 1,000 PLN costs about 234.70 EUR at Exchange Kantor Black Sheep and about 238.60–260.50 EUR at an ATM with conversion. With a card only, use an ATM and decline the conversion."
 ---
 
 **In short:** Use an ATM attached to a bank branch, read every screen, and **always decline the conversion** so that your account is charged in złoty (PLN). If the machine shows its own withdrawal fee, you can cancel and find another one. Type your own amount and bring the physical card. If you already carry euros, dollars or pounds in cash, you can simply exchange them at Exchange Kantor Black Sheep, Floriańska 37: the best exchange rates in Kraków's Old Town, with a spread of just a few groszy and 0% commission. The rate you see is the rate you get.
@@ -63,25 +63,29 @@ The Polish wording you may see is *bez przewalutowania* (without conversion) or 
 
 ## What it costs: an example in numbers
 
-The figures below are made up to show the mechanism. They are not today's rates; current rates are always on our [home page](/#rates).
+The figures below are an example that shows the mechanism. They are not today's rates; current rates are always on our [home page](/#rates).
 
 Say you need 1,000 PLN and your money is in euros. The market rate is 4.30 PLN per euro. We compare three routes:
 
 - **cash at our office**: the buy rate for euros in this example is 4.26 (our retail spread is at most 9 groszy, commission 0%),
-- **ATM, conversion declined**: a rate close to the market rate, and in this example your bank adds 3% in total for a withdrawal abroad and for converting the currency,
-- **ATM, conversion accepted**: the ATM operator applies its own rate with an 8% markup.
+- **ATM, conversion declined**: a rate close to the market rate, to which the bank typically adds 3.5 to 5% for a withdrawal abroad and for converting the currency,
+- **ATM, conversion accepted**: the ATM operator applies its own rate. In a study by the German consumer organisation Stiftung Warentest, reported in the Polish press in August 2026, withdrawals with conversion cost 2.6 to 12% more.
 
-| | Cash at Exchange Kantor Black Sheep | ATM, conversion declined | ATM, conversion accepted |
-|---|---|---|---|
-| You receive | 1,000 PLN | 1,000 PLN | 1,000 PLN |
-| Rate in this example | 4.26 (the rate on the board) | about 4.30, plus 3% in bank fees | about 3.98 |
-| It costs you | **about 234.70 EUR** | about 239.50 EUR | about 251.20 EUR |
-| What may be added | nothing, 0% commission | the ATM's withdrawal fee | the ATM's fee, sometimes a bank fee too |
-| More than at our office | | by about 4.80 EUR | by about 16.40 EUR |
+<table>
+<thead>
+<tr><th></th><th style="background:rgba(34,197,94,.16)">Cash at Exchange Kantor Black Sheep</th><th style="background:rgba(245,158,11,.16)">ATM, conversion declined</th><th style="background:rgba(239,68,68,.16)">ATM, conversion accepted</th></tr>
+</thead>
+<tbody>
+<tr><td>Verdict</td><td style="background:rgba(34,197,94,.16)"><strong>Cheapest</strong></td><td style="background:rgba(245,158,11,.16)">Watch your bank's fees</td><td style="background:rgba(239,68,68,.16)"><strong>Avoid</strong></td></tr>
+<tr><td>You receive</td><td style="background:rgba(34,197,94,.16)">1,000 PLN</td><td style="background:rgba(245,158,11,.16)">1,000 PLN</td><td style="background:rgba(239,68,68,.16)">1,000 PLN</td></tr>
+<tr><td>Rate in this example</td><td style="background:rgba(34,197,94,.16)">4.26 (the rate on the board)</td><td style="background:rgba(245,158,11,.16)">about 4.30, plus 3.5–5% in bank fees</td><td style="background:rgba(239,68,68,.16)">about 3.84–4.19</td></tr>
+<tr><td>It costs you</td><td style="background:rgba(34,197,94,.16)"><strong>about 234.70 EUR</strong></td><td style="background:rgba(245,158,11,.16)">about 240.70–244.20 EUR</td><td style="background:rgba(239,68,68,.16)">about 238.60–260.50 EUR</td></tr>
+<tr><td>What may be added</td><td style="background:rgba(34,197,94,.16)">nothing, 0% commission</td><td style="background:rgba(245,158,11,.16)">the ATM's withdrawal fee</td><td style="background:rgba(239,68,68,.16)">the ATM's fee, sometimes a bank fee too</td></tr>
+<tr><td>More than at our office</td><td style="background:rgba(34,197,94,.16)"></td><td style="background:rgba(245,158,11,.16)">by about 6–9.50 EUR</td><td style="background:rgba(239,68,68,.16)">by about 4–26 EUR</td></tr>
+</tbody>
+</table>
 
-In this example, exchanging cash with us costs about 16 euros less than a withdrawal with conversion, and a few euros less than a declined-conversion withdrawal on a card whose bank adds fees. At an exchange office there are also no screens to get wrong: the rate you see on the board is the rate you get.
-
-To be fair, here is the other side. If your card has no fees at all for withdrawals abroad or for converting currency, and the ATM charges no fee of its own, a withdrawal with the conversion declined would cost about 232.60 EUR in this example, roughly the same as at our office. That is why it pays to know your card's terms. The ATM's own conversion loses in every version: markups of several percent are common there, and they can be higher.
+In this example, exchanging cash with us is the cheapest of the three routes: up to about 26 euros cheaper than a withdrawal with conversion, and about 6 to 9.50 euros cheaper than a withdrawal with the conversion declined. With ATM conversion you do not know in advance where in that range you will land until you read the small print on the screen. At an exchange office there are no screens to get wrong: the rate you see on the board is the rate you get.
 
 ## What the rules say
 
@@ -132,5 +136,5 @@ Look for the black board with the black sheep. Staff speak English and Polish. S
 - **Always decline** the ATM's conversion. You still get your cash, and your account is charged in złoty.
 - An ATM's own withdrawal fee is shown on screen before you confirm. You can cancel and try another machine.
 - Type your own amount, bring the physical card and check your bank's fees before you travel.
-- Carrying cash in euros, dollars or pounds? In our example, exchanging it at the office costs about 16 euros less than an ATM withdrawal with conversion.
+- Carrying cash in euros, dollars or pounds? In our example, exchanging it at the office costs up to about 26 euros less than an ATM withdrawal with conversion, and about 6 to 9.50 euros less than a withdrawal with the conversion declined.
 - Exchange Kantor Black Sheep, Floriańska 37: the best exchange rates in Kraków's Old Town, with a spread of just a few groszy and 0% commission. The rate you see is the rate you get. Open until 20:30 Monday to Saturday.
