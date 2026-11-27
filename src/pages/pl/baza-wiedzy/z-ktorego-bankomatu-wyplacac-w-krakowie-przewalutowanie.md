@@ -2,7 +2,7 @@
 layout: ../../../layouts/Article.astro
 title: "Z którego bankomatu wypłacać w Krakowie i jak odrzucić przewalutowanie"
 seoTitle: "Bankomat w Krakowie: jak odrzucić przewalutowanie"
-description: "Wypłacasz złotówki w Krakowie kartą zagraniczną lub walutową? Jak wybrać bankomat, przeczytać ekran z opłatą i odrzucić przewalutowanie, żeby nie przepłacić."
+description: "Bankomat czy kantor w Krakowie? Jak wybrać bankomat, odrzucić przewalutowanie i ile kosztuje 1000 zł z karty zagranicznej, a ile przy wymianie gotówki."
 lang: pl
 date: 2026-11-27
 alt: /knowledge-base/which-atm-to-use-in-krakow-decline-conversion
@@ -15,7 +15,7 @@ faq:
     a: "Nie. Bankomat wypłaci złotówki, a rachunek zostanie obciążony w złotych. Na Twoją walutę przeliczy je bank lub organizacja kartowa, zwykle po kursie bliższym rynkowemu."
   - q: "Mam polską kartę do konta w złotówkach. Czy przewalutowanie mnie dotyczy?"
     a: "W Polsce nie, bo wypłacasz złotówki z konta w złotówkach. Ekran z przewalutowaniem zobaczysz za granicą oraz w Polsce, jeśli używasz karty do konta w euro, funtach lub dolarach albo karty wydanej w innym kraju."
-  - q: "Co jest tańsze: bankomat czy kantor?"
+  - q: "Bankomat czy kantor w Krakowie: co jest tańsze?"
     a: "Jeśli masz gotówkę w walucie, zwykle kantor ze spreadem kilku groszy i bez prowizji. W przykładzie z artykułu 1000 zł kosztuje w Exchange Kantor Black Sheep ok. 234,70 EUR, a w bankomacie z przewalutowaniem ok. 238,60–260,50 EUR. Jeśli masz tylko kartę, wypłać z bankomatu bez przewalutowania."
 ---
 
@@ -113,9 +113,9 @@ Kraków jest spokojnym miastem, a zasady są takie same jak wszędzie.
 - Jeśli bankomat zatrzymał kartę albo nie wydał pieniędzy, zanotuj godzinę i miejsce, a potem zadzwoń do swojego banku. Dlatego bankomat przy otwartym oddziale to wygodniejszy wybór.
 - Włącz w aplikacji banku powiadomienia o transakcjach. Od razu zobaczysz, w jakiej walucie i na jaką kwotę obciążono rachunek.
 
-## Bankomat czy kantor: co kiedy ma sens
+## Bankomat czy kantor w Krakowie: co wychodzi taniej
 
-Nie ma jednej odpowiedzi dla wszystkich. To zależy od tego, z czym przyjeżdżasz.
+W naszym przykładzie najtaniej wychodzi wymiana gotówki w kantorze. To, którą drogę wybrać, zależy jednak od tego, z czym przyjeżdżasz.
 
 **Masz tylko kartę.** Wypłać z bankomatu bez przewalutowania, a w sklepach i restauracjach płać kartą w złotówkach. Kantor stacjonarny nie zamieni salda na karcie na gotówkę.
 

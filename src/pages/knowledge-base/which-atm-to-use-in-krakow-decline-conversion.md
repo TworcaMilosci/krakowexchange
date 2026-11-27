@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "Which ATM to use in Kraków and how to decline the conversion"
 seoTitle: "Which ATM to use in Kraków: decline the conversion"
-description: "Withdrawing złoty in Kraków with a foreign card? How to choose an ATM, read the fee screen, decline the currency conversion and when exchanging cash is simpler."
+description: "ATM or currency exchange in Kraków? How to pick an ATM, decline the conversion, and what 1,000 PLN costs with a foreign card versus exchanging cash."
 lang: en
 date: 2026-11-27
 alt: /pl/baza-wiedzy/z-ktorego-bankomatu-wyplacac-w-krakowie-przewalutowanie
@@ -15,7 +15,7 @@ faq:
     a: "No. The ATM pays out złoty and your account is charged in PLN. Your own bank or card network then converts the amount, usually at a rate closer to the market rate."
   - q: "Do ATMs in Kraków charge a fee to foreign cards?"
     a: "Some do and some do not, and it can depend on your card. If an ATM charges its own fee, it shows the amount on screen and asks you to accept it. If you do not like it, cancel and try another machine. Your own bank may charge separately."
-  - q: "Is it cheaper to use an ATM or an exchange office in Kraków?"
+  - q: "ATM or currency exchange in Kraków: which is cheaper?"
     a: "With cash in euros, dollars or pounds, usually an exchange office with a spread of a few groszy and no commission. In this article's example, 1,000 PLN costs about 234.70 EUR at Exchange Kantor Black Sheep and about 238.60–260.50 EUR at an ATM with conversion. With a card only, use an ATM and decline the conversion."
 ---
 
@@ -106,9 +106,9 @@ Kraków is a calm city, and the habits are the same as anywhere.
 
 If someone approaches you in the street offering to change money, walk on. Typical situations are described in our guide on [avoiding exchange scams in Kraków](/avoid-currency-exchange-scams-krakow).
 
-## ATM or exchange office: when each makes sense
+## ATM or currency exchange in Kraków: which is cheaper
 
-There is no single answer for everyone. It depends on what you arrive with.
+In our example, exchanging cash at a currency exchange office is the cheapest route. Which one to choose still depends on what you arrive with.
 
 **You have a card only.** Withdraw from an ATM with the conversion declined, and pay by card in PLN in shops and restaurants. A walk-in exchange office cannot turn a card balance into cash.
 
