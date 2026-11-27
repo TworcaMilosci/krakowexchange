@@ -12,7 +12,7 @@ Edytujesz **wyłącznie plik `rates.json`**. Nie dotykasz `index.html`.
    - `wholesaleFrom` = od jakiej kwoty obowiązuje hurt (tekst wyświetlany, np. "1 000 EUR")
    - `wholesaleMinAmount` = próg liczbowy dla kalkulatora (np. 1000) — od tej kwoty
      kalkulator sam przelicza po kursie hurtowym
-   - `alsoBuy` = lista walut skupowanych po wcześniejszym kontakcie
+   - `alsoBuy` = lista pozostałych walut, które skupujemy i sprzedajemy (kurs podajemy na miejscu lub telefonicznie)
 3. Zmień datę w polu `"updated"` — wyświetla się na tablicy jako "Aktualizacja".
 4. Kliknij **Commit changes**. Netlify sam opublikuje stronę w ~1 minutę.
 
@@ -43,7 +43,7 @@ Edytujesz **wyłącznie plik `rates.json`**. Nie dotykasz `index.html`.
 - **Bez hurtu:** usuń `buyHurt` i `sellHurt` ze wszystkich walut — przełącznik
   Detal/Hurt sam zniknie ze strony.
 - **Dodanie waluty do tablicy głównej:** dodaj linię w `rates`.
-- **Dodanie waluty do "Skupujemy również":** dopisz kod do listy `alsoBuy`.
+- **Dodanie waluty do "Skupujemy i sprzedajemy również":** dopisz kod do listy `alsoBuy`.
   Flagi działają automatycznie dla: EUR, USD, GBP, CHF, CAD, AUD, DKK, SEK,
   NOK, CZK, HUF, JPY, AED.
 

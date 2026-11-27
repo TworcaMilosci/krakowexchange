@@ -125,7 +125,7 @@ W naszym przykładzie najtaniej wychodzi wymiana gotówki w kantorze. To, któr�
 
 **Jest niedziela albo późny wieczór.** Nasz kantor jest czynny od poniedziałku do piątku w godzinach 9:30–20:30 i w sobotę 10:00–20:30, a w niedzielę jest zamknięty. Wtedy bankomat przy oddziale banku, z odrzuconym przewalutowaniem, to rozsądne wyjście. Więcej w poradniku o [wymianie wieczorem i w sobotę](/pl/baza-wiedzy/kantor-otwarty-wieczorem-i-w-sobote-krakow).
 
-U nas wymieniasz wyłącznie gotówkę, bez prowizji. Kupujemy i sprzedajemy euro, dolary amerykańskie i funty brytyjskie, a skupujemy także franki szwajcarskie, dolary kanadyjskie i australijskie, korony norweskie, szwedzkie, duńskie i czeskie, forinty, jeny oraz dirhamy. Osoby wracające z pracy za granicą z większą kwotą mogą zapytać o kurs hurtowy: jak go zarezerwować, opisujemy w poradniku o [wymianie większej kwoty](/pl/baza-wiedzy/wymiana-wiekszej-kwoty-kantor-krakow-kurs-hurtowy).
+U nas wymieniasz wyłącznie gotówkę, bez prowizji. Kupujemy i sprzedajemy euro, dolary amerykańskie i funty brytyjskie, a także franki szwajcarskie, dolary kanadyjskie i australijskie, korony norweskie, szwedzkie, duńskie i czeskie, forinty, jeny oraz dirhamy. Osoby wracające z pracy za granicą z większą kwotą mogą zapytać o kurs hurtowy: jak go zarezerwować, opisujemy w poradniku o [wymianie większej kwoty](/pl/baza-wiedzy/wymiana-wiekszej-kwoty-kantor-krakow-kurs-hurtowy).
 
 ## Gdzie nas znaleźć
 

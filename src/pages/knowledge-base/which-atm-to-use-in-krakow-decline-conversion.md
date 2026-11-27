@@ -118,7 +118,7 @@ In our example, exchanging cash at a currency exchange office is the cheapest ro
 
 **It is Sunday or late in the evening.** Our office is open Monday to Friday 9:30–20:30 and Saturday 10:00–20:30, and closed on Sunday. At those times a bank-branch ATM, with the conversion declined, is a sensible way out. More in our guide to [exchanging money late and on Saturday](/knowledge-base/currency-exchange-open-late-saturday-krakow).
 
-We exchange cash only, with 0% commission. We buy and sell euros, US dollars and British pounds (Bank of England notes only). We also buy Swiss francs, Canadian and Australian dollars, Norwegian, Swedish, Danish and Czech crowns, Hungarian forints, Japanese yen and UAE dirhams. Our wider [money guide for visitors to Kraków](/before-you-visit-krakow) covers cards, cash and airports in more detail.
+We exchange cash only, with 0% commission. We buy and sell euros, US dollars and British pounds (Bank of England notes only), as well as Swiss francs, Canadian and Australian dollars, Norwegian, Swedish, Danish and Czech crowns, Hungarian forints, Japanese yen and UAE dirhams. Our wider [money guide for visitors to Kraków](/before-you-visit-krakow) covers cards, cash and airports in more detail.
 
 ## Where to find us
 

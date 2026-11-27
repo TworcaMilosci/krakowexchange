@@ -14,7 +14,7 @@ faq:
   - q: "Czy warto wymieniać walutę na dworcu?"
     a: "Przy większych kwotach lepiej porównać kursy. Dworce i lotniska to wygodne miejsca, a wygodne miejsca rzadko konkurują kursem. Na samym dworcu za wszystko zapłacisz kartą, więc gotówkę możesz wymienić kilkanaście minut później na Starym Mieście."
   - q: "Wracam z Pragi lub Budapesztu. Czy wymienię korony czeskie albo forinty?"
-    a: "Tak. Skupujemy korony czeskie (CZK) i forinty (HUF). Sprzedajemy wyłącznie euro, dolary amerykańskie i funty brytyjskie, więc koron i forintów u nas nie kupisz."
+    a: "Tak. Skupujemy i sprzedajemy korony czeskie (CZK) i forinty (HUF). O kurs tych walut zapytaj na miejscu, zadzwoń lub napisz na WhatsApp: +48 889 505 057."
   - q: "Czy kantor jest czynny, gdy przyjeżdżają wieczorne pociągi?"
     a: "Kantor jest czynny do 20:30 od poniedziałku do soboty, w niedzielę jest zamknięty. Jeśli przyjeżdżasz później, wymień walutę następnego dnia."
 ---
@@ -68,10 +68,10 @@ Przed przyjściem możesz sprawdzić [dzisiejsze kursy](/pl/#rates) i policzyć 
 Po podróży po Europie Środkowej w portfelu często zostają pieniądze z poprzedniego kraju.
 
 - **Euro** z Austrii, Słowacji czy Niemiec wymienisz po kursie z tablicy.
-- **Korony czeskie (CZK)** i **forinty (HUF)** skupujemy za złotówki, więc resztę z Pragi czy Budapesztu warto przynieść.
-- **Jedziesz do Pragi albo Budapesztu?** Sprzedajemy wyłącznie euro, dolary amerykańskie i funty brytyjskie, więc koron ani forintów u nas nie kupisz. W obu miastach bez problemu zapłacisz kartą.
+- **Korony czeskie (CZK)** i **forinty (HUF)** skupujemy i sprzedajemy, więc resztę z Pragi czy Budapesztu warto przynieść.
+- **Jedziesz do Pragi albo Budapesztu?** Korony i forinty kupisz u nas przed wyjazdem. O kurs i większą kwotę zapytaj wcześniej telefonicznie lub na WhatsApp. W obu miastach bez problemu zapłacisz też kartą.
 
-Skupujemy też franki szwajcarskie, dolary kanadyjskie i australijskie, korony skandynawskie, jeny i dirhamy ZEA. Monet nie wymieniamy, z jednym wyjątkiem: [bilon euro](/pl/skup-bilonu-euro-krakow), po wcześniejszym kontakcie.
+Skupujemy i sprzedajemy też franki szwajcarskie, dolary kanadyjskie i australijskie, korony skandynawskie, jeny i dirhamy ZEA. Kurs tych walut podajemy na miejscu, telefonicznie lub przez WhatsApp. Monet nie wymieniamy, z jednym wyjątkiem: [bilon euro](/pl/skup-bilonu-euro-krakow), po wcześniejszym kontakcie.
 
 ## Kupno waluty przed pociągiem
 

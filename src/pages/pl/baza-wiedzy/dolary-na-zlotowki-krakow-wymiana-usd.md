@@ -93,7 +93,7 @@ Dolar amerykański nie jest walutą wyłącznie na wyjazd do Stanów. To nadal g
 
 Dlatego przy dalekich podróżach, na przykład do Azji, Afryki czy Ameryki Łacińskiej, często bardziej opłaca się zabrać dolary i wymienić je na walutę lokalną dopiero na miejscu, niż szukać tej waluty w Polsce. Powód jest ten sam, który opisujemy przy spreadzie. Waluty odległych krajów są w Polsce egzotyczne, więc trudno je kupić, a różnica między kursem kupna i sprzedaży bywa bardzo duża. Na miejscu jest odwrotnie: dolar wymienia się tam codziennie, a waluta lokalna jest po prostu zwykłym pieniądzem. Dotyczy to praktycznie każdego odległego kraju. Wyjątkiem są kraje strefy euro i Wielka Brytania, gdzie lepiej od razu mieć euro albo funty.
 
-My sprzedajemy trzy waluty: euro, dolary amerykańskie i funty brytyjskie. Walut egzotycznych u nas nie kupisz, ale dolary na taki wyjazd tak.
+Dolary na taki wyjazd kupisz u nas po kursie z tablicy. Oprócz euro, dolarów i funtów skupujemy i sprzedajemy też franki szwajcarskie, dolary kanadyjskie i australijskie, korony skandynawskie i czeskie, forinty, jeny oraz dirhamy ZEA. Walut spoza tej listy nie prowadzimy.
 
 Kilka wskazówek:
 

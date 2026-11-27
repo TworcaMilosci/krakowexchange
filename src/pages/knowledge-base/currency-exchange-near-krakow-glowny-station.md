@@ -14,7 +14,7 @@ faq:
   - q: "How do I walk from Kraków Główny to Floriańska 37?"
     a: "Leave the station towards the Old Town, cross the Planty park to the Barbican, go through St. Florian's Gate and continue straight along Floriańska Street. The office is about 120 metres past the gate, on the left."
   - q: "I am coming from Prague or Budapest. Can I exchange Czech crowns or forints?"
-    a: "Yes. The office buys Czech crowns (CZK) and Hungarian forints (HUF) for złoty. It sells only euros, US dollars and British pounds, so crowns and forints cannot be bought here."
+    a: "Yes. The office buys and sells Czech crowns (CZK) and Hungarian forints (HUF). For the rate on these currencies, ask at the counter, call or message on WhatsApp: +48 889 505 057."
   - q: "Is the exchange office open when evening trains arrive?"
     a: "It is open until 20:30 from Monday to Saturday and closed on Sunday. If you arrive later, pay by card that evening and exchange the next day."
 ---
@@ -68,10 +68,10 @@ If your hotel is on the other side of the Old Town, you are walking through it a
 Travellers on a Central European route often arrive with the previous country's money still in their pocket.
 
 - **Euros** from Austria, Slovakia or Germany: exchanged at the board rate.
-- **Czech crowns (CZK)** and **Hungarian forints (HUF)**: we buy them for złoty. So if Kraków comes after Prague or Budapest, bring your leftover notes.
-- **Leaving for Prague or Budapest next?** We sell only euros, US dollars and British pounds, so you cannot buy crowns or forints from us. Cards work well in both cities.
+- **Czech crowns (CZK)** and **Hungarian forints (HUF)**: we buy and sell them. So if Kraków comes after Prague or Budapest, bring your leftover notes.
+- **Leaving for Prague or Budapest next?** You can buy crowns and forints from us before you go. Ask about the rate, and about larger amounts, by phone or on WhatsApp first. Cards also work well in both cities.
 
-We also buy Swiss francs, Canadian and Australian dollars, Scandinavian crowns, Japanese yen and UAE dirhams. Coins are not exchanged, with one exception: [euro coins](/exchange-euro-coins-krakow), after you contact us first.
+We also buy and sell Swiss francs, Canadian and Australian dollars, Scandinavian crowns, Japanese yen and UAE dirhams. Rates for these currencies are quoted at the counter, by phone or on WhatsApp. Coins are not exchanged, with one exception: [euro coins](/exchange-euro-coins-krakow), after you contact us first.
 
 ## How to read the board when you get there
 

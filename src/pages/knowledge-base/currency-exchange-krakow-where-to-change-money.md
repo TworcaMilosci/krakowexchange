@@ -77,10 +77,10 @@ Since we advise you to compare, here is the data to compare us by.
 | Retail spread (EUR, USD, GBP) | up to 0.09 PLN |
 | Wholesale spread | 0.01–0.03 PLN during Polish FX market hours |
 | Rates online | yes, buy and sell, with the time of the last update |
-| We buy and sell | EUR, USD, GBP |
-| We also buy | CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED |
+| We buy and sell | EUR, USD, GBP (rates online) |
+| We also buy and sell | CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED (rates at the counter or by phone) |
 | Hours | Mon–Fri 09:30–20:30, Sat 10:00–20:30, closed on Sunday |
-| Google reviews | more than 250, average 4.8 |
+| Google reviews | nearly 300, average 4.8 |
 | Operating since | 2010, at the same address |
 
 Until 2026 we traded as Kantor Wymiany Walut "U Górali". The name changed; the owner and the address did not.

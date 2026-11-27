@@ -77,10 +77,10 @@ Skoro radzimy porównywać, podajemy dane, z którymi można nas zestawić.
 | Spread detaliczny (EUR, USD, GBP) | do 9 groszy |
 | Spread hurtowy | 1–3 grosze w godzinach pracy polskiego rynku walutowego |
 | Kursy online | tak, kupno i sprzedaż, z godziną aktualizacji |
-| Skup i sprzedaż | EUR, USD, GBP |
-| Skup | CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED |
+| Skup i sprzedaż | EUR, USD, GBP (kursy online) |
+| Skup i sprzedaż, pozostałe waluty | CHF, CAD, AUD, NOK, SEK, DKK, CZK, HUF, JPY, AED (kurs na miejscu lub telefonicznie) |
 | Godziny | pon.–pt. 9:30–20:30, sob. 10:00–20:30, niedziela zamknięte |
-| Opinie w Google | ponad 250, średnia 4,8 |
+| Opinie w Google | blisko 300, średnia 4,8 |
 | Działa od | 2010 roku, pod tym samym adresem |
 
 Do 2026 roku działaliśmy jako Kantor Wymiany Walut „U Górali". Zmieniła się nazwa, a właściciel i adres pozostały te same.
