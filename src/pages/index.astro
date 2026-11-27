@@ -1192,7 +1192,7 @@ import Analytics from '../components/Analytics.astro';
         renderAlsoBuy();
         renderCurrencyOptions();
         if (detectLang() === "pl") {
-            window.location.replace(ALT_URL);
+            window.location.replace(ALT_URL + location.search + location.hash);
         } else {
             setLanguage("en");
             loadRates();
